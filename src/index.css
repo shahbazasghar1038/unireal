@@ -17,6 +17,27 @@ code {
     monospace;
 }
 
+.ecl-heading{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 59px;
+  color: #fff; 
+  text-align: center;
+}
+
+.ecl-sub-heading{
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 53px;
+  color: #fff; 
+  text-align: center;
+}
+
+.ecl-card-text{
+  font-weight: 400;
+  font-size:40px;
+  line-height: 53px;  
+}
 
  
 

@@ -16,7 +16,7 @@ const ECLSlider = () => {
     };
   
     return (
-      <div className="slider">
+      <div className="slider mx-auto">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
