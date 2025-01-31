@@ -1,0 +1,45 @@
+.newsletter-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(to right, #42dcff, #a852ff, #fe43aa);
+}
+
+.newsletter-container {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.newsletter-input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 16rem;
+}
+
+.newsletter-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
