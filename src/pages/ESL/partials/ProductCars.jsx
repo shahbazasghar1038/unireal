@@ -1,38 +1,50 @@
-import React from 'react'
+import ProductCards1 from "../../../assets/ProductCards1.png";
+import ProductCards2 from "../../../assets/ProductCards2.png";
+import ProductCards3 from "../../../assets/ProductCards3.png";
+import ProductCards4 from "../../../assets/ProductCards4.png";
+const ProductCards = () => {
+  const products = [
+    {
+      id: 1,
+      name: "Multicolor 13.3 inch",
+      image: ProductCards1,
+    },
+    {
+      id: 2,
+      name: "Bluetooth E Pricer Label",
+      image: ProductCards2,
+    },
+    {
+      id: 3,
+      name: "Stretched LCD screen",
+      image: ProductCards3,
+    },
+    {
+      id: 4,
+      name: "E-INK BLE 5.0",
+      image: ProductCards4,
+    },
+  ];
 
-const ProductCars = () => {
   return (
-    <div>
-        <div class="max-w-[1328px] mx-auto sm:grid lg:grid-cols-2 sm:grid-cols-2 gap-[14px]">
-       
+    <div className="max-w-[1328px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 px-4">
+      {products.map((product) => (
         <div
-            class="bg-[#1D1D1F] rounded-[47px] w-full hover:bg-gray-900 hover:text-white transition duration-300  overflow-hidden shadow-lg">
-            <div class="py-4 px-8">
-                <a href="#">
-                    <h4 class="text-lg mb-3 font-semibold">How to be effective at working remotely?</h4>
-                </a>
-
-                <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="w-full"/>
-
-            </div>
+          key={product.id}
+          className="bg-[#1D1D1F] rounded-[30px] p-6 hover:bg-gray-900 hover:text-white transition duration-300 shadow-lg flex flex-col items-center text-center"
+        >
+          <h4 className="text-lg mb-3 font-semibold text-white">
+            {product.name}
+          </h4>
+          <img
+            src={product.image}
+            className="w-[60%] h-auto rounded-lg"
+            alt={product.name}
+          />
         </div>
-
-
-        <div
-            class="hover:bg-gray-900 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg">
-            <div class="py-4 px-8">
-                <a href="#">
-                    <h4 class="text-lg mb-3 font-semibold">How to be effective at working remotely?</h4>
-                </a>
-
-                <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="w-100"/>
-
-            </div>
-        </div>
-
-        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default ProductCars
+export default ProductCards;

@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 import ECL from "./pages/ESL/ESL";
 import Products from "./pages/product/Product";
+import ProductDetail from "./pages/product/ProductDetail/ProductDetail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ecl" element={<ECL />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>

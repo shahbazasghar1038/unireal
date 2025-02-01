@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./ContactForm.css";
 import Newsletter from "../Newsletter/Newsletter";
 
 const ContactForm = () => {
@@ -13,8 +12,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    console.log(formData); // Handle form submission
   };
 
   const handleChange = (e) => {
@@ -26,80 +24,110 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="contact-section">
-        <div className="contact-container">
-          <div className="contact-info">
-            <h1 className="contact-title">We'd Love to Hear From You!</h1>
-            <p className="contact-description">
-              Any questions? We certainly hope so.
-              <br />
-              Feel free to reach out to us and we'll get
-              <br />
-              back to you as soon as we can.
+      <div className="bg-black py-16 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+          {/* Left Side: Contact Info */}
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-5xl font-extrabold text-white opacity-10">
+              CONTACT US
+            </h1>
+            <h2 className="mt-4 text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#42dcff] via-[#a852ff] to-[#fe43aa]">
+              Wed Love to Hear From You!
+            </h2>
+            <p className="mt-4 text-white text-opacity-80 leading-relaxed">
+              Any questions? We certainly hope so. <br />
+              Feel free to reach out to us and well get back to you as soon as
+              we can.
             </p>
-            <div className="ask-box">
-              <p className="ask-text">
+
+            <div
+              className="mt-6 border p-5 rounded-lg w-full lg:w-1/2"
+              style={{ borderColor: "#A4A4A4" }}
+            >
+              <p className="text-lg font-semibold text-white">
                 Ask us anything
-                <br />
-                <span className="ask-subtext">
-                  Pricing, features, setup or how we can support your business
-                </span>
+              </p>
+              <p className="text-white text-opacity-60 text-sm">
+                Pricing, features, setup or how we can support your business
               </p>
             </div>
-            <div className="contact-details">
-              <p>110 Easter Queenslie Road, Glasggow, Scotland</p>
+
+            <div className="mt-6 text-white text-opacity-80 border-l-4 border-gradient pl-4 space-y-1">
+              <p>110 Easter Queenslie Road, Glasgow, Scotland</p>
               <p>G33 4UL, GB</p>
               <p>+44 141 781 6600</p>
               <p>hello@unireal.io</p>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="name-inputs">
+
+          {/* Right Side: Contact Form (Wider) */}
+          <div className="w-full lg:w-1/2 bg-[#1a1a1a] p-8 rounded-lg shadow-lg">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  style={{ borderColor: "#A4A4A4", color: "#858585" }} // Apply border & text color
+                  className="w-full px-4 py-3 bg-transparent border border-opacity-30 rounded-md text-white placeholder-[#858585] focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  style={{ borderColor: "#A4A4A4", color: "#858585" }} // Apply border & text color
+                  className="w-full px-4 py-3 bg-transparent border border-opacity-30 rounded-md text-white placeholder-[#858585] focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+              </div>
               <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                value={formData.firstName}
+                type="email"
+                name="email"
+                placeholder="Your e-mail"
+                value={formData.email}
                 onChange={handleChange}
-                className="form-input"
+                style={{ borderColor: "#A4A4A4", color: "#858585" }}
+                className="w-full px-4 py-3 bg-transparent border  border-opacity-30 rounded-md placeholder-[#858585] focus:ring-2 focus:ring-blue-400 outline-none"
               />
               <input
                 type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={formData.lastName}
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
                 onChange={handleChange}
-                className="form-input"
+                style={{ borderColor: "#A4A4A4", color: "#858585" }}
+                className="w-full px-4 py-3 bg-transparent border  border-opacity-30 rounded-md placeholder-[#858585] focus:ring-2 focus:ring-blue-400 outline-none"
               />
-            </div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your e-mail"
-              value={formData.email}
-              onChange={handleChange}
-              className="form-input-single"
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="form-input-single"
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={10}
-              className="form-textarea"
-            />
-            <button type="submit" className="submit-button">
-              Submit
-            </button>
-          </form>
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                style={{ borderColor: "#A4A4A4", color: "#858585" }}
+                className="w-full px-4 py-3 bg-transparent border  border-opacity-30 rounded-md text-white placeholder-[#858585] focus:ring-2 focus:ring-blue-400 outline-none resize-none"
+              />
+              <div className="flex justify-center">
+                {" "}
+                {/* Center Button */}
+                <button
+                  type="submit"
+                  className="relative px-8 py-3 text-white font-semibold rounded-full border-2 bg-transparent transition duration-300 shadow-lg overflow-hidden"
+                  style={{
+                    borderImage:
+                      "linear-gradient(to right, #42dcff, #a852ff, #ffb336) 1",
+                    borderRadius: "9999px", // Ensures fully rounded button
+                  }}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <Newsletter />
