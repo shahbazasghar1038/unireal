@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="footer-links-container">
             <div className="footer-links-section">
               <h3 className="footer-heading">Navigation</h3>
-              <div className="line"></div>
+
               <div className="footer-links">
                 <a href="/" className="footer-link">
                   Home

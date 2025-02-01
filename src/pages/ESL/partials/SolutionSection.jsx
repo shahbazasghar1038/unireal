@@ -3,11 +3,11 @@ import React from "react";
 const SolutionSection = () => {
   return (
     <>
-      <div className="max-w-[1328px] mx-auto flex flex-wrap sm:flex-nowrap flex-col sm:flex-row justify-center gap-6 mt-[87px] px-4 sm:px-6 lg:px-8">
-        <div className="relative flex flex-col h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full md:w-[48%] p-6 sm:p-10 rounded-[47px]">
+      <div className="max-w-[1328px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[87px]">
+        <div className="relative flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
           <div className="group w-full h-fit cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <span className="absolute top-0 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
-            <div className="relative z-10 mx-auto text-center">
+            <div className="relative z-10 mx-auto">
               <svg
                 width="161"
                 height="161"
@@ -35,20 +35,20 @@ const SolutionSection = () => {
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="space-y-4 pt-4 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
+              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
                 <p className="ecl-card-text">
-                  The first true cloud architecture of industry. Simple and
-                  flexible operation from any device.
+                  The first true cloud architecture of the industry. Simple and
+                  flexible operation from any device
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex flex-col h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full md:w-[48%] p-6 sm:p-10 rounded-[47px] mt-6 sm:mt-0">
-          <div className="group w-full h-fit cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
+        <div className="relative mt-[104px] flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
+          <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
-            <div className="relative z-10 mx-auto text-center">
+            <div className="relative z-10 mx-auto">
               <svg
                 width="159"
                 height="159"
@@ -348,10 +348,10 @@ const SolutionSection = () => {
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="space-y-4 pt-4 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
+              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
                 <p className="ecl-card-text">
                   Provide the most cost-effective customized solution based on
-                  different industry and requirements.
+                  different industries and requirements
                 </p>
               </div>
             </div>
@@ -359,11 +359,12 @@ const SolutionSection = () => {
         </div>
       </div>
 
-      <div className="max-w-[1328px] mx-auto flex flex-wrap sm:flex-nowrap flex-col sm:flex-row justify-center gap-6 mt-6 px-4 sm:px-6 lg:px-8">
-        <div className="relative flex flex-col h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full md:w-[48%] p-6 sm:p-10 rounded-[47px]">
-          <div className="group w-full h-fit cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
+      {/* SECOND SECTION */}
+      <div className="max-w-[1328px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[-80px]">
+        <div className="relative flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
+          <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
-            <div className="relative z-10 mx-auto text-center">
+            <div className="relative z-10 mx-auto">
               <svg
                 width="141"
                 height="141"
@@ -430,20 +431,20 @@ const SolutionSection = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <div className="space-y-4 pt-4 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
+              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
                 <p className="ecl-card-text">
                   Optimization of promotion and sales channels. Enhancing
-                  consumer interaction and shopping experience.
+                  consumer interaction and shopping experience
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex flex-col h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full md:w-[48%] p-6 sm:p-10 rounded-[47px] mt-6 sm:mt-0">
-          <div className="group w-full h-fit cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
+        <div className="relative mt-[104px] flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
+          <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
-            <div className="relative z-10 mx-auto text-center">
+            <div className="relative z-10 mx-auto">
               <svg
                 width="157"
                 height="157"
@@ -471,10 +472,10 @@ const SolutionSection = () => {
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="space-y-4 pt-4 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
+              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
                 <p className="ecl-card-text">
                   Unireal ESL solution connecting stores with the ESL cloud
-                  platform for lowest cost deployment.
+                  platform for lowest cost deployment
                 </p>
               </div>
             </div>

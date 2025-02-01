@@ -27,7 +27,7 @@ const ProductCards = () => {
   ];
 
   return (
-    <div className="max-w-[1328px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 px-4">
+    <div className="max-w-[1328px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 px-4 pb-10 ">
       {products.map((product) => (
         <div
           key={product.id}

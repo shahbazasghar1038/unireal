@@ -52,11 +52,20 @@ const ContactForm = () => {
               </p>
             </div>
 
-            <div className="mt-6 text-white text-opacity-80 border-l-4 border-gradient pl-4 space-y-1">
-              <p>110 Easter Queenslie Road, Glasgow, Scotland</p>
-              <p>G33 4UL, GB</p>
-              <p>+44 141 781 6600</p>
-              <p>hello@unireal.io</p>
+            <div className="mt-6 text-white text-opacity-80 pl-4 relative">
+              <div
+                className="absolute left-0 top-0 w-1 h-full rounded-full"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, #42dcff, #a852ff, #fe43aa)",
+                }}
+              />
+              <div className="space-y-1">
+                <p>110 Easter Queenslie Road, Glasgow, Scotland</p>
+                <p>G33 4UL, GB</p>
+                <p>+44 141 781 6600</p>
+                <p>hello@unireal.io</p>
+              </div>
             </div>
           </div>
 
@@ -116,11 +125,16 @@ const ContactForm = () => {
                 {/* Center Button */}
                 <button
                   type="submit"
-                  className="relative px-8 py-3 text-white font-semibold rounded-full border-2 bg-transparent transition duration-300 shadow-lg overflow-hidden"
+                  className="relative w-[260px] px-8 py-3 text-white font-medium rounded-full transition-transform hover:scale-105 duration-300"
                   style={{
-                    borderImage:
-                      "linear-gradient(to right, #42dcff, #a852ff, #ffb336) 1",
-                    borderRadius: "9999px", // Ensures fully rounded button
+                    background: "#000",
+                    boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+                    border: "2px solid transparent",
+                    backgroundImage:
+                      "linear-gradient(#000, #000), linear-gradient(90deg, #00f0ff, #7c35ff, #ff9d35)",
+                    backgroundOrigin: "border-box",
+                    backgroundClip: "padding-box, border-box",
+                    WebkitBackgroundClip: "padding-box, border-box",
                   }}
                 >
                   Submit
