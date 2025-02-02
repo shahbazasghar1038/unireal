@@ -1,29 +1,50 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
 import ContactForm from "./components/ContactForm/ContactForm";
-import Footer from "./components/Footer/Footer";
-import "./App.css";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import ECL from "./pages/ESL/ESL";
-import Products from "./pages/product/Product";
+import Home from "./pages/home/home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Product from "./pages/product/Product";
 import ProductDetail from "./pages/product/ProductDetail/ProductDetail";
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div className="app">
+    <>
+      <Router>
         <Header />
+
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <div className="w-full overflow-hidden">
+                <Home />
+              </div>
+            }
+          />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ecl" element={<ECL />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route
+            path="/products"
+            element={
+              <div className="w-full bg-white">
+                <Product />
+              </div>
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={
+              <div className="w-full bg-white pt-[80px] !text-black">
+                <ProductDetail />
+              </div>
+            }
+          />
         </Routes>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
