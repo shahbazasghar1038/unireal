@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Open Sans", serif;
-  font-family: "Helvetica Neue Lt Std", sans-serif!important;
+  font-family: "Helvetica Neue Lt Std", sans-serif !important;
   position: relative;
   /* overflow-x: hidden; */
   @apply bg-[#000000] text-white;
@@ -193,9 +193,9 @@ body {
 }
 
 .slide p {
-  font-family: "Helvetica Neue Lt Std", sans-serif!important;
-  font-size: 30px!important;
-  font-weight: 700!important;
+  font-family: "Helvetica Neue Lt Std", sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
   line-height: 59px;
   position: absolute;
   color: black;
@@ -265,4 +265,7 @@ body {
     background-position: 0% 50%;
     transform: rotate(360deg) translateX(15px) rotate(-360deg);
   }
+}
+motion.div {
+  will-change: transform, top, width;
 }
