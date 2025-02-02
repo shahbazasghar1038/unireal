@@ -83,10 +83,14 @@ const Header = () => {
         {/* <div className="flex h-[80px] w-full max-w-[1250px] items-center justify-between 2xl:max-w-[1452px]"> */}
         <div className="flex h-[80px] w-full items-center justify-between px-[5.3%]">
           <Link to="/">
-            {location.pathname !== "/" &&
-              location.pathname.startsWith("/?") === false && (
-                <img src="/logo.png" className="w-full max-w-[46px]" alt="" />
-              )}
+            {/* {location.pathname !== "/" &&
+              location.pathname.startsWith("/?") === false && ( */}
+            <img
+              src="/logo.png"
+              className="w-full max-w-[46px] sm:translate-x-[-8px] 2xl:translate-x-0"
+              alt=""
+            />
+            {/* )} */}
           </Link>
           <div className="flex items-center gap-2 md:gap-[50px]">
             <div className="hidden items-center justify-center gap-[39px] md:flex">

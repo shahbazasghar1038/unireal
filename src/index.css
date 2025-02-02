@@ -233,21 +233,33 @@ body {
     #a952fe 67.8%,
     #4ecbff 99.21%
   );
+  background-size: 300% 300%; /* Key addition */
   filter: blur(150px);
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   z-index: -1;
-  animation: gradientMove 5s ease-in-out infinite;
+  animation: rotateGradient 5s ease-in-out infinite;
 }
 
-@keyframes gradientMove {
+@keyframes rotateGradient {
   0% {
     background-position: 0% 50%;
+    transform: rotate(0deg) translateX(15px) rotate(0deg);
+  }
+  25% {
+    background-position: 50% 100%;
+    transform: rotate(90deg) translateX(15px) rotate(-90deg);
   }
   50% {
     background-position: 100% 50%;
+    transform: rotate(180deg) translateX(15px) rotate(-180deg);
+  }
+  75% {
+    background-position: 50% 0%;
+    transform: rotate(270deg) translateX(15px) rotate(-270deg);
   }
   100% {
     background-position: 0% 50%;
+    transform: rotate(360deg) translateX(15px) rotate(-360deg);
   }
 }
