@@ -1,13 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+body {
+  font-family: "Open Sans", serif;
+  position: relative;
+  @apply bg-[#000000] text-white;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.marquee-scroll-animation {
+  animation: scroll 35s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-33.33% - 5px));
+  }
+}
+.image-color-overlay {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(190deg)
+    brightness(50%);
+  mix-blend-mode: multiply;
+}
+.div-bg-gradient {
+  background: linear-gradient(
+    90deg,
+    #58beff 0%,
+    #bb4eee 28.76%,
+    #fe4996 64.51%,
+    #fea042 100%
+  );
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-heading {
+  background: linear-gradient(
+    90deg,
+    #4395be 0%,
+    #b650ef 29%,
+    #f948a3 62%,
+    #fe9748 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s ease-in-out infinite;
+}
+
+@keyframes gradientFade {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-bg-div {
+  background: linear-gradient(
+    269.08deg,
+    #fe9748 2.58%,
+    #fe489e 21.41%,
+    #a952fe 67.8%,
+    #4ecbff 99.21%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+.gradient-hover-effect {
+  position: relative;
+  background: linear-gradient(
+    269.08deg,
+    #fe9748 2.58%,
+    #fe489e 21.41%,
+    #a952fe 67.8%,
+    #4ecbff 99.21%
+  );
+  /* padding: 20px; */
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-hover-effect::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  background: linear-gradient(
+    269.08deg,
+    #fe9748 2.58%,
+    #fe489e 21.41%,
+    #a952fe 67.8%,
+    #4ecbff 99.21%
+  );
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.gradient-hover-effect:hover::before {
+  opacity: 1;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: floatAnimation 2s ease-in-out infinite;
 }

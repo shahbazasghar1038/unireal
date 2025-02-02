@@ -1,25 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
 import ContactForm from "./components/ContactForm/ContactForm";
-import Footer from "./components/Footer/Footer";
-import "./App.css";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import ECL from "./pages/ESL/ESL";
+import Home from "./pages/home/home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div className="app">
+    <>
+      <Router>
         <Header />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ecl" element={<ECL />} />
         </Routes>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;

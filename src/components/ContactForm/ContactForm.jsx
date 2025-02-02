@@ -29,11 +29,11 @@ const ContactForm = () => {
       <div className="contact-section">
         <div className="contact-container">
           <div className="contact-info">
-            <h1 className="contact-title">We'd Love to Hear From You!</h1>
+            <h1 className="contact-title">We&apos;d Love to Hear From You!</h1>
             <p className="contact-description">
               Any questions? We certainly hope so.
               <br />
-              Feel free to reach out to us and we'll get
+              Feel free to reach out to us and we&apos;ll get
               <br />
               back to you as soon as we can.
             </p>
