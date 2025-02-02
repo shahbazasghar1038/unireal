@@ -8,11 +8,11 @@ const Footer = () => {
         <img src="/arr.svg" className="floating cursor-pointer" alt="" />
       </div>
       <div className="relative flex w-full flex-col items-center justify-center">
-        <div className="relative flex w-full items-center justify-center">
+        <div className="relative flex w-full max-w-[100%] items-center justify-center overflow-hidden">
           <img
             src="/footer-gb-img.png"
             alt=""
-            className="pointer-events-none absolute left-0 z-[-1] h-auto w-full scale-[2] md:scale-[1] lg:top-0 lg:h-[105%]"
+            className="pointer-events-none absolute left-0 z-[-1] h-auto w-full max-w-[99vw] scale-[2] md:scale-[1] lg:top-0 lg:h-[105%]"
           />
           <div className="w-full max-w-[1250px] px-5 2xl:max-w-[1452px] 2xl:px-0">
             <div className="flex w-full flex-col items-start justify-between gap-[50px] pb-[28px] pt-[37px] md:flex-row lg:gap-0 xl:h-[460px] 2xl:h-[550px]">

@@ -12,7 +12,14 @@ const App = () => {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <div className="w-full overflow-hidden">
+                <Home />
+              </div>
+            }
+          />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/ecl" element={<ECL />} />
         </Routes>

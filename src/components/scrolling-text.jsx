@@ -10,13 +10,13 @@ const ScrollingText = () => {
     <>
       <motion.div
         style={{ width, top, x: translateX }}
-        className="fixed top-[280px] z-[9999] hidden w-full min-w-[150px] sm:flex"
+        className="fixed top-[280px] z-[9999] hidden w-full min-w-[150px] max-w-[99vw] sm:flex"
       >
         <img src="/unireal.png" className="mx-auto w-full max-w-[90%]" alt="" />
       </motion.div>
       <motion.div
         style={{ width, top: top2, x: translateX }}
-        className="fixed top-[280px] z-[9999] w-full min-w-[150px] sm:hidden"
+        className="fixed top-[280px] z-[9999] w-full min-w-[150px] max-w-[99vw] sm:hidden"
       >
         <img src="/unireal.png" className="mx-auto w-full max-w-[90%]" alt="" />
       </motion.div>

@@ -5,11 +5,11 @@ const HeroSection = () => {
     <>
       <ScrollingText />
       <div className="relative flex w-full flex-col items-center justify-center">
-        {/* <img
-        src="/footer-gradient.png"
-        className="pointer-events-none absolute top-[-32px] mx-auto w-full max-w-[100%] lg:max-w-[75%]"
-        alt=""
-      /> */}
+        <img
+          src="/footer-gradient.png"
+          className="pointer-events-none absolute top-[-32px] mx-auto w-full max-w-[100%] lg:max-w-[75%]"
+          alt=""
+        />
         <svg
           width={611}
           height={334}
