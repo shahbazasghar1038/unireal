@@ -5,10 +5,10 @@ const ECLSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [
-    { id: 1, imageUrl: slide1 },
-    { id: 2, imageUrl: slide1 },
-    { id: 3, imageUrl: slide1 },
-    { id: 4, imageUrl: slide1 },
+    { id: 1, imageUrl: slide1,content:'Fresh Food',subContent:'' },
+    { id: 2, imageUrl: slide1,content:'Retail',subContent:'' },
+    { id: 3, imageUrl: slide1,content:'Pharmacy',subContent:'' },
+    { id: 4, imageUrl: slide1,content:'Digital Signage',subContent:'' },
   ];
 
   const handleSlideClick = (index) => {
@@ -24,7 +24,8 @@ const ECLSlider = () => {
           onClick={() => handleSlideClick(index)}
           style={{ backgroundImage: `url(${slide.imageUrl})` }}
         >
-          <p>Slide {slide.id}</p>
+          <p>{slide.content}<br/></p>
+          <span>{slide.subContent}</span>
         </div>
       ))}
     </div>
