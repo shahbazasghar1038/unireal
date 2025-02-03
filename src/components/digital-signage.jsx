@@ -1,6 +1,12 @@
 import { ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const DigitalSignage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleCanPlay = () => {
+    setIsLoading(false); // Video is ready to play
+  };
   return (
     <div className="flex flex-col items-center justify-center px-5 pb-[95px] pt-[20px] sm:pt-[30px]">
       <div className="flex w-full max-w-[600px] flex-col items-center justify-center lg:max-w-[750px] xl:max-w-[900px] 2xl:max-w-[1067px]">
@@ -17,13 +23,19 @@ const DigitalSignage = () => {
               className="h-full w-full object-cover"
               alt=""
             /> */}
-            <div className="h-full w-full bg-gray-800">
+            <div className="relative h-full w-full bg-gray-800">
+              {isLoading && (
+                <div className="flex h-full w-full animate-pulse items-center justify-center bg-black text-sm">
+                  loading...
+                </div>
+              )}
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 controls={false}
+                onCanPlay={handleCanPlay}
                 className="h-full w-full object-cover"
               >
                 <source src="/V2.mp4" type="video/mp4" />

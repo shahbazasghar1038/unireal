@@ -1,6 +1,12 @@
 import { ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const ZeroPaper = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleCanPlay = () => {
+    setIsLoading(false); // Video is ready to play
+  };
   return (
     <div className="relative flex flex-col items-center justify-center px-5 pb-[50px] pt-[40px] sm:pb-[95px] sm:pt-[70px]">
       <img
@@ -35,13 +41,19 @@ const ZeroPaper = () => {
         </h1>
         <div className="mt-[40px] aspect-[783/746] w-full rounded-[14px] p-1 sm:mt-[54px] sm:rounded-[30px] sm:p-1.5">
           <div className="relative h-full w-full overflow-hidden rounded-[11px] bg-[black] sm:rounded-[27px]">
-            <div className="h-full w-full bg-gray-800">
+            <div className="relative h-full w-full bg-gray-800">
+              {isLoading && (
+                <div className="flex h-full w-full animate-pulse items-center justify-center bg-black text-sm">
+                  loading...
+                </div>
+              )}
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 controls={false}
+                onCanPlay={handleCanPlay}
                 className="h-full w-full object-cover"
               >
                 <source src="/V2.mp4" type="video/mp4" />

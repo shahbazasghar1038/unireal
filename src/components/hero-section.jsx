@@ -1,6 +1,13 @@
+import { useState } from "react";
 import ScrollingText from "./scrolling-text";
 
 const HeroSection = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleCanPlay = () => {
+    setIsLoading(false); // Video is ready to play
+  };
+
   return (
     <>
       <ScrollingText />
@@ -75,13 +82,19 @@ const HeroSection = () => {
               className="h-full w-full rounded-[5px] object-cover"
               alt=""
             /> */}
-              <div className="h-full w-full bg-gray-800">
+              <div className="relative h-full w-full bg-gray-800">
+                {isLoading && (
+                  <div className="flex h-full w-full animate-pulse items-center justify-center bg-black text-sm">
+                    loading...
+                  </div>
+                )}
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
                   controls={false}
+                  onCanPlay={handleCanPlay}
                   className="h-full w-full object-cover"
                 >
                   <source src="/V1.mp4" type="video/mp4" />
