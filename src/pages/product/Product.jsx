@@ -36,30 +36,35 @@ const Product = () => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="h-[80px] w-full bg-white"></div>
+      <div className="mx-auto max-w-7xl bg-white p-6">
         {/* Breadcrumb */}
-        <div className="text-gray-500 text-sm mb-4">
+        <div className="mb-4 text-sm text-gray-500">
           <span className="text-gray-400">Home</span> &gt;{" "}
-          <span className="font-medium">Products</span>
+          <span className="font-medium text-gray-600">Products</span>
         </div>
 
         {/* Header Section */}
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold">Products</h1>
+        <div className="mb-6 flex items-center justify-between">
+          <h1 className="text-2xl font-bold text-black">Products</h1>
 
           {/* Sorting & View Toggle */}
           <div className="flex items-center space-x-4">
-            <span className="text-gray-600 cursor-pointer">Sort by ▾</span>
+            <span className="cursor-pointer text-gray-600">Sort by ▾</span>
 
             <button
               onClick={() => setGridView(true)}
-              className={`p-2 rounded-md ${gridView ? "bg-gray-200" : ""}`}
+              className={`p-2 text-black rounded-md ${
+                gridView ? "bg-gray-200" : ""
+              }`}
             >
               <Grid size={20} />
             </button>
             <button
               onClick={() => setGridView(false)}
-              className={`p-2 rounded-md ${!gridView ? "bg-gray-200" : ""}`}
+              className={`p-2 text-black rounded-md ${
+                !gridView ? "bg-gray-200" : ""
+              }`}
             >
               <AlignJustify size={20} />
             </button>
@@ -81,14 +86,14 @@ const Product = () => {
               state={{ product }} // ✅ Pass product data (including image)
               className="flex flex-col items-center"
             >
-              <div className="bg-gray-100 rounded-lg overflow-hidden flex flex-col items-center p-4 transition-all hover:shadow-lg w-full">
+              <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-[311px] object-contain w-full transition-transform duration-300 ease-in-out transform hover:scale-110"
+                  className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
-              <p className="mt-4 text-left font-medium text-gray-800 w-full">
+              <p className="mt-4 w-full text-left font-medium text-gray-800">
                 {product.name}
               </p>
             </Link>

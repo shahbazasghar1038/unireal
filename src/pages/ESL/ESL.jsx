@@ -18,7 +18,7 @@ const ECL = () => {
 
       <SolutionSection />
 
-      <p className="ecl-heading pb-6 mt-25">Our Products</p>
+      <p className="ecl-heading mt-25 pb-6">Our Products</p>
 
       <ProductCars />
     </div>
