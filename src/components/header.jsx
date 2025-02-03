@@ -42,7 +42,7 @@ const Header = () => {
             Company
           </Link>
           <Link
-            to="/ecl"
+            to="/esl"
             onClick={() => setOpen(false)}
             className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
           >
@@ -107,7 +107,7 @@ const Header = () => {
                 Company
               </Link>
               <Link
-                to="/ecl"
+                to="/esl"
                 className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
               >
                 Services

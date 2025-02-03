@@ -23,7 +23,7 @@ const App = () => {
             }
           />
           <Route path="/contact" element={<ContactForm />} />
-          <Route path="/ecl" element={<ECL />} />
+          <Route path="/esl" element={<ECL />} />
           <Route
             path="/products"
             element={
