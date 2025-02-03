@@ -35,7 +35,6 @@ body {
   font-size: 25px;
   line-height: 53px;
 }
-
 .slider {
   display: flex;
   gap: 10px;
@@ -43,33 +42,150 @@ body {
   overflow: hidden;
 }
 
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-shadow: none;
+}
+
+.slide-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.slide-text {
+  font-size: 1.2rem;
+  max-width: 300px;
+  line-height: 1.5;
+}
+/* Default styling for all slides */
+/* Default styling for all slides */
+/* Default styling for all slides */
 .slide {
-  flex: 1;
-  height: 400px;
+  flex: 1; /* Each slide takes equal space initially */
+  height: 400px; /* Reduce height slightly */
   background-size: cover;
   background-position: center;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: flex 0.3s ease-in-out; /* Smooth transition */
   position: relative;
+  overflow: hidden;
 }
 
-.slide p {
-  position: absolute;
-  bottom: 10px;
-  left: 5px;
-  color: white;
-  font-size: 1rem;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
+/* Default styling for inactive slides */
 .slide:not(.active) {
-  flex: 0.5;
+  flex: 0.6; /* Make inactive slides slightly larger */
   filter: grayscale(100%);
 }
 
+/* Active slide with white shadow overlay */
 .slide.active {
-  flex: 2;
-  filter: none;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  flex: 1.8; /* Reduce expanded size slightly */
+}
+
+/* Add a smooth white overlay on the expanded slide */
+.slide.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+/* Default text styling */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-shadow: none;
+}
+
+/* Default white text for all slides */
+.slide-heading,
+.slide-text {
+  color: white;
+}
+
+/* Change text color to black ONLY for the expanded slide */
+.slide.active .slide-heading,
+.slide.active .slide-text {
+  color: black !important;
+}
+
+/* ---------- Web View: Adjust Width of Slides (Only for screens larger than 768px) ---------- */
+@media (min-width: 769px) {
+  .slider {
+    display: flex;
+    gap: 10px; /* Reduce gap */
+    width: 80%; /* Reduce overall width slightly */
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  /* Reduce the effect of expansion */
+  .slide:not(.active) {
+    flex: 0.5; /* Increase size of inactive slides */
+  }
+
+  .slide.active {
+    flex: 2; /* Reduce the expansion size */
+  }
+}
+
+/* ---------- Mobile View (Keep the same behavior for small screens) ---------- */
+@media (max-width: 768px) {
+  .slider {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+    justify-content: flex-start;
+  }
+
+  .slide {
+    min-width: 87%; /* Make slides slightly smaller on mobile */
+    height: 280px; /* Reduce height */
+  }
+
+  .slide-content {
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .slide-heading {
+    font-size: 1.5rem;
+  }
+
+  .slide-text {
+    font-size: 1rem;
+  }
+
+  /* Only apply shadow effect on active slide in mobile */
+  .slide.active::before {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Ensure only the active slide’s text turns black */
+  .slide.active .slide-heading,
+  .slide.active .slide-text {
+    color: black !important;
+  }
+
+  .ecl-card-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 43px;
+  }
 }
