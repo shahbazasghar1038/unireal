@@ -6,6 +6,7 @@ import Home from "./pages/home/home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from "./pages/product/Product";
 import ProductDetail from "./pages/product/ProductDetail/ProductDetail";
+import CareersPage from "./pages/careers/CareersPage";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/esl" element={<ECL />} />
+          <Route path="/career" element={<CareersPage />} />
           <Route
             path="/products"
             element={
