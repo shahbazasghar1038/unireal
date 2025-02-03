@@ -25,8 +25,8 @@ const DigitalSignage = () => {
             /> */}
             <div className="relative h-full w-full bg-gray-800">
               {isLoading && (
-                <div className="flex h-full w-full animate-pulse items-center justify-center bg-black text-sm">
-                  loading...
+                <div className="flex h-full w-full animate-pulse items-center justify-center overflow-hidden bg-black text-sm">
+                  Loading...
                 </div>
               )}
               <video
