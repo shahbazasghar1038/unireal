@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import slide1 from "../../../assets/slide1.png";
 
 const ECLSlider = () => {

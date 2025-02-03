@@ -3,7 +3,7 @@ import React from "react";
 const SolutionSection = () => {
   return (
     <>
-      <div className="max-w-[1328px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[87px]">
+      <div className=" leftMargin max-w-[1328px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[87px]">
         <div className="relative flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
           <div className="group w-full h-fit cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <span className="absolute top-0 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
@@ -360,7 +360,7 @@ const SolutionSection = () => {
       </div>
 
       {/* SECOND SECTION */}
-      <div className="max-w-[1328px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[-80px]">
+      <div className=" topMargin max-w-[1328px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[-80px]">
         <div className="relative flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
           <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
