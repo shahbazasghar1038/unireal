@@ -10,7 +10,7 @@ const Service = () => {
             Learn more
           </button>
         </div>
-        <img src="/ai-1.png" className="h-full w-full object-cover" alt="" />
+        <img src="/ai-1.1.png" className="h-full w-full object-cover" alt="" />
       </div>
       <div className="group relative aspect-[939/684] w-full overflow-hidden rounded-[15px] lg:rounded-[31px]">
         <div className="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-end gap-[20px] bg-grid-custom-gradient pb-[30px] opacity-0 transition-all group-hover:opacity-[1] 2xl:gap-[27px] 2xl:pb-[40px]">
