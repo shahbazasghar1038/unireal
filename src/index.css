@@ -280,9 +280,6 @@ body {
   .slide.active {
     flex: 2; /* Reduce the expansion size */
   }
-  .custom-job-card-property{
-    max-width: 100%;
-  }
 }
 
 /* ---------- Mobile View (Keep the same behavior for small screens) ---------- */
