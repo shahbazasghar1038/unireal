@@ -11,27 +11,27 @@ const ZeroPaper = () => {
     <div className="relative flex flex-col items-center justify-center px-5 pb-[50px] pt-[40px] sm:pb-[95px] sm:pt-[70px]">
       <img
         src="/vector-bg-1.svg"
-        className="absolute right-0 top-[10%] z-[-1] max-w-[100px] blur-[50px] sm:max-w-[240px] sm:blur-[140px] 2xl:top-[8%] 2xl:max-w-[290px] 2xl:blur-[140px]"
+        className="absolute right-0 top-[10%] z-[-1] max-w-[100px] blur-[50px] sm:max-w-[120px] sm:blur-[90px] 2xl:top-[8%] 2xl:max-w-[180px] 2xl:blur-[120px]"
         alt=""
       />
       <img
         src="/vector-bg-1.svg"
         style={{ transform: "scaleX(-1)" }}
-        className="absolute left-0 top-[50%] z-[-1] max-w-[100px] blur-[40px] sm:max-w-[240px] sm:blur-[140px] 2xl:max-w-[280px]"
+        className="absolute left-0 top-[50%] z-[-1] max-w-[100px] blur-[40px] sm:max-w-[120px] sm:blur-[100px] 2xl:max-w-[180px]"
         alt=""
       />
       <img
         src="/vector-bg-2.svg"
-        className="absolute right-0 top-[30%] z-[-1] max-w-[100px] blur-[50px] sm:max-w-[180px] sm:blur-[200px] 2xl:top-[30%] 2xl:max-w-[280px] 2xl:blur-[200px]"
+        className="absolute right-0 top-[30%] z-[-1] max-w-[100px] blur-[50px] sm:max-w-[100px] sm:blur-[90px] 2xl:top-[30%] 2xl:max-w-[140px] 2xl:blur-[160px]"
         alt=""
       />
       <img
         src="/vector-bg-2.svg"
         style={{ transform: "scaleX(-1)" }}
-        className="absolute left-0 top-[65%] z-[-1] max-w-[100px] blur-[40px] sm:max-w-[200px] sm:blur-[180px] 2xl:max-w-[270px]"
+        className="absolute left-0 top-[65%] z-[-1] max-w-[100px] blur-[40px] sm:max-w-[110px] sm:blur-[120px] 2xl:max-w-[150px] 2xl:blur-[160px]"
         alt=""
       />
-      <div className="flex w-full max-w-[650px] flex-col items-center justify-center 2xl:max-w-[783px]">
+      <div className="flex w-full max-w-[900px] flex-col items-center justify-center 2xl:max-w-[1000px]">
         <h1 className="text-center text-[20px] font-[700] leading-[1.4] sm:text-[35px] 2xl:text-[40px]">
           Dynamic Pricing, Instant Updates
           <br />{" "}
@@ -39,7 +39,7 @@ const ZeroPaper = () => {
             Zero Paper Waste
           </span>
         </h1>
-        <div className="mt-[40px] aspect-[783/746] w-full rounded-[14px] p-1 sm:mt-[54px] sm:rounded-[30px] sm:p-1.5">
+        <div className="mt-[40px] aspect-[1000/556] w-full rounded-[14px] p-1 sm:mt-[54px] sm:rounded-[30px] sm:p-1.5">
           <div className="relative h-full w-full overflow-hidden rounded-[11px] bg-[black] sm:rounded-[27px]">
             <div className="relative h-full w-full bg-gray-800">
               {isLoading && (
@@ -54,7 +54,7 @@ const ZeroPaper = () => {
                 playsInline
                 controls={false}
                 onCanPlay={handleCanPlay}
-                className="h-full w-full object-cover"
+                className="h-[101%] w-full object-cover"
               >
                 <source src="/V1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

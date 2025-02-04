@@ -73,6 +73,17 @@ const HeroSection = () => {
             <div className="absolute top-0 z-[-1] h-[250px] w-full bg-custom-gradient blur-[6px] md:h-[600px] md:blur-[15px] xl:blur-[16px] 2xl:h-[578px] 2xl:blur-[16px]"></div>
             <div className="relative aspect-[2/1.3] w-full overflow-hidden rounded-[5px] bg-[black] sm:aspect-[2/1]">
               <div className="relative h-full w-full !border-[16px] !border-[black] bg-gray-800">
+                <div className="absolute left-0 top-0 flex h-[101%] w-full flex-col items-center justify-end bg-gradient-to-t from-[black]/80 to-transparent pb-[13px] sm:pb-[30px] xl:pb-[55px] 2xl:pb-[60px]">
+                  <h1 className="text-center text-[15px] font-[700] leading-[1.2] sm:text-[23px] xl:text-[35px] 2xl:text-[40px]">
+                    Smart Displays, Smarter Insights
+                    <br />
+                    Redefining Engagement with AI
+                  </h1>
+                  <p className="mt-1 text-center text-[13px] font-[500] leading-[1.1] text-[#E5E5E5] sm:mt-3 sm:text-sm sm:font-[500] xl:text-[23px] 2xl:mt-5 2xl:text-[26px]">
+                    Effortless screen management - <br className="sm:hidden" />{" "}
+                    anytime, anywhere
+                  </p>
+                </div>
                 {isLoading && (
                   <div className="flex h-full w-full animate-pulse items-center justify-center bg-black text-sm">
                     Loading...
