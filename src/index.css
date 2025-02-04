@@ -225,7 +225,7 @@ body {
   flex: 1.8; /* Reduce expanded size slightly */
 }
 .custom-job-card-property{
-  max-width: 60%;
+  max-width: 65%;
   height: 8rem;
 }
 
