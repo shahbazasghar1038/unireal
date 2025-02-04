@@ -224,6 +224,10 @@ body {
 .slide.active {
   flex: 1.8; /* Reduce expanded size slightly */
 }
+.custom-job-card-property{
+  max-width: 60%;
+  height: 8rem;
+}
 
 /* Add a smooth white overlay on the expanded slide */
 .slide.active::before {
@@ -275,6 +279,9 @@ body {
 
   .slide.active {
     flex: 2; /* Reduce the expansion size */
+  }
+  .custom-job-card-property{
+    max-width: 100%;
   }
 }
 
@@ -328,6 +335,9 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 43px;
+  }
+  .custom-job-card-property{
+    max-width: 100%;
   }
 }
 
