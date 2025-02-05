@@ -14,7 +14,7 @@ import product10 from "../../assets/product10.png";
 import product11 from "../../assets/product11.png";
 import product12 from "../../assets/product12.png";
 import Newsletter from "../../components/Newsletter/Newsletter";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const products = [
   { id: 1, name: "Stand Alone Digital Signage", image: product1 },
@@ -32,6 +32,7 @@ const products = [
 ];
 
 const Product = () => {
+  const navigate = useNavigate();
   const [gridView, setGridView] = useState(true);
 
   return (
@@ -39,9 +40,22 @@ const Product = () => {
       <div className="h-[80px] w-full bg-white"></div>
       <div className="mx-auto max-w-7xl bg-white p-6">
         {/* Breadcrumb */}
-        <div className="mb-4 text-sm text-gray-500">
-          <span className="text-gray-400">Home</span> &gt;{" "}
-          <span className="font-medium text-gray-600">Products</span>
+        <div className="flex items-center space-x-2 ">
+          <span
+            className="cursor-pointer text-gray-400"
+            onClick={() => navigate("/")}
+          >
+            Home
+          </span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+          </svg>
+          <span
+            className="cursor-pointer text-black font-semibold"
+            onClick={() => navigate("/products")}
+          >
+            Products
+          </span>
         </div>
 
         {/* Header Section */}
