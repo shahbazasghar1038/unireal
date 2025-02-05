@@ -248,9 +248,9 @@ const ProductDetail = () => {
         <span className=" color-black font-semibold">{product.name}</span>
       </div>
 
-      <div className="grid grid-cols-[0.5fr_2fr_1fr] gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-[0.5fr_2fr_1fr] gap-6 md:gap-12">
         {/* Left Side: Larger Thumbnails */}
-        <div className="flex flex-col items-center space-y-6 max-h-[750px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300">
+        <div className="flex flex-row md:flex-col items-center space-x-2 md:space-x-0 md:space-y-6 max-h-[750px] overflow-x-auto md:overflow-y-auto">
           {/* Previous Image Button */}
           <button
             onClick={handlePrevious}
@@ -312,16 +312,16 @@ const ProductDetail = () => {
         </div>
 
         {/* Main Image (Larger) */}
-        <div className="flex flex-1 items-center justify-center rounded-lg bg-gray-100 p-10 shadow-lg w-full max-h-[750px]">
+        <div className="flex flex-1 items-center justify-center rounded-lg bg-gray-100 p-4 md:p-10 shadow-lg w-full max-h-[500px] md:max-h-[750px]">
           <img
             src={products[activeIndex].image} // Corrected to use selected product image
             alt={products[activeIndex].name}
-            className="w-full max-h-[550px] object-contain"
+            className="w-full max-h-[510px] object-contain"
           />
         </div>
 
         {/* Right Side: Product Information (Smaller) */}
-        <div className="flex flex-col space-y-6 w-[500px]">
+        <div className="flex flex-col space-y-6 w-full md:w-[500px]">
           <h1 className="text-3xl font-bold">{products[activeIndex].name}</h1>
 
           {/* Available Sizes */}
