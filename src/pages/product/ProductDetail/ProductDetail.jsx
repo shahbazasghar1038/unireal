@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+// Import product images
 import product1 from "../../../assets/product1.png";
 import product2 from "../../../assets/product2.png";
 import product3 from "../../../assets/product3.png";
@@ -13,79 +14,68 @@ import product10 from "../../../assets/product10.png";
 import product11 from "../../../assets/product11.png";
 import product12 from "../../../assets/product12.png";
 
+const products = [
+  { id: 1, name: "Stand Alone Digital Signage", image: product1 },
+  { id: 2, name: "Outdoor Digital Signage", image: product2 },
+  { id: 3, name: "Multimedia Kiosk", image: product3 },
+  { id: 4, name: "Hand Sanitizer Kiosk", image: product4 },
+  { id: 5, name: "Face Recognition Kiosk", image: product5 },
+  { id: 6, name: "Window Advertising LCD", image: product6 },
+  { id: 7, name: "LCD in Bus Station", image: product7 },
+  { id: 8, name: "Touch Screen Table", image: product8 },
+  { id: 9, name: "Taxi Top LCD", image: product9 },
+  { id: 10, name: "LCD Video Wall", image: product10 },
+  { id: 11, name: "Wall Mount LCD", image: product11 },
+  { id: 12, name: "Stretched LCD", image: product12 },
+];
+
 const ProductDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const products = location.state?.products || []; // Get all products
-  const currentProductId = location.state?.currentProductId; // Get current product ID
-  const clickedImageIndex = location.state?.clickedImageIndex || 0; // Retrieve the clicked image index
+  const currentProductId = location.state?.currentProductId; // Get selected product ID
 
-  // Find the current product
+  // Find the selected product
   const currentIndex = products.findIndex((p) => p.id === currentProductId);
   const product = products[currentIndex];
 
-  // Handle case when product is not found
   if (!product) {
     return <div className="text-center text-red-500">Product not found.</div>;
   }
 
-  // All product images (replace with actual image data)
-  const allImages = [
-    product1,
-    product2,
-    product3,
-    product4,
-    product5,
-    product6,
-    product7,
-    product8,
-    product9,
-    product10,
-    product11,
-    product12,
-  ];
+  // State to track the active image index, initialized to the selected product
+  const [activeIndex, setActiveIndex] = useState(currentIndex);
 
-  // State to track the active image index (initialize from clicked index)
-  const [activeIndex, setActiveIndex] = useState(clickedImageIndex);
-
-  // Update active image index when product changes or when clicked image changes
-  useEffect(() => {
-    setActiveIndex(clickedImageIndex); // Set active index based on the clicked index
-  }, [product, clickedImageIndex]);
-
-  // Function to get random index for previous image (to prevent repeating images)
-  const getRandomIndex = () => {
-    return Math.floor(Math.random() * allImages.length);
-  };
-
-  // Handle Previous Image
+  // Handle Previous & Next Image
   const handlePrevious = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : getRandomIndex()
+      prevIndex === 0 ? products.length - 1 : prevIndex - 1
     );
   };
 
-  // Handle Next Image
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex < allImages.length - 1 ? prevIndex + 1 : 0
+      prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
-
-  // Current, Previous, and Next Image Logic
-  const images = [
-    allImages[(activeIndex - 1 + allImages.length) % allImages.length], // Previous Image
-    allImages[activeIndex], // Current Image
-    allImages[(activeIndex + 1) % allImages.length], // Next Image
-  ];
 
   return (
     <div className="max-w-[1250px] mx-auto bg-white p-6">
       {/* Breadcrumb */}
       <div className="mb-4 text-sm text-gray-500">
-        <span className="text-gray-400">Home</span> &gt;{" "}
-        <span className="text-gray-400">Products</span> &gt;{" "}
-        <span className="font-medium">{product.name}</span>
+        <span
+          className="text-gray-400 cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          Home
+        </span>{" "}
+        &gt;{" "}
+        <span
+          className="text-gray-400 cursor-pointer"
+          onClick={() => navigate("/products")}
+        >
+          Products
+        </span>{" "}
+        &gt; <span className="font-medium">{product.name}</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-12">
@@ -113,15 +103,23 @@ const ProductDetail = () => {
             </button>
 
             {/* Thumbnails for image navigation */}
-            {images.map((img, index) => (
+            {[
+              products[(activeIndex - 1 + products.length) % products.length], // Previous
+              products[activeIndex], // Current
+              products[(activeIndex + 1) % products.length], // Next
+            ].map((imgProduct, index) => (
               <img
-                key={index}
-                src={img}
+                key={imgProduct.id}
+                src={imgProduct.image}
                 alt={`Thumbnail ${index}`}
                 className={`h-24 w-20 cursor-pointer rounded-md border object-cover transition ${
                   index === 1 ? "border-gray-500" : "border-gray-200"
                 }`}
-                onClick={() => setActiveIndex(index)} // Click to update main image
+                onClick={() =>
+                  setActiveIndex(
+                    products.findIndex((p) => p.id === imgProduct.id)
+                  )
+                }
               />
             ))}
 
@@ -145,11 +143,11 @@ const ProductDetail = () => {
             </button>
           </div>
 
-          {/* Main Image with Enhanced Width */}
+          {/* Main Image */}
           <div className="flex flex-1 items-center justify-center rounded-lg bg-gray-100 p-8 shadow-lg w-full max-h-[724px]">
             <img
-              src={allImages[activeIndex]} // Main image updates dynamically based on activeIndex
-              alt={product.name}
+              src={products[activeIndex].image} // Corrected to use selected product image
+              alt={products[activeIndex].name}
               className="w-full max-h-[600px] object-contain"
             />
           </div>
@@ -157,7 +155,7 @@ const ProductDetail = () => {
 
         {/* Right Side: Product Information */}
         <div className="flex flex-col space-y-8">
-          <h1 className="text-5xl font-bold">{product.name}</h1>
+          <h1 className="text-5xl font-bold">{products[activeIndex].name}</h1>
 
           {/* Available Sizes */}
           <div>
@@ -168,7 +166,7 @@ const ProductDetail = () => {
                   key={size}
                   className="rounded-md bg-gray-200 px-6 py-3 text-md font-medium"
                 >
-                  {size}
+                  {size}"
                 </span>
               ))}
             </div>
@@ -178,7 +176,7 @@ const ProductDetail = () => {
           <h3 className="mb-2 font-semibold">Specifications:</h3>
           <div className="rounded-lg bg-gray-100 px-8 py-4 shadow-lg">
             <div className="flex justify-between pb-2 text-md">
-              <span className="font-medium font-semibold">Screen</span>
+              <span className="font-medium">Screen</span>
             </div>
             <div className="flex justify-between pb-2 text-md">
               <span className="font-medium">Panel Brand</span>
