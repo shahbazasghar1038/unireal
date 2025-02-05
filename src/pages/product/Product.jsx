@@ -83,7 +83,7 @@ const Product = () => {
             <Link
               key={product.id}
               to={`/product/${product.id}`}
-              state={{ product }} // ✅ Pass product data (including image)
+              state={{ products, currentProductId: product.id }} // ✅ Send all products & current ID
               className="flex flex-col items-center"
             >
               <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
