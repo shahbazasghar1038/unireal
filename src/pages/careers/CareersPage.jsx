@@ -15,7 +15,7 @@ const CareersPage = () => {
         </p>
         <button
           type="submit"
-          className="relative w-[260px] rounded-full px-8 py-3 my-16 font-medium text-white transition-transform duration-300 hover:scale-105"
+          className="gradient-hover-effect relative w-[260px] rounded-full px-8 py-3 my-16 font-medium text-white transition-transform duration-300 hover:scale-105"
           style={{
             background: "#000",
             boxShadow: "0 0 10px rgba(0,0,0,0.1)",
@@ -62,7 +62,7 @@ const CareersPage = () => {
             .map((_, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between bg-[#1D1D1F] p-6 rounded-[30px] mx-auto max-w-screen-xl"
+                className="custom-job-card-property flex items-center justify-between bg-[#1D1D1F] p-6 rounded-[30px] mx-auto max-w-screen-xl"
               >
                 <div>
                   <h3 className="text-lg font-bold">Sales Engineer</h3>
@@ -91,9 +91,9 @@ const CareersPage = () => {
 
       {/* Contact Section */}
       <section className="text-center py-16 max-w-screen-xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold">Drop us a line</h2>
+        <h2 className="text-2xl sm:text-3xl">Drop us a line</h2>
         <p className="mt-4 text-gray-300 text-[25px]   max-w-[800px] mx-auto text-gray-300">
-          If you haven t found the right job for you, don t hesitate to get in
+          If you haven't found the right job for you, don't hesitate to get in
           touch with us.We are growing and always looking for people who can
           join the journey and help shape the future of recruitment technology.
         </p>

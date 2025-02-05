@@ -7,13 +7,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from "./pages/product/Product";
 import ProductDetail from "./pages/product/ProductDetail/ProductDetail";
 import CareersPage from "./pages/careers/CareersPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <>
       <Router>
         <Header />
-
+        <ScrollToTop/>
         <Routes>
           <Route
             path="/"
