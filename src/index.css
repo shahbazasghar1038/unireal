@@ -224,7 +224,7 @@ body {
 .slide.active {
   flex: 1.8; /* Reduce expanded size slightly */
 }
-.custom-job-card-property{
+.custom-job-card-property {
   max-width: 65%;
   height: 8rem;
 }
@@ -271,7 +271,12 @@ body {
     overflow: hidden;
     justify-content: center;
   }
-
+  .sliderMobile {
+    display: none;
+  }
+  .sliderWeb {
+    display: flex;
+  }
   /* Reduce the effect of expansion */
   .slide:not(.active) {
     flex: 0.5; /* Increase size of inactive slides */
@@ -333,8 +338,14 @@ body {
     font-size: 20px;
     line-height: 43px;
   }
-  .custom-job-card-property{
+  .custom-job-card-property {
     max-width: 100%;
+  }
+  .sliderMobile {
+    display: flex;
+  }
+  .sliderWeb {
+    display: none;
   }
 }
 

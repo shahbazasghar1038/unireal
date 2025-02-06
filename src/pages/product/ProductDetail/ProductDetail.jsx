@@ -217,7 +217,7 @@ const ProductDetail = () => {
   return (
     <div className="max-w-[1400px] mx-auto bg-white p-6">
       {/* Breadcrumb */}
-      <div className="mb-4 text-sm  flex items-center space-x-2">
+      <div className="mb-4 text-sm sm:text-[12px] xs:text-[12px] flex items-center space-x-2">
         <span
           className="text-gray-400 cursor-pointer"
           onClick={() => navigate("/")}
@@ -245,12 +245,12 @@ const ProductDetail = () => {
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
         </svg>
-        <span className=" color-black font-semibold">{product.name}</span>
+        <span className="color-black font-semibold">{product.name}</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[0.5fr_2fr_1fr] gap-6 md:gap-12">
         {/* Left Side: Larger Thumbnails */}
-        <div className="flex flex-row md:flex-col items-center space-x-2 md:space-x-0 md:space-y-6 max-h-[750px] overflow-x-auto md:overflow-y-auto">
+        <div className=" sliderWeb flex flex-row md:flex-col items-center space-x-2 md:space-x-0 md:space-y-6 max-h-[750px] overflow-x-auto md:overflow-y-auto">
           {/* Previous Image Button */}
           <button
             onClick={handlePrevious}
@@ -307,6 +307,70 @@ const ProductDetail = () => {
               className="w-5 h-5"
             >
               <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div className=" sliderMobile relative flex items-center space-x-4 overflow-hidden max-w-full">
+          {/* Previous Image Button */}
+          <button
+            onClick={handlePrevious}
+            className="absolute left-0 p-2 bg-white rounded-full shadow hover:bg-gray-300 flex items-center justify-center z-10"
+            style={{ top: "50%", transform: "translateY(-50%)" }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5"
+            >
+              <path d="M15 18l-6-6 6-6"></path>
+            </svg>
+          </button>
+
+          <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
+            {[
+              products[(activeIndex - 1 + products.length) % products.length], // Previous
+              products[activeIndex], // Current
+              products[(activeIndex + 1) % products.length], // Next
+            ].map((imgProduct, index) => (
+              <img
+                key={imgProduct.id}
+                src={imgProduct.image}
+                alt={`Thumbnail ${index}`}
+                className={`h-32 w-24 md:h-40 md:w-32 cursor-pointer rounded-md border object-cover transition ${
+                  index === 1 ? "border-gray-600 scale-105" : "border-gray-300"
+                }`}
+                onClick={() =>
+                  setActiveIndex(
+                    products.findIndex((p) => p.id === imgProduct.id)
+                  )
+                }
+              />
+            ))}
+          </div>
+
+          {/* Next Image Button */}
+          <button
+            onClick={handleNext}
+            className="absolute right-0 p-2 bg-white rounded-full shadow hover:bg-gray-300 flex items-center justify-center z-10"
+            style={{ top: "50%", transform: "translateY(-50%)" }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5"
+            >
+              <path d="M9 18l6-6-6-6"></path>
             </svg>
           </button>
         </div>

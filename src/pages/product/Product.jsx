@@ -85,6 +85,8 @@ const Product = () => {
   const navigate = useNavigate();
   const [gridView, setGridView] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [twoImageView, setTwoImageView] = useState(false); // State for two-image layout
+  const [sortOrder, setSortOrder] = useState("asc"); // State for sorting
   const scrollRef = useRef(null);
 
   // Filter products based on category
@@ -92,6 +94,12 @@ const Product = () => {
     selectedCategory === "All"
       ? products
       : products.filter((p) => p.category === selectedCategory);
+
+  // Sort products based on name
+  const sortedProducts = filteredProducts.sort((a, b) => {
+    if (sortOrder === "asc") return a.name.localeCompare(b.name);
+    return b.name.localeCompare(a.name);
+  });
 
   // Scroll functions for category bar
   const scrollLeft = () => {
@@ -135,34 +143,51 @@ const Product = () => {
 
           {/* Sorting & View Toggle */}
           <div className="flex items-center space-x-4">
-            <span className="cursor-pointer text-gray-600">Sort by ▾</span>
+            <span
+              onClick={() =>
+                setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
+              }
+              className="cursor-pointer text-gray-600"
+            >
+              Sort by {sortOrder === "asc" ? "⬆️" : "⬇️"}
+            </span>
 
             <button
-              onClick={() => setGridView(true)}
+              onClick={() => {
+                setGridView(true); // Ensure gridView is true
+                setTwoImageView(false); // Disable twoImageView
+              }}
               className={`p-2 text-black rounded-md ${
-                gridView ? "bg-gray-200" : ""
+                gridView && !twoImageView ? "bg-gray-200" : ""
               }`}
             >
               <Grid size={20} />
             </button>
             <button
-              onClick={() => setGridView(false)}
+              onClick={() => {
+                setGridView(false); // Ensure gridView is false
+                setTwoImageView(true); // Enable twoImageView
+              }}
               className={`p-2 text-black rounded-md ${
-                !gridView ? "bg-gray-200" : ""
+                twoImageView ? "bg-gray-200" : ""
+              }`}
+            >
+              <Columns size={20} />
+            </button>
+            <button
+              onClick={() => {
+                setGridView(false); // Disable gridView
+                setTwoImageView(false); // Ensure twoImageView is also false
+              }}
+              className={`p-2 text-black rounded-md ${
+                !gridView && !twoImageView ? "bg-gray-200" : ""
               }`}
             >
               <AlignJustify size={20} />
             </button>
-            <button className="p-2 text-black rounded-md">
-              <Rows3 size={20} />
-            </button>
-            <button className="p-2 text-black rounded-md">
-              <Columns size={20} />
-            </button>
           </div>
         </div>
 
-        {/* Scrollable Categories Banner without scrollbar */}
         {/* Scrollable Categories Banner without scrollbar */}
         <div className="relative flex items-center">
           {/* Left Scroll Button */}
@@ -204,13 +229,15 @@ const Product = () => {
 
         {/* Products Grid */}
         <div
-          className={
-            gridView
+          className={`${
+            twoImageView
+              ? "grid grid-cols-1 md:grid-cols-2 gap-6 mt-4"
+              : gridView
               ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4"
               : "space-y-6 mt-4"
-          }
+          }`}
         >
-          {filteredProducts.map((product) => (
+          {sortedProducts.map((product) => (
             <Link
               key={product.id}
               to={`/product/${product.id}`}
