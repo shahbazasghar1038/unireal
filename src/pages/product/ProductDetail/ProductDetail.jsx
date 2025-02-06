@@ -217,35 +217,58 @@ const ProductDetail = () => {
   return (
     <div className="max-w-[1400px] mx-auto bg-white p-6">
       {/* Breadcrumb */}
-      <div className="mb-4 text-sm sm:text-[12px] xs:text-[12px] flex items-center space-x-2">
+      <div className="flex items-center space-x-2 flex-wrap mb-5">
         <span
-          className="text-gray-400 cursor-pointer"
+          className="cursor-pointer text-gray-500 text-xs sm:text-sm md:text-base whitespace-nowrap"
           onClick={() => navigate("/")}
         >
           Home
         </span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+        >
           <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
         </svg>
+
         <span
-          className="text-gray-400 cursor-pointer"
+          className="cursor-pointer text-gray-500 text-xs sm:text-sm md:text-base whitespace-nowrap"
           onClick={() => navigate("/products")}
         >
           Products
         </span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
-        </svg>
-        <span
-          className="text-gray-400 cursor-pointer"
-          onClick={() => navigate("/products")}
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
         >
-          Outdoor Digital Signage
-        </span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
         </svg>
-        <span className="color-black font-semibold">{product.name}</span>
+
+        <span
+          className="cursor-pointer text-gray-500 text-xs sm:text-sm md:text-base whitespace-nowrap"
+          onClick={() => navigate("/categories")}
+        >
+          {product.name}
+        </span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+        >
+          <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+        </svg>
+
+        <span className="text-black font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">
+          {product.name} Products
+        </span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[0.5fr_2fr_1fr] gap-6 md:gap-12">

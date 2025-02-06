@@ -8,13 +8,14 @@ import Product from "./pages/product/Product";
 import ProductDetail from "./pages/product/ProductDetail/ProductDetail";
 import CareersPage from "./pages/careers/CareersPage";
 import ScrollToTop from "./components/ScrollToTop";
+import ProductCategory from "./pages/product/ProductCategory/ProductCategory";
 
 const App = () => {
   return (
     <>
       <Router>
         <Header />
-        <ScrollToTop/>
+        <ScrollToTop />
         <Routes>
           <Route
             path="/"
@@ -32,6 +33,14 @@ const App = () => {
             element={
               <div className="w-full bg-white">
                 <Product />
+              </div>
+            }
+          />
+          <Route
+            path="/categories"
+            element={
+              <div className="w-full bg-white">
+                <ProductCategory />
               </div>
             }
           />

@@ -1,28 +1,26 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import {
   Grid,
   AlignJustify,
-  Rows3,
   Columns,
   ChevronLeft,
   ChevronRight,
-} from "lucide-react"; // Added scroll buttons
-import { Link, useNavigate } from "react-router-dom";
+} from "lucide-react";
 
-import product1 from "../../assets/product1.png";
-import product2 from "../../assets/product2.png";
-import product3 from "../../assets/product3.png";
-import product4 from "../../assets/product4.png";
-import product5 from "../../assets/product5.png";
-import product6 from "../../assets/product6.png";
-import product7 from "../../assets/product7.png";
-import product8 from "../../assets/product8.png";
-import product9 from "../../assets/product9.png";
-import product10 from "../../assets/product10.png";
-import product11 from "../../assets/product11.png";
-import product12 from "../../assets/product12.png";
-import Newsletter from "../../components/Newsletter/Newsletter";
-
+import product1 from "../../../assets/product1.png";
+import product2 from "../../../assets/product2.png";
+import product3 from "../../../assets/product3.png";
+import product4 from "../../../assets/product4.png";
+import product5 from "../../../assets/product5.png";
+import product6 from "../../../assets/product6.png";
+import product7 from "../../../assets/product7.png";
+import product8 from "../../../assets/product8.png";
+import product9 from "../../../assets/product9.png";
+import product10 from "../../../assets/product10.png";
+import product11 from "../../../assets/product11.png";
+import product12 from "../../../assets/product12.png";
+import Newsletter from "../../../components/Newsletter/Newsletter";
 const products = [
   {
     id: 1,
@@ -81,13 +79,30 @@ const products = [
 // Generate unique categories dynamically
 const categories = ["All", ...new Set(products.map((p) => p.category))];
 
-const Product = () => {
+const ProductCategory = () => {
+  const location = useLocation();
   const navigate = useNavigate();
-  const [gridView, setGridView] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [twoImageView, setTwoImageView] = useState(false); // State for two-image layout
-  const [sortOrder, setSortOrder] = useState("asc"); // State for sorting
   const scrollRef = useRef(null);
+
+  // Get the product name from the previous page
+  const { selectedProduct } = location.state || {};
+
+  const [gridView, setGridView] = useState(true);
+  const [twoImageView, setTwoImageView] = useState(false);
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Set default category based on selected product
+  useEffect(() => {
+    if (selectedProduct) {
+      const productCategory = products.find(
+        (p) => p.name === selectedProduct
+      )?.category;
+      if (productCategory) {
+        setSelectedCategory(productCategory);
+      }
+    }
+  }, [selectedProduct]);
 
   // Filter products based on category
   const filteredProducts =
@@ -95,13 +110,25 @@ const Product = () => {
       ? products
       : products.filter((p) => p.category === selectedCategory);
 
-  // Sort products based on name
-  const sortedProducts = filteredProducts.sort((a, b) => {
-    if (sortOrder === "asc") return a.name.localeCompare(b.name);
-    return b.name.localeCompare(a.name);
+  // Sort products by name
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    return sortOrder === "asc"
+      ? a.name.localeCompare(b.name)
+      : b.name.localeCompare(a.name);
   });
 
   // Scroll functions for category bar
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -119,18 +146,22 @@ const Product = () => {
             <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
           </svg>
           <span
-            className="cursor-pointer text-black font-semibold"
+            className="cursor-pointer text-gray-400"
             onClick={() => navigate("/products")}
           >
             Products
           </span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+          </svg>
+          <span className="text-black font-semibold">{selectedCategory}</span>
         </div>
 
-        {/* Header Section */}
+        {/* Category Scroll Buttons */}
+
+        {/* Sorting & View Toggle */}
         <div className="mb-6 flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between">
           <h1 className="text-2xl font-bold text-black"></h1>
-
-          {/* Sorting & View Toggle */}
           <div className="flex items-center space-x-0">
             <span
               onClick={() =>
@@ -203,9 +234,43 @@ const Product = () => {
             </button>
           </div>
         </div>
+        <div className="relative flex items-center mt-6">
+          {/* Left Scroll Button */}
+          <button
+            className="p-2 bg-white shadow rounded-full"
+            onClick={scrollLeft}
+          >
+            <ChevronLeft color="black" size={24} />
+          </button>
 
-        {/* Scrollable Categories Banner without scrollbar */}
+          <div
+            ref={scrollRef}
+            className="flex space-x-2 overflow-hidden w-full px-4"
+          >
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full border text-sm flex items-center justify-center whitespace-nowrap transition ${
+                  selectedCategory === category
+                    ? "bg-gradient-to-r from-blue-500 to-orange-400 text-white"
+                    : "border-gray-400 text-black font-semibold"
+                }`}
+                style={{ minWidth: "140px", height: "40px" }}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
 
+          {/* Right Scroll Button */}
+          <button
+            className="p-2 bg-white shadow rounded-full"
+            onClick={scrollRight}
+          >
+            <ChevronRight color="black" size={24} />
+          </button>
+        </div>
         {/* Products Grid */}
         <div
           className={`${
@@ -216,25 +281,29 @@ const Product = () => {
               : "space-y-6 mt-4"
           }`}
         >
-          {sortedProducts.map((product) => (
-            <Link
-              key={product.id}
-              to="/categories"
-              state={{ selectedProduct: product.name }}
-              className="flex flex-col items-center"
-            >
-              <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-              <p className="mt-4 w-full text-left font-medium text-gray-800">
-                {product.name}
-              </p>
-            </Link>
-          ))}
+          {sortedProducts.length > 0 ? (
+            sortedProducts.map((product) => (
+              <Link
+                key={product.id}
+                to={`/product/${product.id}`}
+                state={{ currentProductId: product.id }}
+                className="flex flex-col items-center"
+              >
+                <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
+                </div>
+                <p className="mt-4 w-full text-left font-medium text-gray-800">
+                  {product.name}
+                </p>
+              </Link>
+            ))
+          ) : (
+            <p className="text-center text-gray-600 mt-6">No products found.</p>
+          )}
         </div>
       </div>
       <Newsletter />
@@ -242,4 +311,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductCategory;
