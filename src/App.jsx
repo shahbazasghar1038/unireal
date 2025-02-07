@@ -9,6 +9,7 @@ import ProductDetail from "./pages/product/ProductDetail/ProductDetail";
 import CareersPage from "./pages/careers/CareersPage";
 import ScrollToTop from "./components/ScrollToTop";
 import ProductCategory from "./pages/product/ProductCategory/ProductCategory";
+import Gemini from "./pages/gemini/Gemini";
 
 const App = () => {
   return (
@@ -41,6 +42,14 @@ const App = () => {
             element={
               <div className="w-full bg-white">
                 <ProductCategory />
+              </div>
+            }
+          />
+          <Route
+            path="/gemini"
+            element={
+              <div className="w-full bg-white">
+                <Gemini />
               </div>
             }
           />
