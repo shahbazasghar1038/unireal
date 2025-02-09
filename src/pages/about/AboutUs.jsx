@@ -1,5 +1,6 @@
 import Artboard1 from "../../assets/Artboard1.png";
 import TrustedSection from "../../components/trusted-section";
+import Newsletter from "../../components/Newsletter/Newsletter";
 const AboutUs = () => {
   return (
     <div className="bg-black text-white  px-4 sm:px-16 lg:px-16 my-24 mx-auto">
@@ -88,6 +89,9 @@ const AboutUs = () => {
       </section>
       <section style={{marginTop:"-5rem"}}>
         <TrustedSection/>
+      </section>
+      <section>
+        <Newsletter/>
       </section>
     </div>
   );
