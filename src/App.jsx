@@ -49,7 +49,7 @@ const App = () => {
           <Route
             path="/gemini"
             element={
-              <div className="w-full bg-white">
+              <div className="w-full">
                 <Gemini />
               </div>
             }

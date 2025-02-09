@@ -10,7 +10,12 @@ export default {
         'custom-gradient': 'linear-gradient(180deg, rgba(217, 217, 217, 0.7) 0%, rgba(234, 234, 234, 0.381317) 22.05%, rgba(255, 255, 255, 0) 63.11%)',
         'div-custom-gradient': 'linear-gradient(269.08deg, #FE9748 2.58%, #FE489E 21.41%, #A952FE 67.8%, #4ECBFF 99.21%)',
         'grid-custom-gradient': 'linear-gradient(359.5deg, rgba(0, 0, 0, 0.79) 8.36%, rgba(0, 0, 0, 0) 99.74%)',
-
+        'custom-text-gradient': 'linear-gradient(90deg, #58BEFF 0%, #BB4EEE 30.5%, #FE4996 64%, #FEA042 100%)',
+        'custom-button-gradient': 'linear-gradient(90deg, #58BEFF 0%, #BB4EEE 28.76%, #FE4996 64.51%, #FEA042 100%)',
+        'border-gradient': 'linear-gradient(90deg, rgba(88, 190, 255, 0.5) 3.59%, rgba(187, 78, 238, 0.5) 35.89%, rgba(254, 73, 150, 0.5) 65.78%, rgba(254, 160, 66, 0.5) 100%)',
+        'section-gradient': 'linear-gradient(90deg, #5ABBFE 0%, #B150F4 31.48%, #E24BBD 68.21%, #FC934E 100%)',
+        'heading-gradient': 'linear-gradient(90deg, #57C3F9 0%, #BB4EEE 32%, #FE4996 65%, #FEA042 100%)',
+        'mask-group': "url('/Mask group.svg')",
       },
       screens: {
         '300': '300px',

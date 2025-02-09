@@ -48,14 +48,14 @@ const Header = () => {
           <div className="relative">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="text-sm font-[500] text-[#FFFFFFCC] flex items-center gap-1 transition-all hover:opacity-70"
+              className="flex items-center gap-1 text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
             >
               Services
               <ChevronDown size={16} />
             </button>
 
             {dropdownOpen && (
-              <div className="absolute left-0 mt-2 w-40 rounded-md bg-black p-2 shadow-lg">
+              <div className="absolute left-0 mt-2 w-40 rounded-md border border-[white]/30 bg-black p-2 shadow-lg">
                 <Link
                   to="/esl"
                   onClick={() => {
@@ -137,13 +137,13 @@ const Header = () => {
               </Link>
 
               {/* Dropdown for Services */}
-              <div className="relative group">
-                <button className="text-sm font-[500] text-[#FFFFFFCC] flex items-center gap-1 transition-all hover:opacity-70">
+              <div className="group relative">
+                <button className="items-cen0ter flex h-[40px] items-center justify-center gap-1 text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70">
                   Services
                   <ChevronDown size={16} />
                 </button>
 
-                <div className="absolute left-0 mt-2 hidden w-40 rounded-md bg-black p-2 shadow-lg group-hover:block">
+                <div className="absolute left-0 mt-0 hidden w-40 rounded-md bg-black p-2 shadow-lg group-hover:block">
                   <Link
                     to="/esl"
                     className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
