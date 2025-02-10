@@ -4,6 +4,7 @@
 }
 
 .animated-gradient-shadow::before {
+  will-change: transform, filter;
   content: "";
   position: absolute;
   top: -10px;
@@ -30,6 +31,7 @@
   z-index: -2;
   filter: blur(120px);
   animation: rotateGradient 4s both infinite;
+  background-blend-mode: lighten;
 }
 
 @media (max-width: 600px) {
@@ -37,6 +39,16 @@
     filter: blur(50px);
     background: none;
     /* bottom: 30px !important; */
+  }
+}
+.animated-gradient-shadow::before {
+  transform: translateZ(0);
+}
+@supports (-webkit-backdrop-filter: blur(120px)) or
+  (backdrop-filter: blur(120px)) {
+  .animated-gradient-shadow::before {
+    -webkit-backdrop-filter: blur(120px);
+    backdrop-filter: blur(120px);
   }
 }
 
