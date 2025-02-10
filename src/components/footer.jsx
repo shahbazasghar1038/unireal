@@ -9,7 +9,7 @@ const Footer = () => {
       >
         <img src="/arr.svg" className="floating cursor-pointer" alt="" />
       </div>
-      <div className="relative flex w-full flex-col items-center justify-center">
+      <div className="relative flex w-full flex-col items-center justify-center pt-[100px]">
         <div className="relative flex w-full max-w-[100%] items-center justify-center overflow-hidden sm:overflow-visible">
           <img
             src="/footer-gb-img.png"
