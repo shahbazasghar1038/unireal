@@ -68,7 +68,7 @@ app.post("/api/contact", (req, res) => {
         return res.status(500).json({ message: "Database error." });
       }
       res.status(200).json({
-        message: "Query submitted successfully.",
+        message: "Query submitted successfullyyy.",
         id: result.insertId,
       });
     }
