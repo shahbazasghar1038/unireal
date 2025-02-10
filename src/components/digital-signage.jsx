@@ -45,7 +45,7 @@ const DigitalSignage = () => {
           </div>
         </div>
         <div className="mt-[30px] flex w-full items-center justify-center md:mt-[55px]">
-          <a href="#" className="flex items-center justify-center gap-1">
+          <a href="/gemini" className="flex items-center justify-center gap-1">
             <p className="text-[18px] leading-[1] sm:text-[20px]">Learn more</p>
             <ChevronRight className="size-[20px] text-white sm:size-[25px]" />
           </a>
