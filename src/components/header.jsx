@@ -124,7 +124,7 @@ const Header = () => {
               location.pathname.startsWith("/?") === false && (
                 <img
                   src="/unireal.png"
-                  className="absolute left-[120%] top-0 w-[99px] max-w-[84px] -translate-y-1.5"
+                  className="absolute left-[120%] top-0 w-[99px] max-w-[84px] -translate-y-1.5 sm:left-[100%] 2xl:left-[120%] 2xl:max-w-[84px]"
                   alt=""
                 />
               )}
