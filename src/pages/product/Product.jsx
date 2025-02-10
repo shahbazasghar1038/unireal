@@ -220,7 +220,7 @@ const Product = () => {
             <Link
               key={product.id}
               to="/categories"
-              state={{ selectedProduct: product.name }}
+              state={{ selectedProduct: product.category }}
               className="flex flex-col items-center"
             >
               <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
