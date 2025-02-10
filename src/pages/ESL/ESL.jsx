@@ -12,12 +12,7 @@ const ECL = () => {
       <ECLSlider />
       {/* cards section  */}
 
-      <p className="ecl-heading mt-16">Solutions</p>
-      <p className="ecl-sub-heading">Standardized also personalized solution</p>
-
       <SolutionSection />
-
-      <p className="ecl-heading mt-25 pb-6">Our Products</p>
 
       <ProductCars />
     </div>

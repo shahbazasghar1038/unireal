@@ -1,43 +1,32 @@
 const CareersPage = () => {
   return (
-    <div className="bg-black text-white min-h-screen px-4 sm:px-16 lg:px-16 my-24 mx-auto">
+    <div className="flex w-full flex-col items-center justify-center px-5">
       {/* Hero Section */}
-      <section className="text-center py-16 max-w-screen-xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-          Join the Future of{" "}
-          <p className="bg-gradient-to-r from-[#42dcff] via-[#a852ff] to-[#fe43aa] bg-clip-text text-transparent">
+      <div className="flex w-full max-w-[1230px] flex-col items-center justify-center pb-[140px] pt-[160px] md:pb-[200px] 2xl:pb-[230px] 2xl:pt-[219px]">
+        <h1 className="text-center text-[40px] font-[500] leading-[1.3] sm:text-[50px] lg:text-[75px] lg:leading-[95px] 2xl:text-[90px]">
+          Join the Future of <br />{" "}
+          <span className="w-fit bg-custom-text-gradient bg-clip-text text-transparent">
             Digital Innovation
-          </p>
+          </span>
         </h1>
-        <p className="mt-6 text-lg max-w-[500px] mx-auto">
+        <p className="mt-5 max-w-[780px] text-center text-[18px] font-[400] sm:text-[25px] lg:text-[30px] 2xl:mt-[30px] 2xl:text-[30px]">
           At Unireal, we’re redefining retail with AI-driven signage and IoT
           solutions. Be a part of something bigger.
         </p>
-        <button
-          type="submit"
-          className="gradient-hover-effect relative w-[260px] rounded-full px-8 py-3 my-16 font-medium text-white transition-transform duration-300 hover:scale-105"
-          style={{
-            background: "#000",
-            boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-            border: "2px solid transparent",
-            backgroundImage:
-              "linear-gradient(#000, #000), linear-gradient(90deg, #00f0ff, #7c35ff, #ff9d35)",
-            backgroundOrigin: "border-box",
-            backgroundClip: "padding-box, border-box",
-            WebkitBackgroundClip: "padding-box, border-box",
-          }}
-        >
-          See Open Positions
-        </button>
-      </section>
-
+        <div className="relative mt-[40px] flex flex-col items-center gap-4 sm:mt-[50px] sm:flex-row sm:gap-[33px] lg:mt-[70px] 2xl:mt-[98px]">
+          <button className="animated-gradient-bg-div gradient-hover-effect h-[50px] w-[300px] rounded-full p-[2px] sm:h-[55px] md:w-[386px] md:p-[3px] lg:h-[66px]">
+            <div className="flex h-full w-full items-center justify-center rounded-full bg-black text-[20px] font-[500] lg:text-[25px]">
+              See Open Positions
+            </div>
+          </button>
+        </div>
+      </div>
       {/* Why Work at Unireal Section */}
-      <section
-        className="bg-[#1D1D1F] p-12 rounded-[30px] text-center mx-auto mb-16"
-        style={{ maxWidth: "1664px" }}
-      >
-        <h2 className="text-3xl font-bold mb-6">Why Work at Unireal?</h2>
-        <p className="text-gray-300  sm:text-[15px] md:text-[15px] lg:text-[20px] xl:text-[20px] mx-auto">
+      <section className="mx-auto flex max-w-[1300px] flex-col items-center justify-center gap-[30px] rounded-[30px] bg-[#1D1D1F] px-5 py-[40px] text-center md:px-6 md:py-[80px] lg:px-[65px] 2xl:max-w-[1600px] 2xl:py-[90px]">
+        <h2 className="text-[30px] font-bold lg:text-[50px]">
+          Why Work at Unireal?
+        </h2>
+        <p className="mx-auto w-full text-[18px] font-[400] text-gray-200 lg:text-[24px] 2xl:text-[26px]">
           At Unireal, we are redefining the future of retail with cutting-edge
           digital signage and Electronic Shelf Label (ESL) solutions powered by
           AI and IoT. Joining our team means being part of an innovative,
@@ -50,39 +39,31 @@ const CareersPage = () => {
           generation of smart retail solutions.
         </p>
       </section>
-
       {/* Current Openings Section */}
-      <section className="text-center my-16 max-w-screen-xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+      <section className="mx-auto flex w-full flex-col items-center justify-center gap-[60px] pb-[80px] pt-[100px] text-center md:pb-[100px] md:pt-[190px]">
+        <h2 className="text-[30px] font-bold lg:text-[50px]">
           Current Openings
         </h2>
-        <div className="space-y-4">
+        <div className="flex w-full max-w-[1200px] flex-col items-center justify-center gap-2 2xl:max-w-[1312px]">
           {Array(4)
             .fill(null)
             .map((_, index) => (
               <div
                 key={index}
-                className="custom-job-card-property flex items-center justify-between bg-[#1D1D1F] p-6 rounded-[30px] mx-auto max-w-screen-xl"
+                className="flex w-full flex-col items-center justify-between gap-10 rounded-[25px] bg-[#1D1D1F] px-6 py-[50px] md:flex-row md:gap-0 md:rounded-[48px] md:px-[80px] md:py-[60px] 2xl:py-[72px]"
               >
                 <div>
-                  <h3 className="text-lg font-bold">Sales Engineer</h3>
-                  <p className="text-sm text-gray-400">Remote</p>
+                  <h3 className="text-[27px] font-bold 2xl:text-[30px]">
+                    Sales Engineer
+                  </h3>
+                  <p className="text-[26px] text-[#A4A4A4] 2xl:text-[30px]">
+                    Remote
+                  </p>
                 </div>
-                <button
-                  type="button"
-                  className="relative w-[140px] rounded-full px-6 py-2 font-medium text-white transition-transform duration-300 hover:scale-105"
-                  style={{
-                    background: "#000",
-                    boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-                    border: "2px solid transparent",
-                    backgroundImage:
-                      "linear-gradient(#000, #000), linear-gradient(90deg, #00f0ff, #7c35ff, #ff9d35)",
-                    backgroundOrigin: "border-box",
-                    backgroundClip: "padding-box, border-box",
-                    WebkitBackgroundClip: "padding-box, border-box",
-                  }}
-                >
-                  Apply
+                <button className="animated-gradient-bg-div gradient-hover-effect z-[100] h-[50px] w-[181px] rounded-full p-[2px] sm:h-[55px] md:p-[3px] lg:h-[48px]">
+                  <div className="flex h-full w-full items-center justify-center rounded-full bg-[#1D1D1F] text-[20px] font-[500] lg:text-[18px]">
+                    Apply
+                  </div>
                 </button>
               </div>
             ))}
@@ -90,28 +71,21 @@ const CareersPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="text-center py-16 max-w-screen-xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl">Drop us a line</h2>
-        <p className="mt-4 text-gray-300 text-[25px]   max-w-[800px] mx-auto text-gray-300">
-          If you haven't found the right job for you, don't hesitate to get in
-          touch with us.We are growing and always looking for people who can
-          join the journey and help shape the future of recruitment technology.
+      <section className="mx-auto flex flex-col items-center justify-center pb-[50px] pt-[50px] text-center md:pb-[100px] md:pt-[100px] 2xl:pt-[130px]">
+        <h2 className="text-[35px] font-bold lg:text-[50px]">
+          Drop us a line{" "}
+        </h2>
+        <p className="mt-[24px] w-full max-w-[900px] text-[18px] font-[400] md:text-[26px] 2xl:max-w-[1000px] 2xl:text-[30px]">
+          If you haven&apos;t found the right job for you, don&apos;t hesitate
+          to get in touch with us.We are growing and always looking for people
+          who can join the journey and help shape the future of recruitment
+          technology.
         </p>
-        <button
-          type="submit"
-          className="relative w-[200px] rounded-full px-8 py-3 my-16 font-medium text-white transition-transform duration-300 hover:scale-105"
-          style={{
-            background: "#000",
-            boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-            border: "2px solid transparent",
-            backgroundImage:
-              "linear-gradient(#000, #000), linear-gradient(90deg, #00f0ff, #7c35ff, #ff9d35)",
-            backgroundOrigin: "border-box",
-            backgroundClip: "padding-box, border-box",
-            WebkitBackgroundClip: "padding-box, border-box",
-          }}
-        >
-          Contact Us
+
+        <button className="animated-gradient-bg-div gradient-hover-effect z-[10] mt-[70px] h-[50px] w-[300px] rounded-full p-[2px] sm:h-[55px] md:w-[386px] md:p-[3px] lg:h-[66px] 2xl:mt-[80px]">
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-black text-[20px] font-[500] lg:text-[25px]">
+            Contact Us
+          </div>
         </button>
       </section>
     </div>

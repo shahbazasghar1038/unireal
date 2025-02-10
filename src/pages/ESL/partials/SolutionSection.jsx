@@ -1,12 +1,13 @@
-import React from "react";
-
 const SolutionSection = () => {
   return (
-    <>
-      <div className=" leftMargin max-w-[1028px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[87px]">
-        <div className="relative flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
-          <div className="group w-full h-fit cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
-            <span className="absolute top-0 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
+    <div className="flex flex-col items-center justify-center px-5 pb-[50px] pt-[70px] md:pb-[100px] md:pt-[100px]">
+      <p className="text-center text-[40px] font-[700]">Solutions</p>
+      <p className="mt-[15px] w-full text-center text-[23px] font-[400] md:text-[33px]">
+        Standardized also personalized solution
+      </p>
+      <div className="mx-auto mt-[80px] flex max-w-[1050px] flex-col justify-center gap-6 md:mt-[100px] md:flex-row 2xl:max-w-[1128px]">
+        <div className="relative flex h-fit w-full justify-center overflow-hidden rounded-[47px] bg-[#1D1D1F] p-8 sm:p-14 sm:py-8 2xl:py-12">
+          <div className="group h-fit w-full cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <div className="relative z-10 mx-auto">
               <svg
                 width="161"
@@ -14,6 +15,7 @@ const SolutionSection = () => {
                 viewBox="0 0 161 161"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-[100px] sm:w-[113px]"
               >
                 <path
                   d="M132.385 127.668H28.6152C21.0526 127.668 13.9007 124.735 8.47703 119.409C3.01057 114.042 0 106.924 0 99.3672C0 91.8106 3.01057 84.6926 8.47703 79.3252C12.758 75.1216 18.1156 72.4088 23.9022 71.4519C23.8997 71.3243 23.8984 71.1956 23.8984 71.0664C23.8984 50.2597 40.8261 33.332 61.6328 33.332C69.3489 33.332 76.764 35.6549 83.0766 40.0497C87.5205 43.1433 91.21 47.107 93.9526 51.698C98.3798 48.9519 103.486 47.4824 108.801 47.4824C122.915 47.4824 134.649 57.8676 136.762 71.3985C142.677 72.3041 148.159 75.0402 152.523 79.3252C157.989 84.6926 161 91.8102 161 99.3672C161 106.924 157.989 114.042 152.523 119.409C147.099 124.735 139.947 127.668 132.385 127.668ZM28.6152 80.5C18.0383 80.5 9.43359 88.9638 9.43359 99.3672C9.43359 109.771 18.0383 118.234 28.6152 118.234H132.385C142.962 118.234 151.566 109.771 151.566 99.3672C151.566 88.9638 142.962 80.5 132.385 80.5H127.668V75.7832C127.668 65.3798 119.204 56.916 108.801 56.916C103.843 56.916 99.1534 58.8405 95.5953 62.335L90.5182 67.3216L87.9035 60.7027C83.5989 49.8065 73.2871 42.7656 61.6328 42.7656C46.0278 42.7656 33.332 55.4614 33.332 71.0664C33.332 72.1808 33.5069 73.3773 33.6918 74.6443L34.5367 80.5H28.6152Z"
@@ -28,15 +30,15 @@ const SolutionSection = () => {
                     y2="127.668"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#538BC5" />
-                    <stop offset="0.26" stop-color="#B84FEC" />
-                    <stop offset="0.615" stop-color="#F248AA" />
-                    <stop offset="1" stop-color="#FD8B55" />
+                    <stop stopColor="#538BC5" />
+                    <stop offset="0.26" stopColor="#B84FEC" />
+                    <stop offset="0.615" stopColor="#F248AA" />
+                    <stop offset="1" stopColor="#FD8B55" />
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
-                <p className="ecl-card-text">
+              <div className="pt-[30px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 md:pt-[60px] 2xl:pt-[90px]">
+                <p className="text-[20px] leading-[1.6] md:text-[26px]">
                   The first true cloud architecture of the industry. Simple and
                   flexible operation from any device
                 </p>
@@ -45,9 +47,8 @@ const SolutionSection = () => {
           </div>
         </div>
 
-        <div className="relative mt-[60px] flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
-          <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
-            <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
+        <div className="relative flex h-fit w-full justify-center overflow-hidden rounded-[47px] bg-[#1D1D1F] p-8 sm:p-14 sm:py-8 md:mt-[30px] 2xl:translate-y-16 2xl:py-12">
+          <div className="group relative h-fit w-full cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <div className="relative z-10 mx-auto">
               <svg
                 width="159"
@@ -55,6 +56,7 @@ const SolutionSection = () => {
                 viewBox="0 0 159 159"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-[100px] sm:w-[113px]"
               >
                 <path
                   d="M39.3302 89.4375H21.9396C21.2891 89.4502 20.6695 89.7175 20.214 90.1821C19.7584 90.6466 19.5033 91.2713 19.5033 91.922C19.5033 92.5726 19.7585 93.1973 20.2141 93.6618C20.6697 94.1263 21.2893 94.3936 21.9398 94.4062H39.3302C39.9808 94.3936 40.6003 94.1262 41.0559 93.6617C41.5115 93.1972 41.7667 92.5725 41.7667 91.9219C41.7667 91.2712 41.5115 90.6466 41.0559 90.182C40.6003 89.7175 39.9808 89.4502 39.3302 89.4375Z"
@@ -133,10 +135,10 @@ const SolutionSection = () => {
                     y2="92.7692"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_555_1063"
@@ -146,10 +148,10 @@ const SolutionSection = () => {
                     y2="105.191"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear_555_1063"
@@ -159,10 +161,10 @@ const SolutionSection = () => {
                     y2="117.613"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint3_linear_555_1063"
@@ -172,10 +174,10 @@ const SolutionSection = () => {
                     y2="20.7113"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint4_linear_555_1063"
@@ -185,10 +187,10 @@ const SolutionSection = () => {
                     y2="33.1332"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint5_linear_555_1063"
@@ -198,10 +200,10 @@ const SolutionSection = () => {
                     y2="45.555"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint6_linear_555_1063"
@@ -211,10 +213,10 @@ const SolutionSection = () => {
                     y2="56.6094"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint7_linear_555_1063"
@@ -224,10 +226,10 @@ const SolutionSection = () => {
                     y2="127.041"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint8_linear_555_1063"
@@ -237,10 +239,10 @@ const SolutionSection = () => {
                     y2="92.4886"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint9_linear_555_1063"
@@ -250,10 +252,10 @@ const SolutionSection = () => {
                     y2="116.762"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint10_linear_555_1063"
@@ -263,10 +265,10 @@ const SolutionSection = () => {
                     y2="105.741"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint11_linear_555_1063"
@@ -276,10 +278,10 @@ const SolutionSection = () => {
                     y2="129.767"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint12_linear_555_1063"
@@ -289,10 +291,10 @@ const SolutionSection = () => {
                     y2="124.908"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint13_linear_555_1063"
@@ -302,10 +304,10 @@ const SolutionSection = () => {
                     y2="42.0878"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint14_linear_555_1063"
@@ -315,10 +317,10 @@ const SolutionSection = () => {
                     y2="35.1498"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint15_linear_555_1063"
@@ -328,10 +330,10 @@ const SolutionSection = () => {
                     y2="52.0595"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint16_linear_555_1063"
@@ -341,15 +343,15 @@ const SolutionSection = () => {
                     y2="64.5369"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#4E8DD9" />
-                    <stop offset="0.355446" stop-color="#CB4DD7" />
-                    <stop offset="0.595446" stop-color="#F94C9E" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#4E8DD9" />
+                    <stop offset="0.355446" stopColor="#CB4DD7" />
+                    <stop offset="0.595446" stopColor="#F94C9E" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
-                <p className="ecl-card-text">
+              <div className="pt-[40px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 md:pt-[60px] 2xl:pt-[90px]">
+                <p className="text-[20px] leading-[1.6] md:text-[26px]">
                   Provide the most cost-effective customized solution based on
                   different industries and requirements
                 </p>
@@ -360,10 +362,9 @@ const SolutionSection = () => {
       </div>
 
       {/* SECOND SECTION */}
-      <div className=" topMargin max-w-[1028px] mx-auto flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 mt-[-80px]">
-        <div className="relative flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
-          <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
-            <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
+      <div className="mx-auto mt-6 flex max-w-[1050px] flex-col justify-center gap-6 md:-mt-8 md:flex-row 2xl:mt-0 2xl:max-w-[1128px]">
+        <div className="relative flex h-fit w-full justify-center overflow-hidden rounded-[47px] bg-[#1D1D1F] p-8 sm:p-14 sm:py-8 2xl:py-12">
+          <div className="group relative h-fit w-full cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <div className="relative z-10 mx-auto">
               <svg
                 width="141"
@@ -371,8 +372,9 @@ const SolutionSection = () => {
                 viewBox="0 0 141 141"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-[100px] sm:w-[113px]"
               >
-                <g clip-path="url(#clip0_555_1084)">
+                <g clipPath="url(#clip0_555_1084)">
                   <path
                     d="M102.109 114.323C100.967 114.338 100.054 115.276 100.069 116.417C100.131 121.08 97.9899 125.599 94.3429 128.505C93.8506 128.897 93.564 129.493 93.564 130.122V139.016C93.564 141.603 97.6986 141.72 97.6986 139.016V131.083C101.862 127.383 104.277 121.954 104.204 116.363C104.188 115.221 103.247 114.298 102.109 114.323Z"
                     fill="url(#paint0_linear_555_1084)"
@@ -395,10 +397,10 @@ const SolutionSection = () => {
                     y2="132.463"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#58BEFF" />
-                    <stop offset="0.305" stop-color="#BB4EEE" />
-                    <stop offset="0.66" stop-color="#FE4996" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#58BEFF" />
+                    <stop offset="0.305" stopColor="#BB4EEE" />
+                    <stop offset="0.66" stopColor="#FE4996" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_555_1084"
@@ -408,10 +410,10 @@ const SolutionSection = () => {
                     y2="111.235"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#58BEFF" />
-                    <stop offset="0.305" stop-color="#BB4EEE" />
-                    <stop offset="0.66" stop-color="#FE4996" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#58BEFF" />
+                    <stop offset="0.305" stopColor="#BB4EEE" />
+                    <stop offset="0.66" stopColor="#FE4996" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear_555_1084"
@@ -421,18 +423,18 @@ const SolutionSection = () => {
                     y2="62.8948"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#58BEFF" />
-                    <stop offset="0.305" stop-color="#BB4EEE" />
-                    <stop offset="0.66" stop-color="#FE4996" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#58BEFF" />
+                    <stop offset="0.305" stopColor="#BB4EEE" />
+                    <stop offset="0.66" stopColor="#FE4996" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                   <clipPath id="clip0_555_1084">
                     <rect width="141" height="141" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
-              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
-                <p className="ecl-card-text">
+              <div className="pt-[60px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 2xl:pt-[90px]">
+                <p className="text-[20px] leading-[1.6] md:text-[26px]">
                   Optimization of promotion and sales channels. Enhancing
                   consumer interaction and shopping experience
                 </p>
@@ -441,9 +443,8 @@ const SolutionSection = () => {
           </div>
         </div>
 
-        <div className="relative mt-[104px] flex h-fit justify-center overflow-hidden bg-[#1D1D1F] w-full p-14 sm:py-12 rounded-[47px]">
-          <div className="group w-full h-fit relative cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
-            <span className="absolute top-10 z-0 h-[1px] w-[1px] rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[1000]"></span>
+        <div className="relative flex h-fit w-full justify-center overflow-hidden rounded-[47px] bg-[#1D1D1F] p-8 sm:p-14 sm:py-8 md:translate-y-16 2xl:mt-[30px] 2xl:py-12">
+          <div className="group relative h-fit w-full cursor-pointer overflow-hidden ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1">
             <div className="relative z-10 mx-auto">
               <svg
                 width="157"
@@ -451,6 +452,7 @@ const SolutionSection = () => {
                 viewBox="0 0 157 157"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className="w-[100px] sm:w-[113px]"
               >
                 <path
                   d="M115.888 109.303C113.416 108.642 110.839 108.977 108.634 110.25L86.0053 123.314C85.7861 122.253 85.3997 121.22 84.8447 120.25C83.4719 117.85 81.2576 116.132 78.6095 115.411L52.1148 108.2C52.009 108.171 51.9014 108.149 51.7925 108.135C47.6139 107.582 43.7987 108.6 40.4532 111.162L34.1582 115.983L34.1187 115.835C33.5452 113.695 31.3374 112.421 29.1962 112.992L22.8922 114.682C20.7519 115.255 19.4769 117.463 20.0503 119.604L29.19 153.714C29.4672 154.749 30.1326 155.615 31.063 156.152C31.6836 156.511 32.372 156.694 33.0684 156.694C33.4168 156.694 33.7669 156.648 34.1119 156.556L40.4158 154.866C41.4514 154.589 42.3176 153.923 42.8548 152.992C43.3918 152.062 43.535 150.979 43.2575 149.944L43.0241 149.073C46.5014 146.567 49.6221 145.905 53.5201 146.799L68.6964 150.278C70.0628 150.591 71.3951 150.748 72.6901 150.748C75.3821 150.748 77.9118 150.072 80.2454 148.725L118.197 126.814C122.763 124.178 124.333 118.318 121.697 113.751C120.425 111.545 118.361 109.966 115.888 109.303ZM33.6992 151.587L25.0188 119.191L29.6089 117.962L38.2893 150.357L33.6992 151.587ZM115.744 122.565L77.7926 144.476C75.4115 145.85 72.7943 146.184 69.7929 145.496L54.617 142.017C49.8999 140.936 45.802 141.567 41.685 144.074L35.532 121.11L43.4362 115.057C45.7014 113.322 48.1748 112.641 50.9919 112.979L77.3206 120.145C78.7045 120.522 79.8639 121.424 80.5858 122.686C81.3076 123.948 81.498 125.405 81.1211 126.789C80.744 128.175 79.8421 129.336 78.5819 130.056C77.3216 130.777 75.8641 130.966 74.4778 130.589L60.3248 126.737C58.902 126.349 57.4319 127.297 57.2433 128.817C57.0919 130.037 57.9229 131.168 59.1096 131.491L73.1893 135.323C74.0933 135.569 75.0015 135.687 75.8966 135.687C80.0157 135.686 83.8315 133.196 85.4353 129.308L111.087 114.499C112.157 113.881 113.411 113.719 114.618 114.042C115.825 114.366 116.83 115.133 117.448 116.204C118.732 118.428 117.967 121.281 115.744 122.565ZM49.8398 79.3589H49.8407H51.722V102.258C51.722 103.613 52.8204 104.712 54.1751 104.712H67.613C68.9678 104.712 70.0661 103.613 70.0661 102.258V79.3589H71.9465H71.9483C73.4625 79.3589 74.8191 78.5125 75.4885 77.1504C76.1533 75.7972 75.9907 74.2119 75.0644 73.0132L64.0661 58.7805C63.4081 57.9293 62.4507 57.3335 61.3824 57.2062C59.9706 57.0379 58.6287 57.6076 57.7784 58.7078L46.7243 73.0126C45.798 74.2113 45.6352 75.7966 46.2997 77.1498C46.9687 78.5128 48.3253 79.3589 49.8398 79.3589ZM60.8942 62.6994L69.9766 74.4526H67.6133C66.2586 74.4526 65.1602 75.551 65.1602 76.9057V99.8054H56.6285V76.9057C56.6285 75.551 55.5301 74.4526 54.1754 74.4526H51.8121L60.8942 62.6994ZM84.772 104.712H98.2099C99.5647 104.712 100.663 103.613 100.663 102.258V59.9838H102.543H102.545C104.059 59.9838 105.416 59.1375 106.085 57.7754C106.75 56.4221 106.588 54.8368 105.661 53.6382L94.6063 39.3318C93.8608 38.3671 92.7103 37.8023 91.4911 37.8023C90.263 37.8023 89.1272 38.3598 88.3753 39.3328L77.3206 53.6382C76.3943 54.8368 76.2321 56.4221 76.8966 57.7754C77.5656 59.1375 78.9219 59.9838 80.4364 59.9838H80.4373H82.3186V102.258C82.3189 103.613 83.4173 104.712 84.772 104.712ZM91.4911 43.3243L100.574 55.0775H98.2102C96.8555 55.0775 95.7571 56.1759 95.7571 57.5307V99.8054H87.2254V57.5307C87.2254 56.1759 86.1271 55.0775 84.7723 55.0775H82.409L91.4911 43.3243ZM136.258 67.4775L125.203 53.1721C124.452 52.1994 123.316 51.6416 122.088 51.6416C122.088 51.6416 122.088 51.6416 122.087 51.6416C120.859 51.6416 119.724 52.1991 118.972 53.1721L107.917 67.4775C106.991 68.6761 106.828 70.2618 107.493 71.6147C108.162 72.9768 109.518 73.8228 111.033 73.8228H111.035H112.915V102.258C112.915 103.613 114.014 104.711 115.368 104.711H128.806C130.161 104.711 131.259 103.613 131.259 102.258V73.8228H133.139H133.142C134.656 73.8228 136.012 72.9768 136.682 71.615C137.347 70.2615 137.185 68.6761 136.258 67.4775ZM128.807 68.9168C127.452 68.9168 126.354 70.0152 126.354 71.37V99.8054H117.822V71.37C117.822 70.0152 116.724 68.9168 115.369 68.9168H113.006L122.088 57.1639L131.17 68.9168H128.807ZM81.3073 23.3724L78.9455 33.4416C78.7806 34.145 78.8928 34.9018 79.3178 35.486C80.1049 36.5678 81.5259 36.8064 82.59 36.1615L91.4905 30.7714L100.391 36.1615C100.783 36.3985 101.223 36.5163 101.662 36.5163C102.427 36.5163 103.189 36.159 103.686 35.4544C104.095 34.8742 104.197 34.1309 104.035 33.4397L101.674 23.3721L109.551 16.5727C110.492 15.7601 110.705 14.3366 109.922 13.2536C109.499 12.6679 108.815 12.3269 108.095 12.2662L97.7846 11.4003L93.7759 1.86373C93.4959 1.19801 92.9608 0.6525 92.2737 0.430186C91.0014 0.0186742 89.7117 0.660473 89.2293 1.80762L85.197 11.4003L74.8865 12.2662C74.1665 12.3266 73.4821 12.6679 73.0593 13.2536C72.2767 14.3366 72.4889 15.7601 73.4303 16.5727L81.3073 23.3724ZM87.0887 16.1654C87.9985 16.0891 88.7905 15.5135 89.1444 14.6718L91.4911 9.0891L93.8378 14.6718C94.1917 15.5135 94.9838 16.0891 95.8936 16.1654L101.928 16.672L97.344 20.6292C96.6528 21.2259 96.3501 22.1572 96.5587 23.0465L97.9413 28.9419L92.7618 25.8053C92.3715 25.5689 91.9311 25.4505 91.4911 25.4505C91.0511 25.4505 90.6107 25.5689 90.2204 25.8053L85.0406 28.9419L86.4233 23.0465C86.6318 22.1572 86.3291 21.2259 85.638 20.6292L81.0537 16.672L87.0887 16.1654Z"
@@ -465,15 +467,15 @@ const SolutionSection = () => {
                     y2="134.5"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#58BEFF" />
-                    <stop offset="0.33" stop-color="#BB4EEE" />
-                    <stop offset="0.635" stop-color="#FE4996" />
-                    <stop offset="1" stop-color="#EF8055" />
+                    <stop stopColor="#58BEFF" />
+                    <stop offset="0.33" stopColor="#BB4EEE" />
+                    <stop offset="0.635" stopColor="#FE4996" />
+                    <stop offset="1" stopColor="#EF8055" />
                   </linearGradient>
                 </defs>
               </svg>
-              <div className="space-y-6 pt-5 text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90">
-                <p className="ecl-card-text">
+              <div className="pt-[60px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 2xl:pt-[90px]">
+                <p className="text-[20px] leading-[1.6] md:text-[26px]">
                   Unireal ESL solution connecting stores with the ESL cloud
                   platform for lowest cost deployment
                 </p>
@@ -482,7 +484,7 @@ const SolutionSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
