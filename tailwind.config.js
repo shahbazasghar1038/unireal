@@ -16,6 +16,7 @@ export default {
         'section-gradient': 'linear-gradient(90deg, #5ABBFE 0%, #B150F4 31.48%, #E24BBD 68.21%, #FC934E 100%)',
         'heading-gradient': 'linear-gradient(90deg, #57C3F9 0%, #BB4EEE 32%, #FE4996 65%, #FEA042 100%)',
         'mask-group': "url('/Mask group.svg')",
+        'esl-heading-gradient': 'linear-gradient(90deg, #4395BE 0%, #B650EF 29%, #F948A3 62%, #FE9748 100%)',
       },
       screens: {
         '300': '300px',

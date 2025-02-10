@@ -2,14 +2,14 @@ import digitalSelf from "../../../assets/digitalSelf.png";
 
 const SelfSection = () => {
   return (
-    <div className="max-w-[1328px] mx-auto px-6 my-16">
+    <div className="mx-auto max-w-[1328px] px-6 pb-[80px] pt-[80px] md:pb-[100px] md:pt-[164px]">
       {/* Heading */}
-      <h2 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-red-400 text-transparent bg-clip-text text-center">
+      <h2 className="bg-esl-heading-gradient bg-clip-text text-center text-[30px] font-bold text-transparent md:text-[35px] 2xl:text-[40px]">
         Why Our Digital Shelf Labels
       </h2>
 
       {/* Description */}
-      <p className="text-white text-opacity-80 text-md md:text-lg mt-4 max-w-3xl mx-auto text-center">
+      <p className="text-md mx-auto mt-4 max-w-[1050px] text-center text-[20px] text-white text-opacity-80 md:text-[24px] 2xl:max-w-[1100px] 2xl:text-[26px]">
         Electronic shelf label (ESL) is revolutionizing the way retail stores
         manage pricing and product information. Our digital price tags are
         designed to improve efficiency, accuracy, and customer satisfaction in
@@ -18,11 +18,11 @@ const SelfSection = () => {
       </p>
 
       {/* Image - Left on Mobile, Centered on Desktop */}
-      <div className="flex md:justify-center justify-start mt-8">
+      <div className="mt-8 flex justify-start md:justify-center">
         <img
           src={digitalSelf}
           alt="Digital Shelf Label"
-          className="max-w-xs md:max-w-md w-full object-contain"
+          className="w-full max-w-[600px]"
         />
       </div>
     </div>

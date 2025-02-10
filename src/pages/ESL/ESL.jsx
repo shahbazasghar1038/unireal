@@ -9,7 +9,6 @@ const ECL = () => {
     <div className="bg-black">
       <HeroSection />
       <SelfSection />
-      <p className="ecl-heading pb-10">Services</p>
       <ECLSlider />
       {/* cards section  */}
 

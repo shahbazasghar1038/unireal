@@ -3,25 +3,25 @@ import heroServiceImage from "../../../assets/hero-service-bgImage.png";
 const HeroSection = () => {
   return (
     <div
-      className="relative w-full h-[500px] md:h-[600px] bg-cover bg-center"
+      className="relative h-[500px] w-full bg-cover bg-center sm:bg-center md:h-[700px] 2xl:h-[878px]"
       style={{ backgroundImage: `url(${heroServiceImage})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
 
       {/* Content Wrapper with Same Width as Header & Centered Vertically */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 h-full flex items-center">
-        <div className="text-left">
-          <h1 className="text-white font-bold text-2xl md:text-4xl">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1280px] items-center px-6">
+        <div className="flex w-[450px] flex-col items-center justify-center text-left 2xl:w-[600px]">
+          <h1 className="text-[30px] font-bold text-white md:text-[40px] 2xl:text-[50px]">
             <span className="font-bold">Electronic Shelf Label</span>
           </h1>
-          <p className="text-white text-opacity-70 text-lg md:text-xl mt-2">
+          <p className="text-[20px] text-white text-opacity-70 sm:mt-4 md:text-[28px] 2xl:text-[35px]">
             Smart Labels, Smarter Retail
           </p>
 
           {/* Button */}
           <button
-            className="relative w-[280px] mt-6 px-8 py-3 text-black font-bold bg-white rounded-full transition-transform hover:scale-105 duration-300"
+            className="relative mt-[30px] w-[218px] rounded-full bg-white px-8 py-3 font-bold text-black transition-transform duration-300 hover:scale-105 sm:mt-[40px]"
             style={{
               background: "#F5F5F7",
               border: "3px solid transparent",
@@ -40,7 +40,7 @@ const HeroSection = () => {
       </div>
 
       {/* Gradient Bottom Border */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-red-400"></div>
+      <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-blue-400 via-purple-500 to-red-400"></div>
     </div>
   );
 };

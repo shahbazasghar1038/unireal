@@ -36,22 +36,29 @@ const ECLSlider = () => {
   };
 
   return (
-    <div className="slider mx-auto">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`slide ${activeIndex === index ? "active" : ""}`}
-          onClick={() => handleSlideClick(index)}
-          style={{
-            backgroundImage: `url(${slide.imageUrl})`,
-          }}
-        >
-          <div className="slide-content">
-            <h2 className="slide-heading">{slide.heading}</h2>
-            <p className="slide-text">{slide.text}</p>
+    <div className="flex w-full flex-col items-center justify-center gap-[60px] pb-[60px] pt-[100px]">
+      <p className="text-center text-[40px] font-[700]">Services</p>
+
+      <div className="mx-auto flex w-full items-center justify-center gap-[14px]">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`flex-1 transition-all h-[700px] ${
+              activeIndex === index ? "flex-[2]" : ""
+            }`}
+            onMouseEnter={() => handleSlideClick(index)}
+            style={{
+              backgroundImage: `url(${slide.imageUrl})`,
+            }}
+          >
+            {/* <div className="slide-content">
+              <h2 className="slide-heading">{slide.heading}</h2>
+              <p className="slide-text">{slide.text}</p>
+            </div> */}
+            flsdkjlsadjlksdjlkasdjlkasjdlkasjdlk
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

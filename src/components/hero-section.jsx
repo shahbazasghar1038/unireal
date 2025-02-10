@@ -74,7 +74,7 @@ const HeroSection = () => {
             {/* <div className="bg-[#FE43AA]">
               
             </div> */}
-            <div className="absolute top-0 z-[-1] h-[250px] w-full bg-custom-gradient blur-[6px] md:h-[600px] md:blur-[15px] xl:blur-[16px] 2xl:h-[578px] 2xl:blur-[16px]"></div>
+            <div className="absolute top-0 z-[-1] hidden h-[250px] w-full bg-custom-gradient blur-[6px] sm:z-[-1] sm:flex md:h-[600px] md:blur-[15px] xl:blur-[16px] 2xl:h-[578px] 2xl:blur-[16px]"></div>
             <div className="relative aspect-[2/1.3] w-full overflow-hidden rounded-[5px] bg-[black] sm:aspect-[2/1]">
               <div className="relative h-full w-full !border-[16px] !border-[black] bg-gray-800">
                 <div className="absolute left-0 top-0 flex h-[101%] w-full flex-col items-center justify-end bg-gradient-to-t from-[black]/80 to-transparent pb-[13px] sm:pb-[30px] xl:pb-[55px] 2xl:pb-[60px]">
