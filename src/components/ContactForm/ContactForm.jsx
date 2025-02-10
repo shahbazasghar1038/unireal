@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Newsletter from "../Newsletter/Newsletter";
 
 const ContactForm = () => {
@@ -10,9 +14,40 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // Handle form submission
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://tieronix.com/ur-be/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success("Query submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error(data.message || "Submission failed. Try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -33,11 +68,11 @@ const ContactForm = () => {
               CONTACT US
             </h1>
             <h2 className="mt-4 bg-gradient-to-r from-[#42dcff] via-[#a852ff] to-[#fe43aa] bg-clip-text text-3xl font-bold text-transparent">
-              Wed Love to Hear From You!
+              We'd Love to Hear From You!
             </h2>
             <p className="mt-4 leading-relaxed text-white text-opacity-80">
               Any questions? We certainly hope so. <br />
-              Feel free to reach out to us and well get back to you as soon as
+              Feel free to reach out to us and we’ll get back to you as soon as
               we can.
             </p>
 
@@ -49,7 +84,7 @@ const ContactForm = () => {
                 Ask us anything
               </p>
               <p className="text-sm text-white text-opacity-60">
-                Pricing, features, setup or how we can support your business
+                Pricing, features, setup, or how we can support your business
               </p>
             </div>
 
@@ -80,8 +115,8 @@ const ContactForm = () => {
                   placeholder="First Name"
                   value={formData.firstName}
                   onChange={handleChange}
-                  style={{ borderColor: "#A4A4A4", color: "#858585" }} // Apply border & text color
                   className="w-full rounded-md border border-opacity-30 bg-transparent px-4 py-3 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                  required
                 />
 
                 <input
@@ -90,8 +125,8 @@ const ContactForm = () => {
                   placeholder="Last Name"
                   value={formData.lastName}
                   onChange={handleChange}
-                  style={{ borderColor: "#A4A4A4", color: "#858585" }} // Apply border & text color
                   className="w-full rounded-md border border-opacity-30 bg-transparent px-4 py-3 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                  required
                 />
               </div>
               <input
@@ -100,8 +135,8 @@ const ContactForm = () => {
                 placeholder="Your e-mail"
                 value={formData.email}
                 onChange={handleChange}
-                style={{ borderColor: "#A4A4A4", color: "#858585" }}
-                className="w-full rounded-md border border-opacity-30 bg-transparent px-4 py-3 placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full rounded-md border border-opacity-30 bg-transparent px-4 py-3 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                required
               />
               <input
                 type="text"
@@ -109,8 +144,8 @@ const ContactForm = () => {
                 placeholder="Subject"
                 value={formData.subject}
                 onChange={handleChange}
-                style={{ borderColor: "#A4A4A4", color: "#858585" }}
-                className="w-full rounded-md border border-opacity-30 bg-transparent px-4 py-3 placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full rounded-md border border-opacity-30 bg-transparent px-4 py-3 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                required
               />
               <textarea
                 name="message"
@@ -118,12 +153,10 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                style={{ borderColor: "#A4A4A4", color: "#858585" }}
                 className="w-full resize-none rounded-md border border-opacity-30 bg-transparent px-4 py-3 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-blue-400"
+                required
               />
               <div className="flex justify-center">
-                {" "}
-                {/* Center Button */}
                 <button
                   type="submit"
                   className="relative w-[260px] rounded-full px-8 py-3 font-medium text-white transition-transform duration-300 hover:scale-105"
@@ -137,8 +170,9 @@ const ContactForm = () => {
                     backgroundClip: "padding-box, border-box",
                     WebkitBackgroundClip: "padding-box, border-box",
                   }}
+                  disabled={loading}
                 >
-                  Submit
+                  {loading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>
