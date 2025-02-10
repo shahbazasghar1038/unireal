@@ -126,7 +126,7 @@ body {
     #a952fe 67.8%,
     #4ecbff 99.21%
   );
-  filter: blur(40px);
+  filter: blur(20px);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: -1;

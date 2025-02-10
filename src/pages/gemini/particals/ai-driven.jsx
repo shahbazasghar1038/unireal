@@ -1,6 +1,9 @@
 const AiDriven = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center bg-mask-group bg-cover bg-center bg-no-repeat">
+    <div
+      id={"ai"}
+      className="relative flex w-full flex-col items-center justify-center bg-mask-group bg-cover bg-center bg-no-repeat"
+    >
       <div className="flex w-full max-w-[1240px] flex-col items-center justify-center px-5 pb-[100px] pt-[80px] md:pb-[130px] md:pt-[100px] lg:pb-[156px] 2xl:max-w-[1485px] 2xl:pt-[119px]">
         {/* top  */}
         <div className="flex w-full flex-col items-center justify-center pb-[60px] md:pb-[90px]">

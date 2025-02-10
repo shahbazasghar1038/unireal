@@ -1,6 +1,9 @@
 const Promo = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center">
+    <div
+      id={"promo"}
+      className="relative flex w-full flex-col items-center justify-center"
+    >
       <img
         src="/vector-bg-1.svg"
         className="absolute right-0 top-[10%] z-[-1] max-w-[100px] blur-[50px] sm:max-w-[120px] sm:blur-[90px] 2xl:top-[8%] 2xl:max-w-[180px] 2xl:blur-[120px]"
