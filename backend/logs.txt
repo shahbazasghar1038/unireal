@@ -1,2 +1,4 @@
 2025-02-10T13:35:55.324Z - 🚀 Server running on http://localhost:5000
 2025-02-10T13:35:56.198Z - Database connection failed: Access denied for user 'tieronix_unireal'@'%' to database 'tieronix_unireal'
+2025-02-10T17:39:45.428Z - 🚀 Server running on http://localhost:5000
+2025-02-10T17:39:55.456Z - Database connection failed: connect ETIMEDOUT
