@@ -96,7 +96,7 @@ const ProductCategory = () => {
   useEffect(() => {
     if (selectedProduct) {
       const productCategory = products.find(
-        (p) => p.name === selectedProduct
+        (p) => p.category === selectedProduct
       )?.category;
       if (productCategory) {
         setSelectedCategory(productCategory);
