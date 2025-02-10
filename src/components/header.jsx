@@ -125,20 +125,20 @@ const Header = () => {
             <div className="hidden items-center justify-center gap-[39px] md:flex">
               <Link
                 to="/"
-                className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
+                className="text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
               >
                 Home
               </Link>
               <Link
                 to="/company"
-                className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
+                className="text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
               >
                 Company
               </Link>
 
               {/* Dropdown for Services */}
               <div className="group relative">
-                <button className="items-cen0ter flex h-[40px] items-center justify-center gap-1 text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70">
+                <button className="items-cen0ter flex h-[40px] items-center justify-center gap-1 text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70">
                   Services
                   <ChevronDown size={16} />
                 </button>
@@ -146,13 +146,13 @@ const Header = () => {
                 <div className="absolute left-0 mt-0 hidden w-40 rounded-md bg-black p-2 shadow-lg group-hover:block">
                   <Link
                     to="/esl"
-                    className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+                    className="block px-4 py-2 text-base text-white hover:bg-gray-700"
                   >
                     ESL
                   </Link>
                   <Link
                     to="/gemini"
-                    className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+                    className="block px-4 py-2 text-base text-white hover:bg-gray-700"
                   >
                     Gemini
                   </Link>
@@ -161,19 +161,19 @@ const Header = () => {
 
               <Link
                 to="/products"
-                className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
+                className="text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
               >
                 Products
               </Link>
               <Link
                 to="/career"
-                className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
+                className="text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
               >
                 Career
               </Link>
               <Link
                 to="/contact"
-                className="text-sm font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
+                className="text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
               >
                 Contact
               </Link>
