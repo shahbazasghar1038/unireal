@@ -1,6 +1,7 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { useRef } from "react";
 import "@splidejs/react-splide/css";
+import {Link} from "react-router-dom";
 
 const OurProducts = () => {
   const sliderRef = useRef(null);
@@ -158,11 +159,11 @@ const OurProducts = () => {
         </div>
       </div>
       <div className="mt-[40px] flex items-center justify-center md:mt-[50px] lg:mt-[70px] 2xl:mt-[90px]">
-        <button className="animated-gradient-bg-div gradient-hover-effect h-[55px] w-[240px] rounded-full p-[2px] md:h-[66px] md:w-[386px] md:p-[3px]">
+        <Link to = '/products'className="animated-gradient-bg-div gradient-hover-effect h-[55px] w-[240px] rounded-full p-[2px] md:h-[66px] md:w-[386px] md:p-[3px]">
           <div className="flex h-full w-full items-center justify-center rounded-full bg-[#13111A] text-[20px] font-[500] md:text-[25px]">
             See All
           </div>
-        </button>
+        </Link>
       </div>
     </div>
   );
