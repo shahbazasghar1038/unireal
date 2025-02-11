@@ -131,13 +131,13 @@ const products = [
     category: "Outdoor Signage",
   },
   {
-    id: 15,
+    id: 16,
     name: "MWE604",
     image: mwe604,
     category: "Outdoor Signage",
   },
   {
-    id: 16,
+    id: 17,
     name: "Taxi Top Outdoor",
     image: taxiTopOutdoor,
     category: "Outdoor Signage",
