@@ -1,24 +1,40 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Newsletter from "../Newsletter/Newsletter";
+import { z } from "zod";
 import Email from "../../pages/gemini/particals/email";
+import { ChevronDown } from "lucide-react";
+
+// Define Zod schema for validation
+const contactFormSchema = z.object({
+  firstName: z.string().nonempty("First name is required"),
+  lastName: z.string().nonempty("Last name is required"),
+  industry: z.string().nonempty("Industry is required"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().nonempty("Subject is required"),
+  message: z.string().nonempty("Message is required"),
+  interest: z.string().nonempty("Interest is required"),
+});
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // Use React Hook Form with Zod schema
+  const {
+    control,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = async (formData) => {
     setLoading(true);
 
     try {
@@ -34,13 +50,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         toast.success("Query submitted successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+        reset(); // Reset form after successful submission
       } else {
         toast.error(data.message || "Submission failed. Try again.");
       }
@@ -51,18 +61,18 @@ const ContactForm = () => {
     }
   };
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const firstNameValue = watch("firstName");
+  const lastNameValue = watch("lastName");
+  const emailValue = watch("email");
+  const subjectValue = watch("subject");
+  const industryValue = watch("industry");
+  const messageValue = watch("industry");
 
   return (
     <>
       <div className="h-[80px] w-full"></div>
       <div className="bg-black px-6 pb-[50px] pt-[50px] md:pb-[125px] md:pt-[125px]">
-        <div className="mx-auto flex max-w-[1300px] flex-col gap-10 md:gap-16 lg:flex-row 2xl:max-w-[1480px]">
+        <div className="mx-auto flex max-w-[1300px] flex-col gap-10 md:gap-[60px] lg:flex-row 2xl:max-w-[1480px] 2xl:gap-[80px]">
           {/* Left Side: Contact Info */}
           <div className="w-full md:max-w-[570px]">
             {/* <h1 className="text- font-extrabold text-white opacity-10">
@@ -98,88 +108,210 @@ const ContactForm = () => {
 
           {/* Right Side: Contact Form (Wider) */}
           <div className="w-full rounded-lg bg-[#1a1a1a] px-5 py-8 shadow-lg md:py-[53px] lg:px-[43px]">
-            <form onSubmit={handleSubmit} className="space-y-[30px]">
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-                  required
-                />
-
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-                  required
-                />
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-[30px]">
+              <div className="grid w-full gap-4 lg:grid-cols-2">
+                <div className="relative grid grid-cols-1 gap-4 md:grid-cols-1">
+                  <Controller
+                    name="firstName"
+                    control={control}
+                    render={({ field }) => (
+                      <div className="relative">
+                        <input
+                          id="firstName"
+                          type="text"
+                          {...field}
+                          className="peer flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-transparent outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                        />
+                        <label
+                          htmlFor="firstName"
+                          className={`absolute left-4 top-1/2 -translate-y-1/2 transform bg-[#1a1a1a] px-2 text-[#858585] transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:transform-none peer-focus:top-0 peer-focus:text-sm  ${
+                            firstNameValue?.length > 0 && "!text-sm !top-0"
+                          }`}
+                        >
+                          First Name
+                        </label>
+                      </div>
+                    )}
+                  />
+                  {errors.firstName && (
+                    <span className="text-red-500">
+                      {errors.firstName.message}
+                    </span>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
+                  <Controller
+                    name="lastName"
+                    control={control}
+                    render={({ field }) => (
+                      <div className="relative">
+                        <input
+                          id="lastName"
+                          type="text"
+                          {...field}
+                          className="peer flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-transparent outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                        />
+                        <label
+                          htmlFor="lastName"
+                          className={`absolute left-4 top-1/2 -translate-y-1/2 transform bg-[#1a1a1a] px-2 text-[#858585] transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:transform-none peer-focus:top-0 peer-focus:text-sm  ${
+                            lastNameValue?.length > 0 && "!text-sm !top-0"
+                          }`}
+                        >
+                          Last Name
+                        </label>
+                      </div>
+                    )}
+                  />
+                  {errors.lastName && (
+                    <span className="text-red-500">
+                      {errors.lastName.message}
+                    </span>
+                  )}
+                </div>
               </div>
-              <input
-                type="email"
+
+              <Controller
                 name="email"
-                placeholder="Your e-mail"
-                value={formData.email}
-                onChange={handleChange}
-                className="flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-                required
+                control={control}
+                render={({ field }) => (
+                  <div className="relative">
+                    <input
+                      id="email"
+                      type="email"
+                      {...field}
+                      className="peer flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-transparent outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                    />
+                    <label
+                      htmlFor="email"
+                      className={`absolute left-4 top-1/2 -translate-y-1/2 transform bg-[#1a1a1a] px-2 text-[#858585] transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:transform-none peer-focus:top-0 peer-focus:text-sm  ${
+                        emailValue?.length > 0 && "!text-sm !top-0"
+                      }`}
+                    >
+                      Email
+                    </label>
+                  </div>
+                )}
               />
-              <input
-                type="text"
+              {errors.email && (
+                <span className="text-red-500">{errors.email.message}</span>
+              )}
+
+              <Controller
                 name="subject"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className="flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-                required
+                control={control}
+                render={({ field }) => (
+                  <div className="relative">
+                    <input
+                      id="subject"
+                      type="text"
+                      {...field}
+                      className="peer flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-transparent outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                    />
+                    <label
+                      htmlFor="subject"
+                      className={`absolute left-4 top-1/2 -translate-y-1/2 transform bg-[#1a1a1a] px-2 text-[#858585] transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:transform-none peer-focus:top-0 peer-focus:text-sm  ${
+                        subjectValue?.length > 0 && "!text-sm !top-0"
+                      }`}
+                    >
+                      Subject
+                    </label>
+                  </div>
+                )}
               />
-              <input
-                type="text"
-                name="Industry"
-                placeholder="Industry"
-                // value={formData.subject}
-                // onChange={handleChange}
-                className="flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-                required
+              {errors.subject && (
+                <span className="text-red-500">{errors.subject.message}</span>
+              )}
+
+              <Controller
+                name="industry"
+                control={control}
+                render={({ field }) => (
+                  <div className="relative">
+                    <input
+                      id="industry"
+                      type="text"
+                      {...field}
+                      className="peer flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-transparent outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                    />
+                    <label
+                      htmlFor="industry"
+                      className={`absolute left-4 top-1/2 -translate-y-1/2 transform bg-[#1a1a1a] px-2 text-[#858585] transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:transform-none peer-focus:top-0 peer-focus:text-sm  ${
+                        industryValue?.length > 0 && "!text-sm !top-0"
+                      }`}
+                    >
+                      Industry
+                    </label>
+                  </div>
+                )}
               />
-              <select
-                name=""
-                id=""
-                className="flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-              >
-                <option value="" className="text-black">
-                  Intrest
-                </option>
-                <option value="" className="text-black">
-                  Intrest
-                </option>
-                <option value="" className="text-black">
-                  Intrest
-                </option>
-                <option value="" className="text-black">
-                  Intrest
-                </option>
-                <option value="" className="text-black">
-                  Intrest
-                </option>
-                <option value="" className="text-black">
-                  Intrest
-                </option>
-              </select>
-              <textarea
+              {errors.industry && (
+                <span className="text-red-500">{errors.industry.message}</span>
+              )}
+
+              <Controller
+                name="interest"
+                control={control}
+                render={({ field }) => (
+                  <div className="relative">
+                    <select
+                      {...field}
+                      className="flex h-[52px] w-full appearance-none items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-5 text-[#858585] placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                    >
+                      <option value="Interest" className="text-black">
+                        Interest
+                      </option>
+                      <option value="Interest2" className="text-black">
+                        Interest2
+                      </option>
+                      <option value="Interest3" className="text-black">
+                        Interest3
+                      </option>
+                      <option value="Interest4" className="text-black">
+                        Interest4
+                      </option>
+                      <option value="Interest5" className="text-black">
+                        Interest5
+                      </option>
+                      <option value="Interest6" className="text-black">
+                        Interest6
+                      </option>
+                    </select>
+                    <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 transform">
+                      <ChevronDown className="text-[#A4A4A4]" />
+                    </div>
+                  </div>
+                )}
+              />
+              {errors.interest && (
+                <span className="text-red-500">{errors.interest.message}</span>
+              )}
+
+              <Controller
                 name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="flex min-h-[152px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 py-5 text-white placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
-                required
+                control={control}
+                render={({ field }) => (
+                  <div className="relative">
+                    <textarea
+                      id="message"
+                      {...field}
+                      rows={5}
+                      className="peer flex h-[52px] w-full items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-4 py-3 text-white placeholder-transparent outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                    />
+                    <label
+                      htmlFor="message"
+                      className={`absolute left-4 top-1/2 -translate-y-1/2 transform bg-[#1a1a1a] px-2 text-[#858585] transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:transform-none peer-focus:top-0 peer-focus:text-sm  ${
+                        messageValue?.length > 0 && "!text-sm !top-0"
+                      }`}
+                    >
+                      Message
+                    </label>
+                  </div>
+                )}
               />
+              {errors.message && (
+                <span className="text-red-500">{errors.message.message}</span>
+              )}
+
               <div className="flex justify-center">
                 <div className="pt-[50px] 2xl:!pt-[70px]">
                   <button

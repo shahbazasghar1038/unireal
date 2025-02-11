@@ -74,7 +74,7 @@ const App = () => {
           <Route
             path="/company"
             element={
-              <div className="w-full bg-white">
+              <div className="w-full">
                 <AboutUs />
               </div>
             }

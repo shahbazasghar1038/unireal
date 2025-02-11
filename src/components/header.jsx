@@ -107,7 +107,7 @@ const Header = () => {
       {/* Desktop Menu */}
       <motion.div
         style={{ opacity }}
-        className={`fixed left-0 top-0 z-[100] flex w-full items-center justify-center bg-[#16161799] backdrop-blur-[20px] ${
+        className={`fixed left-0 top-0 z-[9999] flex w-full items-center justify-center bg-[#16161799] backdrop-blur-[20px] ${
           location.pathname !== "/" &&
           location.pathname.startsWith("/?") === false &&
           "!opacity-100"

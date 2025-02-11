@@ -19,6 +19,8 @@ export default {
         'esl-heading-gradient': 'linear-gradient(90deg, #4395BE 0%, #B650EF 29%, #F948A3 62%, #FE9748 100%)',
         'white-shade': 'linear-gradient(270deg, rgba(217, 217, 217, 0) 0%, rgba(255, 255, 255, 0.69) 100%)',
         'contact-gradient': 'linear-gradient(180deg, #4ECBFF 0%, #AF51F7 39%, #E44BBB 70%, #FE9748 100%)',
+        'heading-gradient-text-new': 'linear-gradient(90deg, #4ECBFF 35.29%, #BB4EEE 46.89%, #F549A8 57.45%, #FEA042 67.65%)',
+        'company-gradient-text': 'linear-gradient(90deg, #CC4DA5 36.4%, #7453E4 67.66%)',
 
       },
       screens: {

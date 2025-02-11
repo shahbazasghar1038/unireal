@@ -7,11 +7,11 @@ const AiDriven = () => {
       <div className="flex w-full max-w-[1240px] flex-col items-center justify-center px-5 pb-[100px] pt-[80px] md:pb-[130px] md:pt-[100px] lg:pb-[156px] 2xl:max-w-[1485px] 2xl:pt-[119px]">
         {/* top  */}
         <div className="flex w-full flex-col items-center justify-center pb-[60px] md:pb-[90px]">
-          <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center justify-center">
+          <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center justify-center 2xl:max-w-[1200px]">
             <h1 className="w-fit bg-heading-gradient bg-clip-text text-center text-[40px] font-[700] text-transparent md:text-[60px] 2xl:text-[70px]">
               AI-Driven Insights
             </h1>
-            <p className="mt-[25px] text-center text-[19px] font-[400] text-white md:mt-[35px] md:text-[24px] 2xl:mt-[50px] 2xl:text-[31px]">
+            <p className="mt-[25px] text-center text-[19px] font-[400] leading-[34px] text-white md:mt-[35px] md:text-[24px] 2xl:mt-[50px] 2xl:text-[31px] 2xl:leading-[40px]">
               Gemini’s AI-powered analytics is a game-changer for businesses
               looking to understand their audience on a deeper level. By
               integrating advanced AI algorithms, Gemini can detect and analyze

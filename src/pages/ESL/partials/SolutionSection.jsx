@@ -38,7 +38,7 @@ const SolutionSection = () => {
                 </defs>
               </svg>
               <div className="pt-[30px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 md:pt-[60px] 2xl:pt-[90px]">
-                <p className="text-[20px] leading-[1.6] md:text-[26px]">
+                <p className="text-[20px] leading-[36px] md:text-[26px]">
                   The first true cloud architecture of the industry. Simple and
                   flexible operation from any device
                 </p>
@@ -351,7 +351,7 @@ const SolutionSection = () => {
                 </defs>
               </svg>
               <div className="pt-[40px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 md:pt-[60px] 2xl:pt-[90px]">
-                <p className="text-[20px] leading-[1.6] md:text-[26px]">
+                <p className="text-[20px] leading-[36px] md:text-[26px]">
                   Provide the most cost-effective customized solution based on
                   different industries and requirements
                 </p>
@@ -434,7 +434,7 @@ const SolutionSection = () => {
                 </defs>
               </svg>
               <div className="pt-[60px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 2xl:pt-[90px]">
-                <p className="text-[20px] leading-[1.6] md:text-[26px]">
+                <p className="text-[20px] leading-[36px] md:text-[26px]">
                   Optimization of promotion and sales channels. Enhancing
                   consumer interaction and shopping experience
                 </p>
@@ -475,7 +475,7 @@ const SolutionSection = () => {
                 </defs>
               </svg>
               <div className="pt-[60px] text-base leading-7 text-gray-50 transition-all duration-300 group-hover:text-white/90 2xl:pt-[90px]">
-                <p className="text-[20px] leading-[1.6] md:text-[26px]">
+                <p className="text-[20px] leading-[36px] md:text-[26px]">
                   Unireal ESL solution connecting stores with the ESL cloud
                   platform for lowest cost deployment
                 </p>

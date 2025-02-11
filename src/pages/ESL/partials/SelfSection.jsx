@@ -4,7 +4,7 @@ const SelfSection = () => {
   return (
     <div className="mx-auto max-w-[1328px] px-6 pb-[80px] pt-[80px] md:pb-[100px] md:pt-[164px]">
       {/* Heading */}
-      <h2 className="bg-esl-heading-gradient bg-clip-text text-center text-[30px] font-bold text-transparent md:text-[35px] 2xl:text-[40px]">
+      <h2 className="mx-auto w-fit bg-esl-heading-gradient bg-clip-text text-center text-[30px] font-bold leading-[43px] text-transparent md:text-[35px] 2xl:text-[40px] 2xl:leading-[48px]">
         Why Our Digital Shelf Labels
       </h2>
 

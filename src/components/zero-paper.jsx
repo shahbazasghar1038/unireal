@@ -35,10 +35,11 @@ const ZeroPaper = () => {
         <h1 className="text-center text-[20px] font-[700] leading-[1.4] sm:text-[35px] 2xl:text-[40px]">
           Dynamic Pricing, Instant Updates
           <br />{" "}
-          <span className="gradient-heading text-[28px] sm:text-[44px] 2xl:text-[50px]">
+          <h1 className="w-full bg-heading-gradient-text-new bg-clip-text text-[28px] text-transparent sm:text-[44px] 2xl:text-[50px]">
             Zero Paper Waste
-          </span>
+          </h1>
         </h1>
+
         <div className="mt-[40px] aspect-[1000/556] w-full rounded-[14px] p-1 sm:mt-[54px] sm:rounded-[30px] sm:p-1.5">
           <div className="relative h-full w-full overflow-hidden rounded-[11px] bg-[black] sm:rounded-[27px]">
             <div className="relative h-full w-full bg-gray-800">
