@@ -143,12 +143,6 @@ const products = [
     category: "Outdoor Signage",
   },
 
-
-
-
-
-
-
   // { id: 3, name: "Multimedia Kiosk", image: product3, category: "Kiosk" },
   // { id: 4, name: "Hand Sanitizer Kiosk", image: product4, category: "Kiosk" },
   // {
@@ -401,7 +395,10 @@ const ProductCategory = () => {
               <Link
                 key={product.id}
                 to={`/product/${product.id}`}
-                state={{ currentProductId: product.id }}
+                state={{
+                  currentProductId: product.id,
+                  category: product.category,
+                }}
                 className="flex flex-col items-center"
               >
                 <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">

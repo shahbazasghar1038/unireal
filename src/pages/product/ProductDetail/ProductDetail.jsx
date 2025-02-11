@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 // Import product images
@@ -13,7 +15,6 @@ import product9 from "../../../assets/product9.png";
 import product10 from "../../../assets/product10.png";
 import product11 from "../../../assets/product11.png";
 import product12 from "../../../assets/product12.png";
-
 
 //outdoor signage
 import mwe863 from "../../../assets/digitalSignage/mwe863.jpg";
@@ -410,14 +411,6 @@ const products = [
     ],
   },
 
-
-
-  
-
-
-
-
-
   // {
   //   id: 3,
   //   name: "Multimedia Kiosk",
@@ -543,15 +536,13 @@ const products = [
   //     { id: 4, label: "Power Supply", value: "AC 220V" },
   //   ],
   // },
-
-
 ];
 
 const ProductDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const currentProductId = location.state?.currentProductId; // Get selected product ID
-
+  const category = location.state?.category;
   // Find the selected product
   const currentIndex = products.findIndex((p) => p.id === currentProductId);
   const product = products[currentIndex];
@@ -616,7 +607,7 @@ const ProductDetail = () => {
           className="cursor-pointer text-gray-500 text-xs sm:text-sm md:text-base whitespace-nowrap"
           onClick={() => navigate("/categories")}
         >
-          {product.name}
+          {category}
         </span>
         <svg
           width="24"
@@ -629,7 +620,7 @@ const ProductDetail = () => {
         </svg>
 
         <span className="text-black font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">
-          {product.name} Products
+          {product.name}
         </span>
       </div>
 
