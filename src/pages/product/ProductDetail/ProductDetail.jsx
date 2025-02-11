@@ -14,6 +14,25 @@ import product10 from "../../../assets/product10.png";
 import product11 from "../../../assets/product11.png";
 import product12 from "../../../assets/product12.png";
 
+
+//outdoor signage
+import mwe863 from "../../../assets/digitalSignage/mwe863.jpg";
+import mwe986 from "../../../assets/digitalSignage/mwe986.jpg";
+import mwe662 from "../../../assets/digitalSignage/mwe662.jpg";
+import mwe957 from "../../../assets/digitalSignage/mwe957.jpg";
+import mweCharging from "../../../assets/digitalSignage/mweCharging.jpg";
+import mwe701 from "../../../assets/digitalSignage/mwe701.jpg";
+import mwe915 from "../../../assets/digitalSignage/mwe915.jpg";
+import mwe763 from "../../../assets/digitalSignage/mwe763.jpg";
+import mwe930 from "../../../assets/digitalSignage/mwe930.jpg";
+import mwe861 from "../../../assets/digitalSignage/mwe861.jpg";
+import mwe804 from "../../../assets/digitalSignage/mwe804.jpg";
+import mwe601 from "../../../assets/digitalSignage/mwe601.jpg";
+import mwe603 from "../../../assets/digitalSignage/mwe603.jpg";
+import mwe912 from "../../../assets/digitalSignage/mwe912.jpg";
+import mwe604 from "../../../assets/digitalSignage/mwe604.jpg";
+import taxiTopOutdoor from "../../../assets/digitalSignage/taxiTopOutdoor.png";
+
 const products = [
   {
     id: 1,
@@ -38,8 +57,31 @@ const products = [
   },
   {
     id: 2,
-    name: "Outdoor Digital Signage",
-    image: product2,
+    name: "MWE863",
+    image: mwe863,
+    specifications: [
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    name: "MWE986",
+    image: mwe986,
     specifications: [
       { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
       { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
@@ -59,130 +101,450 @@ const products = [
     ],
   },
   {
-    id: 3,
-    name: "Multimedia Kiosk",
-    image: product3,
-    specifications: [
-      { id: 1, label: "Touch Screen", value: "Capacitive 10-Point Touch" },
-      { id: 2, label: "Screen Size", value: "43-inch / 55-inch Options" },
-      { id: 3, label: "Resolution", value: "1920 x 1080 (FHD)" },
-      { id: 4, label: "CPU", value: "Intel Core i5 / i7 Optional" },
-      { id: 5, label: "Operating System", value: "Windows 10 / Android 11" },
-      { id: 6, label: "Speakers", value: "Built-in 10W Stereo" },
-      { id: 7, label: "Camera", value: "8MP with Face Recognition" },
-      { id: 8, label: "Storage", value: "128GB SSD, Expandable" },
-    ],
-  },
-  {
     id: 4,
-    name: "Hand Sanitizer Kiosk",
-    image: product4,
+    name: "MWE662",
+    image: mwe662,
     specifications: [
-      { id: 1, label: "Screen Size", value: "21.5-inch LED Display" },
-      { id: 2, label: "Sanitizer Capacity", value: "1000ml Refillable Tank" },
-      { id: 3, label: "Resolution", value: "1080p Full HD" },
-      { id: 4, label: "Power Supply", value: "Rechargeable Battery / Plug-in" },
-      { id: 5, label: "Motion Sensor", value: "Auto Hand Detection" },
-      { id: 6, label: "OS", value: "Android 9.0 / Windows 10" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 5,
-    name: "Face Recognition Kiosk",
-    image: product5,
+    name: "MWE957",
+    image: mwe957,
     specifications: [
-      { id: 1, label: "Screen Size", value: "15-inch IPS Display" },
-      { id: 2, label: "Camera", value: "Dual-Lens Infrared & RGB" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
       {
-        id: 3,
-        label: "AI Algorithm",
-        value: "Facial Recognition (0.3s Speed)",
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
       },
-      { id: 4, label: "Storage", value: "256GB SSD, Expandable" },
-      { id: 5, label: "Security", value: "Mask Detection, Temperature Check" },
-      { id: 6, label: "Power", value: "DC 12V 5A Adapter" },
     ],
   },
   {
     id: 6,
-    name: "Window Advertising LCD",
-    image: product6,
+    name: "MWE Charging Station Outdoor",
+    image: mweCharging,
     specifications: [
-      { id: 1, label: "Brightness", value: "4000 cd/m (Super High)" },
-      { id: 2, label: "Display Type", value: "Double-Sided LCD Panel" },
-      { id: 3, label: "Resolution", value: "4K UHD" },
-      { id: 4, label: "Thickness", value: "Ultra-Thin 9mm Frame" },
-      { id: 5, label: "Installation", value: "Hanging / Stand Mount" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 7,
-    name: "LCD in Bus Station",
-    image: product7,
+    name: "MWE701",
+    image: mwe701,
     specifications: [
-      { id: 1, label: "Weatherproof", value: "IP67 Certified" },
-      { id: 2, label: "Power", value: "Solar-Powered Battery Backup" },
-      { id: 3, label: "Connectivity", value: "4G LTE, WiFi" },
-      { id: 4, label: "Screen Size", value: "55-inch Outdoor Panel" },
-      { id: 5, label: "Operating System", value: "Linux / Android" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 8,
-    name: "Touch Screen Table",
-    image: product8,
+    name: "MWE915",
+    image: mwe915,
     specifications: [
-      { id: 1, label: "Screen Type", value: "Multi-Touch Interactive Table" },
-      { id: 2, label: "Material", value: "Tempered Glass + Metal Frame" },
-      { id: 3, label: "Processor", value: "Intel Core i7" },
-      { id: 4, label: "Connectivity", value: "WiFi, Bluetooth, HDMI" },
-      { id: 5, label: "Storage", value: "512GB SSD, Expandable" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 9,
-    name: "Taxi Top LCD",
-    image: product9,
+    name: "MWE763",
+    image: mwe763,
     specifications: [
-      { id: 1, label: "Brightness", value: "4000 cd/m for Daylight" },
-      { id: 2, label: "Resolution", value: "Full HD / 4K" },
-      { id: 3, label: "Power", value: "12V Car Battery Powered" },
-      { id: 4, label: "Connectivity", value: "4G / GPS Tracking" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 10,
-    name: "LCD Video Wall",
-    image: product10,
+    name: "MWE930",
+    image: mwe930,
     specifications: [
-      { id: 1, label: "Bezel Width", value: "3.5mm Ultra-Narrow" },
-      { id: 2, label: "Screen Size", value: "55-inch Per Panel" },
-      { id: 3, label: "Resolution", value: "Full HD / 4K Options" },
-      { id: 4, label: "Power Supply", value: "AC 220V" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 11,
-    name: "Wall Mount LCD",
-    image: product11,
+    name: "MWE861",
+    image: mwe861,
     specifications: [
-      { id: 1, label: "Bezel Width", value: "3.5mm Ultra-Narrow" },
-      { id: 2, label: "Screen Size", value: "55-inch Per Panel" },
-      { id: 3, label: "Resolution", value: "Full HD / 4K Options" },
-      { id: 4, label: "Power Supply", value: "AC 220V" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
   {
     id: 12,
-    name: "Stretched LCD",
-    image: product11,
+    name: "MWE804",
+    image: mwe804,
     specifications: [
-      { id: 1, label: "Bezel Width", value: "3.5mm Ultra-Narrow" },
-      { id: 2, label: "Screen Size", value: "55-inch Per Panel" },
-      { id: 3, label: "Resolution", value: "Full HD / 4K Options" },
-      { id: 4, label: "Power Supply", value: "AC 220V" },
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
     ],
   },
+  {
+    id: 13,
+    name: "MWE601",
+    image: mwe601,
+    specifications: [
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
+    ],
+  },
+  {
+    id: 14,
+    name: "MWE603",
+    image: mwe603,
+    specifications: [
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
+    ],
+  },
+  {
+    id: 15,
+    name: "MWE912",
+    image: mwe912,
+    specifications: [
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
+    ],
+  },
+  {
+    id: 16,
+    name: "MWE604",
+    image: mwe604,
+    specifications: [
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
+    ],
+  },
+
+  {
+    id: 17,
+    name: "Taxi Top Outdoor",
+    image: taxiTopOutdoor,
+    specifications: [
+      { id: 1, label: "Panel Type", value: "IP65 Waterproof LED Display" },
+      { id: 2, label: "Brightness", value: "5000 cd/m (Sunlight Readable)" },
+      { id: 3, label: "Resolution", value: "3840 x 2160 (4K UHD)" },
+      { id: 4, label: "Operating Temperature", value: "-30°C to 50°C" },
+      { id: 5, label: "Power Supply", value: "AC 110V~240V, 50/60Hz" },
+      { id: 6, label: "Viewing Angle", value: "160°/160° (H/V)" },
+      { id: 7, label: "Connectivity", value: "4G, WiFi, Ethernet" },
+      { id: 8, label: "Glass Type", value: "Tempered Anti-Glare Glass" },
+      { id: 9, label: "Lifespan", value: "50,000 Hours" },
+      {
+        id: 10,
+        label: "Sensor",
+        value:
+          "Human, Light, Screen, Humidity,Temperature, Smoke, Gas, Noise, Flame, Vibration, Safety Monitoring, Ponding, Smog, Collision, and Tilt",
+      },
+    ],
+  },
+
+
+
+  
+
+
+
+
+
+  // {
+  //   id: 3,
+  //   name: "Multimedia Kiosk",
+  //   image: product3,
+  //   specifications: [
+  //     { id: 1, label: "Touch Screen", value: "Capacitive 10-Point Touch" },
+  //     { id: 2, label: "Screen Size", value: "43-inch / 55-inch Options" },
+  //     { id: 3, label: "Resolution", value: "1920 x 1080 (FHD)" },
+  //     { id: 4, label: "CPU", value: "Intel Core i5 / i7 Optional" },
+  //     { id: 5, label: "Operating System", value: "Windows 10 / Android 11" },
+  //     { id: 6, label: "Speakers", value: "Built-in 10W Stereo" },
+  //     { id: 7, label: "Camera", value: "8MP with Face Recognition" },
+  //     { id: 8, label: "Storage", value: "128GB SSD, Expandable" },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   name: "Hand Sanitizer Kiosk",
+  //   image: product4,
+  //   specifications: [
+  //     { id: 1, label: "Screen Size", value: "21.5-inch LED Display" },
+  //     { id: 2, label: "Sanitizer Capacity", value: "1000ml Refillable Tank" },
+  //     { id: 3, label: "Resolution", value: "1080p Full HD" },
+  //     { id: 4, label: "Power Supply", value: "Rechargeable Battery / Plug-in" },
+  //     { id: 5, label: "Motion Sensor", value: "Auto Hand Detection" },
+  //     { id: 6, label: "OS", value: "Android 9.0 / Windows 10" },
+  //   ],
+  // },
+  // {
+  //   id: 5,
+  //   name: "Face Recognition Kiosk",
+  //   image: product5,
+  //   specifications: [
+  //     { id: 1, label: "Screen Size", value: "15-inch IPS Display" },
+  //     { id: 2, label: "Camera", value: "Dual-Lens Infrared & RGB" },
+  //     {
+  //       id: 3,
+  //       label: "AI Algorithm",
+  //       value: "Facial Recognition (0.3s Speed)",
+  //     },
+  //     { id: 4, label: "Storage", value: "256GB SSD, Expandable" },
+  //     { id: 5, label: "Security", value: "Mask Detection, Temperature Check" },
+  //     { id: 6, label: "Power", value: "DC 12V 5A Adapter" },
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   name: "Window Advertising LCD",
+  //   image: product6,
+  //   specifications: [
+  //     { id: 1, label: "Brightness", value: "4000 cd/m (Super High)" },
+  //     { id: 2, label: "Display Type", value: "Double-Sided LCD Panel" },
+  //     { id: 3, label: "Resolution", value: "4K UHD" },
+  //     { id: 4, label: "Thickness", value: "Ultra-Thin 9mm Frame" },
+  //     { id: 5, label: "Installation", value: "Hanging / Stand Mount" },
+  //   ],
+  // },
+  // {
+  //   id: 7,
+  //   name: "LCD in Bus Station",
+  //   image: product7,
+  //   specifications: [
+  //     { id: 1, label: "Weatherproof", value: "IP67 Certified" },
+  //     { id: 2, label: "Power", value: "Solar-Powered Battery Backup" },
+  //     { id: 3, label: "Connectivity", value: "4G LTE, WiFi" },
+  //     { id: 4, label: "Screen Size", value: "55-inch Outdoor Panel" },
+  //     { id: 5, label: "Operating System", value: "Linux / Android" },
+  //   ],
+  // },
+  // {
+  //   id: 8,
+  //   name: "Touch Screen Table",
+  //   image: product8,
+  //   specifications: [
+  //     { id: 1, label: "Screen Type", value: "Multi-Touch Interactive Table" },
+  //     { id: 2, label: "Material", value: "Tempered Glass + Metal Frame" },
+  //     { id: 3, label: "Processor", value: "Intel Core i7" },
+  //     { id: 4, label: "Connectivity", value: "WiFi, Bluetooth, HDMI" },
+  //     { id: 5, label: "Storage", value: "512GB SSD, Expandable" },
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   name: "Taxi Top LCD",
+  //   image: product9,
+  //   specifications: [
+  //     { id: 1, label: "Brightness", value: "4000 cd/m for Daylight" },
+  //     { id: 2, label: "Resolution", value: "Full HD / 4K" },
+  //     { id: 3, label: "Power", value: "12V Car Battery Powered" },
+  //     { id: 4, label: "Connectivity", value: "4G / GPS Tracking" },
+  //   ],
+  // },
+  // {
+  //   id: 10,
+  //   name: "LCD Video Wall",
+  //   image: product10,
+  //   specifications: [
+  //     { id: 1, label: "Bezel Width", value: "3.5mm Ultra-Narrow" },
+  //     { id: 2, label: "Screen Size", value: "55-inch Per Panel" },
+  //     { id: 3, label: "Resolution", value: "Full HD / 4K Options" },
+  //     { id: 4, label: "Power Supply", value: "AC 220V" },
+  //   ],
+  // },
+  // {
+  //   id: 11,
+  //   name: "Wall Mount LCD",
+  //   image: product11,
+  //   specifications: [
+  //     { id: 1, label: "Bezel Width", value: "3.5mm Ultra-Narrow" },
+  //     { id: 2, label: "Screen Size", value: "55-inch Per Panel" },
+  //     { id: 3, label: "Resolution", value: "Full HD / 4K Options" },
+  //     { id: 4, label: "Power Supply", value: "AC 220V" },
+  //   ],
+  // },
+  // {
+  //   id: 12,
+  //   name: "Stretched LCD",
+  //   image: product11,
+  //   specifications: [
+  //     { id: 1, label: "Bezel Width", value: "3.5mm Ultra-Narrow" },
+  //     { id: 2, label: "Screen Size", value: "55-inch Per Panel" },
+  //     { id: 3, label: "Resolution", value: "Full HD / 4K Options" },
+  //     { id: 4, label: "Power Supply", value: "AC 220V" },
+  //   ],
+  // },
+
+
 ];
 
 const ProductDetail = () => {

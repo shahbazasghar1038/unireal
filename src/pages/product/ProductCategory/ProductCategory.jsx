@@ -21,6 +21,24 @@ import product10 from "../../../assets/product10.png";
 import product11 from "../../../assets/product11.png";
 import product12 from "../../../assets/product12.png";
 import Newsletter from "../../../components/Newsletter/Newsletter";
+
+import mwe863 from "../../../assets/digitalSignage/mwe863.jpg";
+import mwe986 from "../../../assets/digitalSignage/mwe986.jpg";
+import mwe662 from "../../../assets/digitalSignage/mwe662.jpg";
+import mwe957 from "../../../assets/digitalSignage/mwe957.jpg";
+import mweCharging from "../../../assets/digitalSignage/mweCharging.jpg";
+import mwe701 from "../../../assets/digitalSignage/mwe701.jpg";
+import mwe915 from "../../../assets/digitalSignage/mwe915.jpg";
+import mwe763 from "../../../assets/digitalSignage/mwe763.jpg";
+import mwe930 from "../../../assets/digitalSignage/mwe930.jpg";
+import mwe861 from "../../../assets/digitalSignage/mwe861.jpg";
+import mwe804 from "../../../assets/digitalSignage/mwe804.jpg";
+import mwe601 from "../../../assets/digitalSignage/mwe601.jpg";
+import mwe603 from "../../../assets/digitalSignage/mwe603.jpg";
+import mwe912 from "../../../assets/digitalSignage/mwe912.jpg";
+import mwe604 from "../../../assets/digitalSignage/mwe604.jpg";
+import taxiTopOutdoor from "../../../assets/digitalSignage/taxiTopOutdoor.png";
+
 const products = [
   {
     id: 1,
@@ -30,50 +48,147 @@ const products = [
   },
   {
     id: 2,
-    name: "Outdoor Digital Signage",
-    image: product2,
+    name: "MWE863",
+    image: mwe863,
     category: "Outdoor Signage",
   },
-  { id: 3, name: "Multimedia Kiosk", image: product3, category: "Kiosk" },
-  { id: 4, name: "Hand Sanitizer Kiosk", image: product4, category: "Kiosk" },
+  {
+    id: 3,
+    name: "MWE986",
+    image: mwe986,
+    category: "Outdoor Signage",
+  },
+  {
+    id: 4,
+    name: "MWE662",
+    image: mwe662,
+    category: "Outdoor Signage",
+  },
   {
     id: 5,
-    name: "Face Recognition Kiosk",
-    image: product5,
-    category: "Recognition Systems",
+    name: "MWE957",
+    image: mwe957,
+    category: "Outdoor Signage",
   },
   {
     id: 6,
-    name: "Window Advertising LCD",
-    image: product6,
-    category: "Advertising",
+    name: "MWE Charging Station Outdoor",
+    image: mweCharging,
+    category: "Outdoor Signage",
   },
   {
     id: 7,
-    name: "LCD in Bus Station",
-    image: product7,
-    category: "Transportation",
+    name: "MWE701",
+    image: mwe701,
+    category: "Outdoor Signage",
   },
   {
     id: 8,
-    name: "Touch Screen Table",
-    image: product8,
-    category: "Interactive Displays",
+    name: "MWE915",
+    image: mwe915,
+    category: "Outdoor Signage",
   },
-  { id: 9, name: "Taxi Top LCD", image: product9, category: "Advertising" },
-  { id: 10, name: "LCD Video Wall", image: product10, category: "Video Walls" },
+  {
+    id: 9,
+    name: "MWE763",
+    image: mwe763,
+    category: "Outdoor Signage",
+  },
+  {
+    id: 10,
+    name: "MWE930",
+    image: mwe930,
+    category: "Outdoor Signage",
+  },
   {
     id: 11,
-    name: "Wall Mount LCD",
-    image: product11,
-    category: "Mount Displays",
+    name: "MWE861",
+    image: mwe861,
+    category: "Outdoor Signage",
   },
   {
     id: 12,
-    name: "Stretched LCD",
-    image: product12,
-    category: "Specialty Displays",
+    name: "MWE804",
+    image: mwe804,
+    category: "Outdoor Signage",
   },
+  {
+    id: 13,
+    name: "MWE601",
+    image: mwe601,
+    category: "Outdoor Signage",
+  },
+  {
+    id: 14,
+    name: "MWE603",
+    image: mwe603,
+    category: "Outdoor Signage",
+  },
+  {
+    id: 15,
+    name: "MWE912",
+    image: mwe912,
+    category: "Outdoor Signage",
+  },
+  {
+    id: 15,
+    name: "MWE604",
+    image: mwe604,
+    category: "Outdoor Signage",
+  },
+  {
+    id: 16,
+    name: "Taxi Top Outdoor",
+    image: taxiTopOutdoor,
+    category: "Outdoor Signage",
+  },
+
+
+
+
+
+
+
+  // { id: 3, name: "Multimedia Kiosk", image: product3, category: "Kiosk" },
+  // { id: 4, name: "Hand Sanitizer Kiosk", image: product4, category: "Kiosk" },
+  // {
+  //   id: 5,
+  //   name: "Face Recognition Kiosk",
+  //   image: product5,
+  //   category: "Recognition Systems",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Window Advertising LCD",
+  //   image: product6,
+  //   category: "Advertising",
+  // },
+  // {
+  //   id: 7,
+  //   name: "LCD in Bus Station",
+  //   image: product7,
+  //   category: "Transportation",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Touch Screen Table",
+  //   image: product8,
+  //   category: "Interactive Displays",
+  // },
+  // { id: 9, name: "Taxi Top LCD", image: product9, category: "Advertising" },
+  // { id: 10, name: "LCD Video Wall", image: product10, category: "Video Walls" },
+  // {
+  //   id: 11,
+  //   name: "Wall Mount LCD",
+  //   image: product11,
+  //   category: "Mount Displays",
+  // },
+  // {
+  //   id: 12,
+  //   name: "Stretched LCD",
+  //   image: product12,
+  //   category: "Specialty Displays",
+  // },
 ];
 
 // Generate unique categories dynamically

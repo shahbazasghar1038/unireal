@@ -23,6 +23,9 @@ import product11 from "../../assets/product11.png";
 import product12 from "../../assets/product12.png";
 import Newsletter from "../../components/Newsletter/Newsletter";
 
+import outdoorSignage from "../../assets/outdoorSignage.png";
+import { image } from "framer-motion/client";
+
 const products = [
   {
     id: 1,
@@ -33,7 +36,8 @@ const products = [
   {
     id: 2,
     name: "Outdoor Digital Signage",
-    image: product2,
+    //image: product2,
+    image: outdoorSignage,
     category: "Outdoor Signage",
   },
   { id: 3, name: "Multimedia Kiosk", image: product3, category: "Kiosk" },
