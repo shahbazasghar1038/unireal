@@ -24,6 +24,9 @@ body {
 }
 
 .marquee-scroll-animation {
+  will-change: transform;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   animation: scroll 35s linear infinite;
 }
 

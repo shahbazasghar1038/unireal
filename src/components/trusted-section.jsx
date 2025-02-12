@@ -34,12 +34,14 @@ const TrustedSection = ({ className = "" }) => {
                     key={i}
                     src={`${item}`}
                     alt={`work-image-${i}`}
+                    width={150} // Adjust accordingly
+                    height={70} // Adjust accordingly
                     // className="w-full max-w-[90px] sm:max-w-[110px] lg:max-w-[150px] 2xl:max-w-[170px]"
                     className={`${
                       item ===
                       "/companies/Unitas-removebg-preview-Photoroom.png"
-                        ? "h-[30px] max-h-[30px] w-fit md:h-[60px] md:max-h-[60px]"
-                        : "h-[40px] max-h-[40px] w-fit md:h-[70px] md:max-h-[60px]"
+                        ? "h-[30px] max-h-[30px] w-full object-contain  md:h-[60px] md:max-h-[60px]"
+                        : "h-[40px] max-h-[40px] w-full object-contain md:h-[70px] md:max-h-[60px]"
                     }`}
                   />
                 </div>
