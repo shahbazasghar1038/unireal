@@ -409,3 +409,17 @@ motion.div {
   will-change: transform, top, width;
 }
 /* latest  */
+/* Custom select styling */
+select option {
+  padding: 8px 0;
+  background-color: #1a1a1a !important;
+  color: white !important;
+}
+
+select option:hover {
+  background-color: #1d1d1f !important;
+}
+
+select:focus option:checked {
+  background-color: #1d1d1f !important;
+}

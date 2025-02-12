@@ -53,7 +53,11 @@ const Footer = () => {
                 />
                 <div className="flex items-center justify-center gap-2.5">
                   {/* linkedin  */}
-                  <div className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]">
+                  <Link
+                    to={"https://www.linkedin.com/company/unireal-io/"}
+                    target="_blank"
+                    className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]"
+                  >
                     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#13111A]">
                       <img
                         src="/linledin.svg"
@@ -61,9 +65,15 @@ const Footer = () => {
                         className="w-full max-w-[18px] translate-y-[-2px]"
                       />
                     </div>
-                  </div>
+                  </Link>
                   {/* instagram  */}
-                  <div className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]">
+                  <Link
+                    to={
+                      "https://www.instagram.com/unireal_io?igsh=aGZoNmg5bWU4bWpo"
+                    }
+                    target="_blank"
+                    className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]"
+                  >
                     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#13111A]">
                       <img
                         src="/insta.svg"
@@ -71,9 +81,15 @@ const Footer = () => {
                         className="w-full max-w-[18px]"
                       />
                     </div>
-                  </div>
+                  </Link>
                   {/* x  */}
-                  <div className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]">
+                  <Link
+                    to={
+                      "https://x.com/unireal_io?s=21&t=pmSObJhqfsNNpZwiusAoXA"
+                    }
+                    target="_blank"
+                    className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]"
+                  >
                     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#13111A]">
                       <img
                         src="/x.svg"
@@ -81,9 +97,15 @@ const Footer = () => {
                         className="w-full max-w-[16px]"
                       />
                     </div>
-                  </div>
+                  </Link>
                   {/* tiktok  */}
-                  <div className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]">
+                  <Link
+                    to={
+                      "https://www.tiktok.com/@unireal.io?_t=ZS-8trYl8xLnMq&_r=1"
+                    }
+                    target="_blank"
+                    className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]"
+                  >
                     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#13111A]">
                       <img
                         src="/tiktok.svg"
@@ -91,9 +113,13 @@ const Footer = () => {
                         className="w-full max-w-[14px]"
                       />
                     </div>
-                  </div>
+                  </Link>
                   {/* yt  */}
-                  <div className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]">
+                  <Link
+                    to={"https://youtube.com/@unireal_io?si=Ce2LKIMNDQYbf3Kj"}
+                    target="_blank"
+                    className="div-bg-gradient aspect-square h-[41px] cursor-pointer rounded-full p-[3px]"
+                  >
                     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#13111A]">
                       <img
                         src="/yt.svg"
@@ -101,7 +127,7 @@ const Footer = () => {
                         className="w-full max-w-[19px]"
                       />
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
               {/* right  */}

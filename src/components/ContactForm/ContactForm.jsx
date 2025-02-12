@@ -264,28 +264,44 @@ const ContactForm = () => {
                   <div className="relative">
                     <select
                       {...field}
-                      className="flex h-[52px] w-full appearance-none items-center justify-start rounded-md border border-[#A4A4A4] border-opacity-30 bg-transparent px-5 text-[#858585] placeholder-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                      className="flex h-[52px] w-full appearance-none items-center justify-start rounded-md border border-[#A4A4A4]/30 bg-transparent px-5 text-[#858585] outline-none focus:ring-2 focus:ring-[#57C3F9]"
+                      style={{
+                        color: field.value ? "#fff" : "#858585",
+                        backgroundColor: "#1a1a1a",
+                      }}
                     >
-                      <option value="Interest" className="text-black">
-                        Interest
+                      <option
+                        value=""
+                        disabled
+                        hidden
+                        className="text-white"
+                        style={{
+                          backgroundColor: "#1a1a1a",
+                          padding: "8px 0",
+                        }}
+                      >
+                        Select Interest
                       </option>
-                      <option value="Interest2" className="text-black">
-                        Interest2
-                      </option>
-                      <option value="Interest3" className="text-black">
-                        Interest3
-                      </option>
-                      <option value="Interest4" className="text-black">
-                        Interest4
-                      </option>
-                      <option value="Interest5" className="text-black">
-                        Interest5
-                      </option>
-                      <option value="Interest6" className="text-black">
-                        Interest6
-                      </option>
+
+                      {["ESL", "Digital Signage", "AI Analytics"].map((num) => (
+                        <option
+                          key={`${num}`}
+                          value={`${num}`}
+                          style={{
+                            backgroundColor: "#1a1a1a",
+                            color: "white",
+                            padding: "8px 0", // Y-axis padding
+                            // For browser compatibility
+                            WebkitPaddingStart: "8px",
+                            WebkitPaddingEnd: "8px",
+                          }}
+                          className="hover:!bg-[#1D1D1F]"
+                        >
+                          {num}
+                        </option>
+                      ))}
                     </select>
-                    <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 transform">
+                    <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
                       <ChevronDown className="text-[#A4A4A4]" />
                     </div>
                   </div>

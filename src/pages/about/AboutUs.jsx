@@ -7,8 +7,8 @@ const AboutUs = () => {
       <div className="h-[80px] w-full"></div>
       <div className="mx-auto flex flex-col items-center justify-center bg-black text-white">
         {/* Hero Section */}
-        <section className="flex max-w-[1200px] flex-col items-center justify-center gap-[25px] px-5 pb-[70px] pt-[70px] text-center md:gap-[33px] md:pt-[120px] 2xl:max-w-[1465px] 2xl:pt-[149px]">
-          <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[600] text-transparent lg:text-[55px]">
+        <section className="flex max-w-[370px] flex-col items-center justify-center gap-[25px] px-5 pb-[70px] pt-[70px] text-center sm:max-w-[1150px] md:gap-[33px] md:pt-[120px] 2xl:max-w-[1455px] 2xl:pt-[149px]">
+          <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[500] text-transparent lg:text-[55px]">
             Who We Are
           </h2>
           <p className="text-center text-[19px] text-[#D8D8D8] lg:text-[24px] lg:leading-[36px] 2xl:text-[30px] 2xl:leading-[38px]">
@@ -49,7 +49,7 @@ const AboutUs = () => {
 
         {/* Contact Section */}
         <section className="justify-centerpb-[150px] mt-[80px] flex max-w-[700px] flex-col items-center px-5 pb-[40px] md:pb-[70px] lg:mt-[-80px] lg:px-0 2xl:max-w-[850px] 2xl:pb-[150px]">
-          <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[600] text-transparent lg:text-[55px]">
+          <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[500] text-transparent lg:text-[55px]">
             Join Us
           </h2>
           <p className="mt-[24px] text-center text-[19px] text-[white] lg:text-[24px] lg:leading-[36px] 2xl:mt-[28px] 2xl:text-[30px] 2xl:leading-[38px]">

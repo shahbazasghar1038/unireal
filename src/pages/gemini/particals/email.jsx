@@ -1,7 +1,7 @@
 const Email = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-[55px] bg-section-gradient px-5 py-[70px] md:py-[95px] 2xl:gap-[65px] 2xl:py-[105px]">
-      <h3 className="text-center text-[30px] font-[400] text-white md:text-[40px]">
+    <div className="flex flex-col items-center justify-center gap-[40px] bg-section-gradient px-5 py-[70px] md:py-[95px] 2xl:gap-[50px] 2xl:py-[105px]">
+      <h3 className="text-center text-[30px] font-[400] text-white md:text-[35px]">
         Stay ahead with exclusive announcements and updates!{" "}
       </h3>
       <div className="relative flex h-[60px] w-full max-w-[716px] items-center justify-center overflow-hidden rounded-lg bg-[white] md:h-[70px] 2xl:h-[86px]">
