@@ -17,7 +17,7 @@ const HeroSection = () => {
           height={334}
           viewBox="0 0 611 334"
           fill="none"
-          className="absolute top-[-80px] max-w-[300px] translate-x-[-50px] opacity-80 blur-[120px] md:top-[-32px] md:max-w-[500px] md:translate-x-[-200px] md:blur-[200px]"
+          className="absolute top-[-80px] max-w-[300px] translate-x-[-50px] opacity-60 blur-[120px] md:top-[-32px] md:max-w-[450px] md:translate-x-[-200px] md:blur-[200px]"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -44,7 +44,7 @@ const HeroSection = () => {
           viewBox="0 0 730 246"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-[-32px] max-w-[300px] translate-x-[130px] opacity-80 blur-[130px] md:max-w-[500px] md:translate-x-[200px] md:blur-[200px]"
+          className="absolute top-[-32px] max-w-[300px] translate-x-[130px] opacity-60 blur-[130px] md:max-w-[450px] md:translate-x-[200px] md:blur-[200px]"
         >
           <path
             d="M205.738 133.581C262.689 125.989 282.623 178.014 358.5 158C454.256 132.744 746.942 322.26 729 209C705 57.5004 364.746 -170.651 235.923 -153.477C107.1 -136.303 36.8983 -106.925 12.9418 -74.781C-39.2572 -4.74328 76.9149 150.755 205.738 133.581Z"

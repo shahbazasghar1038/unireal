@@ -14,11 +14,11 @@ const ProductCards = () => {
     <div className="flex flex-col items-center justify-center gap-[70px] px-5 pb-[50px] pt-[80px] md:gap-[100px] md:pb-[100px] md:pt-[100px] 2xl:pt-[150px]">
       <p className="text-center text-[40px] font-[700]">Our Products</p>
 
-      <div className="mx-auto grid w-full max-w-[1200px] auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 2xl:max-w-[1428px]">
+      <div className="mx-auto grid w-full max-w-[1100px] auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 2xl:max-w-[1200px]">
         {products.map((product) => (
           <div
             key={product.id}
-            className="flex h-full flex-col items-center gap-[40px] rounded-[20px] bg-[#1D1D1F] pb-[30px] pt-[50px] text-center shadow-lg transition duration-300 hover:bg-gray-900 hover:text-white md:rounded-[30px] 2xl:gap-[80px]"
+            className="flex aspect-square h-full flex-col items-center gap-[40px] rounded-[20px] bg-[#1D1D1F] pb-[30px] pt-[50px] text-center shadow-lg transition duration-300 hover:text-white md:rounded-[30px] 2xl:gap-[80px]"
           >
             <h4 className="text-[24px] font-semibold text-white md:text-[30px]">
               {product.name}

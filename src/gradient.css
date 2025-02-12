@@ -8,9 +8,9 @@
   content: "";
   position: absolute;
   top: -10px;
-  left: -5px;
-  right: -5px;
-  bottom: 30px;
+  left: 2%;
+  right: 2%;
+  bottom: 15%;
   opacity: 60%;
   /* background: linear-gradient(
       90deg,
@@ -29,7 +29,7 @@
   );
   border-radius: inherit;
   z-index: -2;
-  filter: blur(120px);
+  filter: blur(100px);
   animation: rotateGradient 4s both infinite;
   background-blend-mode: lighten;
 }

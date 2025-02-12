@@ -12,7 +12,7 @@ const DigitalSignage = () => {
       <div className="flex w-full max-w-[600px] flex-col items-center justify-center lg:max-w-[750px] xl:max-w-[900px] 2xl:max-w-[1067px]">
         <h1 className="text-center text-[20px] font-[700] leading-[1.2] sm:text-[35px] 2xl:text-[40px]">
           Bring Your Brand to Life with <br />{" "}
-          <span className="gradient-heading text-[28px] sm:text-[44px] 2xl:text-[50px]">
+          <span className="bg-esl-heading-gradient bg-clip-text text-[28px] text-transparent sm:text-[44px] 2xl:text-[50px]">
             Smart Digital Signage
           </span>
         </h1>

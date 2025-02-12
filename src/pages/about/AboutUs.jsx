@@ -1,20 +1,17 @@
-import Artboard1 from "../../assets/Artboard1.png";
 import TrustedSection from "../../components/trusted-section";
-import Newsletter from "../../components/Newsletter/Newsletter";
+import Email from "../gemini/particals/email";
 
 const AboutUs = () => {
   return (
     <>
-      <div className="bg-black text-white px-4 sm:px-16 lg:px-16 mt-24 mx-auto">
+      <div className="h-[80px] w-full"></div>
+      <div className="mx-auto flex flex-col items-center justify-center bg-black text-white">
         {/* Hero Section */}
-        <section
-          className="p-12 rounded-[30px] text-center mx-auto mb-16"
-          style={{ maxWidth: "1664px" }}
-        >
-          <h2 className="mb-4 mt-4 bg-gradient-to-r from-[#42dcff] via-[#a852ff] to-[#fe43aa] bg-clip-text text-3xl font-bold text-transparent">
+        <section className="flex max-w-[1200px] flex-col items-center justify-center gap-[25px] px-5 pb-[70px] pt-[70px] text-center md:gap-[33px] md:pt-[120px] 2xl:max-w-[1465px] 2xl:pt-[149px]">
+          <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[600] text-transparent lg:text-[55px]">
             Who We Are
           </h2>
-          <p className="text-gray-300 sm:text-sm lg:text-xl mx-auto">
+          <p className="text-center text-[19px] text-[#D8D8D8] lg:text-[24px] lg:leading-[36px] 2xl:text-[30px] 2xl:leading-[38px]">
             At Unireal, we are at the forefront of the digital revolution,
             transforming the way businesses interact with their customers and
             manage their operations. As a cutting-edge digital technology firm,
@@ -27,34 +24,20 @@ const AboutUs = () => {
         </section>
 
         {/* Laptop Section */}
-        <div
-          className="relative w-full h-full flex items-center justify-center bg-gradient-to-r from-black via-purple-700/60 to-blue-800/60"
-          style={{
-            background:
-              "radial-gradient(circle at center, rgba(44, 44, 84, 0.8), black 50%)",
-          }}
-        >
-          <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
+        <div className="w-full pb-[0px] pt-[30px] sm:pt-[40px] md:pt-[76px]">
+          <div className="flex flex-col items-center justify-start lg:flex-row lg:items-start">
             {/* Laptop Image */}
-            <div className="lg:w-1/2 flex justify-center">
-              <img
-                src={Artboard1}
-                alt="Laptop Dashboard"
-                className="w-4/5 lg:w-full drop-shadow-2xl"
-              />
-            </div>
+            <img
+              src={"/laptop-grade.svg"}
+              alt="Laptop Dashboard"
+              className="w-full max-w-[500px] xl:max-w-[700px] 2xl:max-w-[800px]"
+            />
 
             {/* Text Section */}
-            <div className="lg:w-1/2 px-6 lg:px-12 text-center lg:text-left mt-8 lg:mt-0 relative">
+            <div className="relative max-w-[700px] py-4 pl-5 text-center md:py-5 md:pl-0 lg:mt-[150px] 2xl:mt-[200px] 2xl:max-w-[850px]">
               {/* Gradient Line */}
-              <div
-                className="absolute left-0 top-0 h-full w-1 rounded-full hidden lg:block"
-                style={{
-                  background:
-                    "linear-gradient(to bottom, #42dcff, #a852ff, #fe43aa)",
-                }}
-              />
-              <p className="text-gray-300 sm:text-sm lg:text-xl">
+              <div className="absolute bottom-0 top-0 w-[6px] bg-contact-gradient" />
+              <p className="pl-[20px] pr-4 text-start font-[400] text-[20xp] text-white md:pl-[30px] md:pr-0 md:text-[24px] md:leading-[32px] 2xl:text-[30px] 2xl:leading-[38px]">
                 We are constantly innovating and exploring new ways to integrate
                 AI and data-driven insights into everyday business operations.
                 At Unireal, we believe that technology should be seamless,
@@ -65,46 +48,26 @@ const AboutUs = () => {
         </div>
 
         {/* Contact Section */}
-        <section className="text-center pt-16 max-w-screen-xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl bg-gradient-to-r from-[#42dcff] via-[#a852ff] to-[#fe43aa] bg-clip-text text-3xl font-bold text-transparent">
+        <section className="justify-centerpb-[150px] mt-[80px] flex max-w-[700px] flex-col items-center px-5 pb-[40px] md:pb-[70px] lg:mt-[-80px] lg:px-0 2xl:max-w-[850px] 2xl:pb-[150px]">
+          <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[600] text-transparent lg:text-[55px]">
             Join Us
           </h2>
-          <p className="mt-4 text-gray-300 sm:text-sm lg:text-xl max-w-[800px] mx-auto">
+          <p className="mt-[24px] text-center text-[19px] text-[white] lg:text-[24px] lg:leading-[36px] 2xl:mt-[28px] 2xl:text-[30px] 2xl:leading-[38px]">
             On this journey as we continue to push the boundaries of what’s
             possible, creating smarter, more connected spaces for businesses and
             consumers alike.
           </p>
-          <button
-            type="submit"
-            className="relative w-[200px] rounded-full px-8 py-3 my-16 font-medium text-white transition-transform duration-300 hover:scale-105"
-            style={{
-              background: "#000",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-              border: "2px solid transparent",
-              backgroundImage:
-                "linear-gradient(#000, #000), linear-gradient(90deg, #00f0ff, #7c35ff, #ff9d35)",
-              backgroundOrigin: "border-box",
-              backgroundClip: "padding-box, border-box",
-              WebkitBackgroundClip: "padding-box, border-box",
-            }}
-          >
-            Contact Us
+
+          <button className="animated-gradient-bg-div gradient-hover-effect z-[10] mt-[60px] h-[50px] w-[280px] rounded-full p-[2px] sm:h-[50px] md:p-[3px] lg:h-[55px] 2xl:mt-[80px]">
+            <div className="flex h-full w-full items-center justify-center rounded-full bg-black text-[20px] font-[500] lg:text-[25px]">
+              Contact Us
+            </div>
           </button>
         </section>
+        <TrustedSection className="!p-0" />
       </div>
 
-      {/* Trusted Section */}
-      <section
-        style={{ marginTop: "-8rem" }}
-        className="bg-black text-white py-16"
-      >
-        <TrustedSection />
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="bg-black text-white md:mt[-20px] lg:mt[-20px] ">
-        <Newsletter />
-      </section>
+      <Email />
     </>
   );
 };

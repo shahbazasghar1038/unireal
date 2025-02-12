@@ -32,22 +32,26 @@ const Promo = () => {
           <h1 className="w-fit bg-heading-gradient bg-clip-text text-center text-[40px] font-[700] text-transparent md:text-[60px] 2xl:text-[80px]">
             Promo
           </h1>
-          <p className="mt-[25px] text-center text-[20px] font-[400] text-white md:mt-[35px] md:text-[26px] 2xl:mt-[50px] 2xl:text-[33px]">
+          <p className="mt-[25px] text-center text-[20px] font-[400] leading-[34px] text-white md:mt-[35px] md:text-[26px] 2xl:mt-[50px] 2xl:text-[31px] 2xl:leading-[40px]">
             Gemini’s{" "}
             <span className="text-center font-[700] text-[#FF00FF]">
               Promo Feature
             </span>{" "}
             is designed to take customer engagement to the next level.{" "}
           </p>
-          <p className="mt-[30px] text-center text-[20px] font-[400] text-white md:mt-[50px] md:text-[26px] 2xl:mt-[72px] 2xl:text-[33px]">
+          <p className="mt-[30px] text-center text-[20px] font-[400] leading-[34px] text-white md:mt-[50px] md:text-[26px] 2xl:mt-[72px] 2xl:text-[31px] 2xl:leading-[40px]">
             With the{" "}
             <span className="font-[700] text-[#FF00FF]">Spin the Wheel</span>{" "}
             game, businesses can create fun, interactive experiences that not
             only capture attention but also drive sales and customer loyalty.
           </p>
           <div className="mt-[40px] aspect-[585/799] w-full max-w-[450px] bg-div-custom-gradient p-1.5 md:mt-[55px] 2xl:mt-[63px] 2xl:max-w-[585px]">
-            <div className="flex h-full w-full items-center justify-center bg-black">
-              Promo Image
+            <div className="flex h-full w-full items-center justify-center overflow-hidden bg-black">
+              <img
+                src="/ai-1.png"
+                className="h-[105%] w-full object-cover"
+                alt=""
+              />
             </div>
           </div>
         </div>

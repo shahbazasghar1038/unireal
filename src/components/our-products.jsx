@@ -15,7 +15,7 @@ const OurProducts = () => {
             ref={sliderRef}
             options={{
               width: "100%",
-              perPage: 2.5,
+              perPage: 3.8,
               perMove: 1,
               drag: true,
               pagination: false,
@@ -23,6 +23,9 @@ const OurProducts = () => {
               type: "loop",
               gap: "20px",
               breakpoints: {
+                1600: {
+                  perPage: 3.5,
+                },
                 1277: {
                   perPage: 1.5,
                 },
@@ -40,117 +43,111 @@ const OurProducts = () => {
             <SplideTrack>
               <SplideSlide>
                 {" "}
-                <div className="flex w-full flex-col items-center justify-center gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[39px] sm:px-0 lg:rounded-[47px]">
+                <div className="flex h-full w-full flex-col items-center justify-start gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[29px] sm:px-0 lg:rounded-[47px]">
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-[30px] font-[700] text-[#F5F5F7]">
                       Touch Screen Table
                     </h2>
-                    <p className="text-center text-[17px] font-[700] text-[#F5F5F7]">
-                      1 line Description
-                    </p>
                   </div>
-                  <div className="flex h-[400px] items-center justify-center">
-                    <img
-                      src="/table.png"
-                      alt=""
-                      className="w-full max-w-[337px]"
-                    />
+                  <div className="flex flex-grow items-end justify-center">
+                    <div className="flex h-[300px] max-h-[300px] items-center justify-center">
+                      <img
+                        src="/table.png"
+                        alt=""
+                        className="w-full max-w-[300px] 2xl:max-w-[337px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </SplideSlide>
               <SplideSlide>
-                <div className="flex w-full flex-col items-center justify-center gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[39px] sm:px-0 lg:rounded-[47px]">
+                <div className="flex h-full w-full flex-col items-center justify-start gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[29px] sm:px-0 lg:rounded-[47px]">
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-[30px] font-[700] text-[#F5F5F7]">
                       Digital Posters{" "}
                     </h2>
-                    <p className="text-center text-[17px] font-[700] text-[#F5F5F7]">
-                      1 line Description{" "}
-                    </p>
                   </div>
-                  <div className="flex h-[400px] items-center justify-center">
-                    <img
-                      src="/hieght.png"
-                      alt=""
-                      className="w-full max-w-[326px]"
-                    />
+                  <div className="flex flex-grow items-end justify-center">
+                    <div className="flex h-[300px] max-h-[300px] items-center justify-center">
+                      <img
+                        src="/hieght.png"
+                        alt=""
+                        className="w-full max-w-[270px] 2xl:max-w-[287px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </SplideSlide>
               <SplideSlide>
-                <div className="flex w-full flex-col items-center justify-center gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[39px] sm:px-0 lg:rounded-[47px]">
+                <div className="flex h-full w-full flex-col items-center justify-start gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[29px] sm:px-0 lg:rounded-[47px]">
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-[30px] font-[700] text-[#F5F5F7]">
                       ESL{" "}
                     </h2>
-                    <p className="text-center text-[17px] font-[700] text-[#F5F5F7]">
-                      1 line Description
-                    </p>
                   </div>
-                  <div className="flex h-[400px] items-center justify-center">
-                    <img
-                      src="/mobiles.png"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
+                  <div className="flex flex-grow items-end justify-center">
+                    <div className="flex h-[300px] max-h-[300px] items-center justify-center">
+                      <img
+                        src="/mobiles.png"
+                        alt=""
+                        className="w-full max-w-[230px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </SplideSlide>
               <SplideSlide>
                 {" "}
-                <div className="flex w-full flex-col items-center justify-center gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[39px] sm:px-0 lg:rounded-[47px]">
+                <div className="flex h-full w-full flex-col items-center justify-start gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[29px] sm:px-0 lg:rounded-[47px]">
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-[30px] font-[700] text-[#F5F5F7]">
                       Touch Screen Table
                     </h2>
-                    <p className="text-center text-[17px] font-[700] text-[#F5F5F7]">
-                      1 line Description
-                    </p>
                   </div>
-                  <div className="flex h-[400px] items-center justify-center">
-                    <img
-                      src="/table.png"
-                      alt=""
-                      className="w-full max-w-[337px]"
-                    />
+                  <div className="flex flex-grow items-end justify-center">
+                    <div className="flex h-[300px] max-h-[300px] items-center justify-center">
+                      <img
+                        src="/table.png"
+                        alt=""
+                        className="w-full max-w-[300px] 2xl:max-w-[337px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </SplideSlide>
               <SplideSlide>
-                <div className="flex w-full flex-col items-center justify-center gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[39px] sm:px-0 lg:rounded-[47px]">
+                <div className="flex h-full w-full flex-col items-center justify-start gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[29px] sm:px-0 lg:rounded-[47px]">
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-[30px] font-[700] text-[#F5F5F7]">
                       Digital Posters{" "}
                     </h2>
-                    <p className="text-center text-[17px] font-[700] text-[#F5F5F7]">
-                      1 line Description{" "}
-                    </p>
                   </div>
-                  <div className="flex h-[400px] items-center justify-center">
-                    <img
-                      src="/hieght.png"
-                      alt=""
-                      className="w-full max-w-[326px]"
-                    />
+                  <div className="flex flex-grow items-end justify-center">
+                    <div className="flex h-[300px] max-h-[300px] items-center justify-center">
+                      <img
+                        src="/hieght.png"
+                        alt=""
+                        className="w-full max-w-[270px] 2xl:max-w-[287px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </SplideSlide>
               <SplideSlide>
-                <div className="flex w-full flex-col items-center justify-center gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[39px] sm:px-0 lg:rounded-[47px]">
+                <div className="flex h-full w-full flex-col items-center justify-start gap-[29px] rounded-[20px] bg-[#1D1D1F] px-1 pb-[0px] pt-[29px] sm:px-0 lg:rounded-[47px]">
                   <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center text-[30px] font-[700] text-[#F5F5F7]">
                       ESL{" "}
                     </h2>
-                    <p className="text-center text-[17px] font-[700] text-[#F5F5F7]">
-                      1 line Description
-                    </p>
                   </div>
-                  <div className="flex h-[400px] items-center justify-center">
-                    <img
-                      src="/mobiles.png"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
+                  <div className="flex w-full flex-grow items-end justify-center">
+                    <div className="flex h-[300px] max-h-[300px] items-center justify-center">
+                      <img
+                        src="/mobiles.png"
+                        alt=""
+                        className="w-full max-w-[300px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </SplideSlide>

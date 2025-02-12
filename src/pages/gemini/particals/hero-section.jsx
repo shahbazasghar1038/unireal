@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="flex w-full max-w-[1230px] flex-col items-center justify-center pb-[70px] pt-[140px] md:pb-[110px] 2xl:pb-[150px] 2xl:pt-[219px]">
         <h1 className="text-center text-[40px] font-[500] leading-[1.3] sm:text-[50px] lg:text-[75px] lg:leading-[95px] 2xl:text-[85px]">
           The Future of <br />{" "}
-          <span className="w-fit bg-custom-text-gradient bg-clip-text text-transparent">
+          <span className="w-fit bg-custom-text-gradient bg-clip-text font-[500] text-transparent">
             Interactive Digital Signage{" "}
           </span>
         </h1>
