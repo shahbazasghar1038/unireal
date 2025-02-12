@@ -48,7 +48,7 @@ const Promo = () => {
           <div className="mt-[40px] aspect-[585/799] w-full max-w-[450px] bg-div-custom-gradient p-1.5 md:mt-[55px] 2xl:mt-[63px] 2xl:max-w-[585px]">
             <div className="flex h-full w-full items-center justify-center overflow-hidden bg-black">
               <img
-                src="/ai-1.png"
+                src="/promo-image.jpeg"
                 className="h-[105%] w-full object-cover"
                 alt=""
               />

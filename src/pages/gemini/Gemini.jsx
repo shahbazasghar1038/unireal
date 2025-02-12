@@ -15,7 +15,7 @@ const Gemini = () => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView();
       }
     }
   }, [location.hash]);

@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 
 const TrustedSection = ({ className = "" }) => {
   const images = [
-    "/companies/Artboard 1-Photoroom.png",
-    "/companies/Artboard 2-Photoroom.png",
-    "/companies/Artboard 3-Photoroom.png",
-    "/companies/Coca-Cola_logo.svg.png",
-    "/companies/day-today-3-1-logo-removebg-preview-Photoroom.png",
-    "/companies/Dhamecha-Photoroom.png",
-    "/companies/Holland_Bazaar-removebg-preview-Photoroom.png",
-    "/companies/Parfetts-2-removebg-preview-Photoroom.png",
-    "/companies/Time_Wholesale_Services-removebg-preview-Photoroom.png",
-    "/companies/Unitas-removebg-preview-Photoroom.png",
+    "/companies/com-1.png",
+    "/companies/com0-2.png",
+    "/companies/com-3.png",
+    "/companies/com-4.png",
+    "/companies/com-5.png",
+    "/companies/com-6.png",
+    "/companies/com-7.png",
+    "/companies/com-8.png",
+    "/companies/com-9.png",
+    "/companies/com-10.png",
   ];
 
   const numberOfDuplications = [0, 1, 3];

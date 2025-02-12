@@ -1,14 +1,40 @@
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const checkScroll = () => {
+      setShowScrollButton(window.scrollY > 1080);
+    };
+
+    window.addEventListener("scroll", checkScroll);
+    return () => window.removeEventListener("scroll", checkScroll);
+  }, []);
   return (
     <>
-      <div
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-6 right-6 z-[9999999] flex"
-      >
-        <img src="/arr.svg" className="floating cursor-pointer" alt="" />
-      </div>
+      <AnimatePresence>
+        {showScrollButton && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ type: "spring", stiffness: 100 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="fixed bottom-6 right-6 z-[9999999] flex cursor-pointer"
+          >
+            <motion.img
+              src="/arr.svg"
+              className="floating"
+              alt="Scroll to top"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="relative flex w-full flex-col items-center justify-center pt-[100px]">
         <div className="relative flex w-full max-w-[100%] items-center justify-center overflow-hidden sm:overflow-visible">
           <img

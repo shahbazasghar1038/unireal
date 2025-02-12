@@ -78,7 +78,7 @@ const HeroSection = () => {
             <div className="relative aspect-[2/1.3] w-full overflow-hidden rounded-[5px] bg-[black] sm:aspect-[2/1]">
               <div className="relative h-full w-full !border-[16px] !border-[black] bg-gray-800">
                 <div className="absolute left-0 top-0 flex h-[101%] w-full flex-col items-center justify-end bg-gradient-to-t from-[black]/80 to-transparent pb-[13px] sm:pb-[30px] xl:pb-[55px] 2xl:pb-[60px]">
-                  <h1 className="text-center text-[15px] font-[700] leading-[1.2] sm:text-[23px] xl:text-[35px] 2xl:text-[40px]">
+                  <h1 className="text-center text-[15px] font-[700] sm:text-[23px] xl:text-[35px] xl:leading-[48px] 2xl:text-[40px] 2xl:leading-[53px]">
                     Smart Displays, Smarter Insights
                     <br />
                     Redefining Engagement with AI
@@ -102,7 +102,7 @@ const HeroSection = () => {
                   onCanPlay={handleCanPlay}
                   className="h-full w-full object-cover"
                 >
-                  <source src="/V2.mp4" type="video/mp4" />
+                  <source src="/day2day.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

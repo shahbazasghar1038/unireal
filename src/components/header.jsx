@@ -188,13 +188,7 @@ const Header = () => {
             </div>
 
             {/* Search & Mobile Menu Icon */}
-            <div>
-              <img
-                src="/search-icon.svg"
-                className="aspect-square w-full max-w-[26px] cursor-pointer transition-all hover:opacity-70"
-                alt="Search"
-              />
-            </div>
+
             <div
               className="cursor-pointer hover:opacity-70 lg:hidden"
               onClick={() => setOpen(true)}
