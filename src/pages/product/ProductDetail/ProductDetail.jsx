@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 // Import product images
 import product1 from "../../../assets/product1.png";
@@ -553,7 +553,16 @@ const ProductDetail = () => {
 
   // State to track the active image index, initialized to the selected product
   const [activeIndex, setActiveIndex] = useState(currentIndex);
+  const [selectedProduct, setSelectedProduct] = useState(
+    location.state?.selectedProduct || sessionStorage.getItem("selectedProduct")
+  );
 
+  useEffect(() => {
+    if (location.state?.category) {
+      // Store selected product in session storage when the user navigates
+      sessionStorage.setItem("selectedProduct", location.state?.category);
+    }
+  }, [location.state?.category]);
   // Handle Previous & Next Image
   const handlePrevious = () => {
     setActiveIndex((prevIndex) =>
@@ -603,12 +612,13 @@ const ProductDetail = () => {
           <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
         </svg>
 
-        <span
+        <Link
+          to="/categories"
+          state={{ selectedProduct: category }}
           className="cursor-pointer text-gray-500 text-xs sm:text-sm md:text-base whitespace-nowrap"
-          onClick={() => navigate("/categories")}
         >
           {category}
-        </span>
+        </Link>
         <svg
           width="24"
           height="24"
