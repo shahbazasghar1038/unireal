@@ -27,7 +27,7 @@ const TrustedSection = ({ className = "" }) => {
               {images.map((item, i) => (
                 <div
                   key={i}
-                  className="mx-[20px] flex min-w-[160px] items-center justify-center sm:mx-[30px] md:mx-[43px] xl:mx-[25px]"
+                  className="mx-[20px] flex min-w-[80px] items-center justify-center sm:mx-[30px] md:mx-[43px] md:min-w-[160px] xl:mx-[25px]"
                   // className="mx-[20px] flex items-center justify-center"
                 >
                   <img
@@ -35,7 +35,12 @@ const TrustedSection = ({ className = "" }) => {
                     src={`${item}`}
                     alt={`work-image-${i}`}
                     // className="w-full max-w-[90px] sm:max-w-[110px] lg:max-w-[150px] 2xl:max-w-[170px]"
-                    className="h-[70px] max-h-[60px] w-fit"
+                    className={`${
+                      item ===
+                      "/companies/Unitas-removebg-preview-Photoroom.png"
+                        ? "h-[30px] max-h-[30px] w-fit md:h-[60px] md:max-h-[60px]"
+                        : "h-[40px] max-h-[40px] w-fit md:h-[70px] md:max-h-[60px]"
+                    }`}
                   />
                 </div>
               ))}

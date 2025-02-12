@@ -3,13 +3,13 @@ const CareersPage = () => {
     <div className="flex w-full flex-col items-center justify-center px-5">
       {/* Hero Section */}
       <div className="flex w-full max-w-[1230px] flex-col items-center justify-center pb-[140px] pt-[160px] md:pb-[200px] 2xl:pb-[230px] 2xl:pt-[219px]">
-        <h1 className="text-center text-[40px] font-[500] leading-[1.3] sm:text-[75px] lg:text-[99px] lg:leading-[95px] 2xl:text-[99px]">
+        <h1 className="text-center text-[45px] font-[500] leading-[1.4] sm:text-[75px] md:leading-[1.3] lg:text-[99px] lg:leading-[95px] 2xl:text-[99px]">
           Join the Future of <br />{" "}
           <span className="w-fit bg-custom-text-gradient bg-clip-text text-transparent">
             Digital Innovation
           </span>
         </h1>
-        <p className="mt-5 max-w-[780px] text-center text-[18px] font-[400] leading-[43px] sm:text-[25px] lg:text-[30px] 2xl:mt-[30px] 2xl:text-[30px]">
+        <p className="mt-5 max-w-[780px] text-center text-[18px] font-[400] leading-[1.5] sm:text-[25px] lg:text-[30px] lg:leading-[43px] 2xl:mt-[30px] 2xl:text-[30px]">
           At Unireal, we’re redefining retail with AI-driven signage and IoT
           solutions. Be a part of something bigger.
         </p>
@@ -75,7 +75,7 @@ const CareersPage = () => {
         <h2 className="text-[35px] font-bold lg:text-[50px]">
           Drop us a line{" "}
         </h2>
-        <p className="mt-[24px] w-full max-w-[900px] text-[18px] font-[400] leading-[38px] md:text-[26px] 2xl:max-w-[1000px] 2xl:text-[30px] 2xl:leading-[45px]">
+        <p className="mt-[24px] w-full max-w-[900px] text-[18px] font-[400] leading-[1.5] md:text-[26px] lg:leading-[38px] 2xl:max-w-[1000px] 2xl:text-[30px] 2xl:leading-[45px]">
           If you haven&apos;t found the right job for you, don&apos;t hesitate
           to get in touch with us.We are growing and always looking for people
           who can join the journey and help shape the future of recruitment
