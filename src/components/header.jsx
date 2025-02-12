@@ -129,8 +129,8 @@ const Header = () => {
                 />
               )}
           </Link>
-          <div className="flex items-center gap-2 md:gap-[50px]">
-            <div className="hidden items-center justify-center gap-[39px] md:flex">
+          <div className="flex items-center gap-2 lg:gap-[50px]">
+            <div className="hidden items-center justify-center gap-[39px] lg:flex">
               <Link
                 to="/"
                 className="text-base font-[500] text-[#FFFFFFCC] transition-all hover:opacity-70"
@@ -196,7 +196,7 @@ const Header = () => {
               />
             </div>
             <div
-              className="cursor-pointer hover:opacity-70 md:hidden"
+              className="cursor-pointer hover:opacity-70 lg:hidden"
               onClick={() => setOpen(true)}
             >
               <MenuIcon className="size-[36px]" strokeWidth={1.5} />
