@@ -32,6 +32,15 @@ const ContactForm = () => {
     reset,
   } = useForm({
     resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      industry: "",
+      email: "",
+      subject: "",
+      message: "",
+      interest: "",
+    },
   });
 
   const onSubmit = async (formData) => {
@@ -66,7 +75,7 @@ const ContactForm = () => {
   const emailValue = watch("email");
   const subjectValue = watch("subject");
   const industryValue = watch("industry");
-  const messageValue = watch("industry");
+  const messageValue = watch("message");
 
   return (
     <>
