@@ -1,16 +1,10 @@
-import { useState, useRef } from "react";
-import {
-  Grid,
-  AlignJustify,
-  Rows3,
-  Columns,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react"; // Added scroll buttons
+import { AlignJustify, Columns, Grid } from "lucide-react"; // Added scroll buttons
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import product1 from "../../assets/product1.png";
-import product2 from "../../assets/product2.png";
+import product10 from "../../assets/product10.png";
+import product11 from "../../assets/product11.png";
+import product12 from "../../assets/product12.png";
 import product3 from "../../assets/product3.png";
 import product4 from "../../assets/product4.png";
 import product5 from "../../assets/product5.png";
@@ -18,13 +12,9 @@ import product6 from "../../assets/product6.png";
 import product7 from "../../assets/product7.png";
 import product8 from "../../assets/product8.png";
 import product9 from "../../assets/product9.png";
-import product10 from "../../assets/product10.png";
-import product11 from "../../assets/product11.png";
-import product12 from "../../assets/product12.png";
-import Newsletter from "../../components/Newsletter/Newsletter";
+import Email from "../gemini/particals/email";
 
 import outdoorSignage from "../../assets/outdoorSignage.png";
-import { image } from "framer-motion/client";
 
 const products = [
   {
@@ -83,7 +73,7 @@ const products = [
 ];
 
 // Generate unique categories dynamically
-const categories = ["All", ...new Set(products.map((p) => p.category))];
+// const categories = ["All", ...new Set(products.map((p) => p.category))];
 
 const Product = () => {
   const navigate = useNavigate();
@@ -91,7 +81,6 @@ const Product = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [twoImageView, setTwoImageView] = useState(false); // State for two-image layout
   const [sortOrder, setSortOrder] = useState("asc"); // State for sorting
-  const scrollRef = useRef(null);
 
   // Filter products based on category
   const filteredProducts =
@@ -109,8 +98,8 @@ const Product = () => {
 
   return (
     <>
-      <div className="h-[80px] w-full bg-white"></div>
-      <div className="mx-auto max-w-7xl bg-white p-6">
+      <div className="h-[90px] w-full bg-white"></div>
+      <div className="mx-auto max-w-[1240px] bg-white p-6 2xl:max-w-[1480px]">
         {/* Breadcrumb */}
         <div className="flex items-center space-x-2">
           <span
@@ -123,7 +112,7 @@ const Product = () => {
             <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
           </svg>
           <span
-            className="cursor-pointer text-black font-semibold"
+            className="cursor-pointer font-semibold text-black"
             onClick={() => navigate("/products")}
           >
             Products
@@ -131,7 +120,7 @@ const Product = () => {
         </div>
 
         {/* Header Section */}
-        <div className="mb-6 flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between">
+        <div className="mb-6 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           <h1 className="text-2xl font-bold text-black"></h1>
 
           {/* Sorting & View Toggle */}
@@ -140,7 +129,7 @@ const Product = () => {
               onClick={() =>
                 setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
               }
-              className="cursor-pointer text-black flex gap-2 font-semibold mr-2"
+              className="mr-2 flex cursor-pointer gap-2 font-semibold text-black"
             >
               Sort by{" "}
               {sortOrder === "asc" ? (
@@ -152,7 +141,7 @@ const Product = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                 >
                   <path d="M18 15l-6-6-6 6"></path>
                 </svg>
@@ -165,7 +154,7 @@ const Product = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                 >
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
@@ -208,16 +197,14 @@ const Product = () => {
           </div>
         </div>
 
-        {/* Scrollable Categories Banner without scrollbar */}
-
         {/* Products Grid */}
         <div
-          className={`${
+          className={`mt-[70px] md:mt-[110px] ${
             twoImageView
-              ? "grid grid-cols-1 md:grid-cols-2 gap-6 mt-4"
+              ? "grid grid-cols-1 md:grid-cols-2 gap-6 "
               : gridView
-              ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4"
-              : "space-y-6 mt-4"
+              ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 "
+              : "space-y-6 "
           }`}
         >
           {sortedProducts.map((product) => (
@@ -240,8 +227,17 @@ const Product = () => {
             </Link>
           ))}
         </div>
+        <div className="flex w-full items-center justify-center pb-[20px] pt-[70px] 2xl:pb-[30px]">
+          <div className="flex size-[47px] animate-bounce cursor-pointer items-center justify-center rounded-full bg-[#000000]/20">
+            <img
+              src="/arrow-down-product.svg"
+              className="w-full max-w-[20px]"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-      <Newsletter />
+      <Email />
     </>
   );
 };

@@ -21,6 +21,7 @@ export default {
         'contact-gradient': 'linear-gradient(180deg, #4ECBFF 0%, #AF51F7 39%, #E44BBB 70%, #FE9748 100%)',
         'heading-gradient-text-new': 'linear-gradient(90deg, #4ECBFF 35.29%, #BB4EEE 46.89%, #F549A8 57.45%, #FEA042 67.65%)',
         'company-gradient-text': 'linear-gradient(90deg, #CC4DA5 36.4%, #7453E4 67.66%)',
+        'product-btn-gradient': 'linear-gradient(90deg, #5EB7FE 0%, #B250F3 30%, #DD4BC2 65%, #FB9151 100%)',
 
       },
       screens: {

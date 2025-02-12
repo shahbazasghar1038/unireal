@@ -1,43 +1,32 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect, useRef } from "react";
-import { useLocation, Link, useNavigate } from "react-router-dom";
 import {
-  Grid,
   AlignJustify,
-  Columns,
   ChevronLeft,
   ChevronRight,
+  Columns,
+  Grid,
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import product1 from "../../../assets/product1.png";
-import product2 from "../../../assets/product2.png";
-import product3 from "../../../assets/product3.png";
-import product4 from "../../../assets/product4.png";
-import product5 from "../../../assets/product5.png";
-import product6 from "../../../assets/product6.png";
-import product7 from "../../../assets/product7.png";
-import product8 from "../../../assets/product8.png";
-import product9 from "../../../assets/product9.png";
-import product10 from "../../../assets/product10.png";
-import product11 from "../../../assets/product11.png";
-import product12 from "../../../assets/product12.png";
 import Newsletter from "../../../components/Newsletter/Newsletter";
 
-import mwe863 from "../../../assets/digitalSignage/mwe863.jpg";
-import mwe986 from "../../../assets/digitalSignage/mwe986.jpg";
-import mwe662 from "../../../assets/digitalSignage/mwe662.jpg";
-import mwe957 from "../../../assets/digitalSignage/mwe957.jpg";
-import mweCharging from "../../../assets/digitalSignage/mweCharging.jpg";
-import mwe701 from "../../../assets/digitalSignage/mwe701.jpg";
-import mwe915 from "../../../assets/digitalSignage/mwe915.jpg";
-import mwe763 from "../../../assets/digitalSignage/mwe763.jpg";
-import mwe930 from "../../../assets/digitalSignage/mwe930.jpg";
-import mwe861 from "../../../assets/digitalSignage/mwe861.jpg";
-import mwe804 from "../../../assets/digitalSignage/mwe804.jpg";
 import mwe601 from "../../../assets/digitalSignage/mwe601.jpg";
 import mwe603 from "../../../assets/digitalSignage/mwe603.jpg";
-import mwe912 from "../../../assets/digitalSignage/mwe912.jpg";
 import mwe604 from "../../../assets/digitalSignage/mwe604.jpg";
+import mwe662 from "../../../assets/digitalSignage/mwe662.jpg";
+import mwe701 from "../../../assets/digitalSignage/mwe701.jpg";
+import mwe763 from "../../../assets/digitalSignage/mwe763.jpg";
+import mwe804 from "../../../assets/digitalSignage/mwe804.jpg";
+import mwe861 from "../../../assets/digitalSignage/mwe861.jpg";
+import mwe863 from "../../../assets/digitalSignage/mwe863.jpg";
+import mwe912 from "../../../assets/digitalSignage/mwe912.jpg";
+import mwe915 from "../../../assets/digitalSignage/mwe915.jpg";
+import mwe930 from "../../../assets/digitalSignage/mwe930.jpg";
+import mwe957 from "../../../assets/digitalSignage/mwe957.jpg";
+import mwe986 from "../../../assets/digitalSignage/mwe986.jpg";
+import mweCharging from "../../../assets/digitalSignage/mweCharging.jpg";
 import taxiTopOutdoor from "../../../assets/digitalSignage/taxiTopOutdoor.png";
 
 const products = [
@@ -242,7 +231,7 @@ const ProductCategory = () => {
 
   return (
     <>
-      <div className="h-[80px] w-full bg-white"></div>
+      <div className="h-[90px] w-full bg-white"></div>
       <div className="mx-auto max-w-7xl bg-white p-6">
         {/* Breadcrumb */}
         <div className="flex items-center space-x-2">
@@ -264,20 +253,20 @@ const ProductCategory = () => {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
           </svg>
-          <span className="text-black font-semibold">{selectedCategory}</span>
+          <span className="font-semibold text-black">{selectedCategory}</span>
         </div>
 
         {/* Category Scroll Buttons */}
 
         {/* Sorting & View Toggle */}
-        <div className="mb-6 flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between">
+        <div className="mb-6 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           <h1 className="text-2xl font-bold text-black"></h1>
           <div className="flex items-center space-x-0">
             <span
               onClick={() =>
                 setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
               }
-              className="cursor-pointer text-black flex gap-2 font-semibold mr-2"
+              className="mr-2 flex cursor-pointer gap-2 font-semibold text-black"
             >
               Sort by{" "}
               {sortOrder === "asc" ? (
@@ -289,7 +278,7 @@ const ProductCategory = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                 >
                   <path d="M18 15l-6-6-6 6"></path>
                 </svg>
@@ -302,7 +291,7 @@ const ProductCategory = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-5 h-5"
+                  className="h-5 w-5"
                 >
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
@@ -344,29 +333,29 @@ const ProductCategory = () => {
             </button>
           </div>
         </div>
-        <div className="relative flex items-center mt-6">
+        <div className="relative mt-6 flex items-center justify-center">
           {/* Left Scroll Button */}
           <button
-            className="p-2 bg-white shadow rounded-full"
+            className="absolute left-0 flex size-[30px] shrink-0 items-center justify-center rounded-full bg-[#6C7275] shadow sm:relative"
             onClick={scrollLeft}
           >
-            <ChevronLeft color="black" size={24} />
+            <ChevronLeft color="white" size={20} />
           </button>
 
           <div
             ref={scrollRef}
-            className="flex space-x-2 overflow-hidden w-full px-4"
+            className="flex w-full flex-nowrap space-x-2 overflow-hidden px-4 pl-[40px] sm:pl-4"
           >
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full border text-sm flex items-center justify-center whitespace-nowrap transition ${
+                className={`min-w-[150px] sm:min-w-[100px] rounded-full border h-[50px] px-[30px] text-sm flex items-center justify-center whitespace-nowrap transition ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-blue-500 to-orange-400 text-white"
-                    : "border-gray-400 text-black font-semibold"
+                    ? "bg-product-btn-gradient text-white"
+                    : "border-[#E4E4E4] text-black font-semibold"
                 }`}
-                style={{ minWidth: "140px", height: "40px" }}
+                // style={{ minWidth: "140px", height: "40px" }}
               >
                 {category}
               </button>
@@ -375,20 +364,20 @@ const ProductCategory = () => {
 
           {/* Right Scroll Button */}
           <button
-            className="p-2 bg-white shadow rounded-full"
+            className="absolute right-0 flex size-[30px] shrink-0 items-center justify-center rounded-full bg-[#6C7275] shadow sm:relative"
             onClick={scrollRight}
           >
-            <ChevronRight color="black" size={24} />
+            <ChevronRight color="white" size={20} />
           </button>
         </div>
         {/* Products Grid */}
         <div
-          className={`${
+          className={`mt-[34px] ${
             twoImageView
-              ? "grid grid-cols-1 md:grid-cols-2 gap-6 mt-4"
+              ? "grid grid-cols-1 md:grid-cols-2 gap-6 "
               : gridView
-              ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4"
-              : "space-y-6 mt-4"
+              ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 "
+              : "space-y-6"
           }`}
         >
           {sortedProducts.length > 0 ? (
@@ -415,7 +404,7 @@ const ProductCategory = () => {
               </Link>
             ))
           ) : (
-            <p className="text-center text-gray-600 mt-6">No products found.</p>
+            <p className="mt-6 text-center text-gray-600">No products found.</p>
           )}
         </div>
       </div>
