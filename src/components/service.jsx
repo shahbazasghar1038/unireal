@@ -29,7 +29,11 @@ const Service = () => {
             Learn more
           </Link>
         </div>
-        <img src="/ai-1.png" className="h-full w-full object-cover" alt="" />
+        <img
+          src="/promo-image.jpeg"
+          className="h-full w-full object-cover"
+          alt=""
+        />
       </div>
     </div>
   );
