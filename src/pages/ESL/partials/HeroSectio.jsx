@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Content Wrapper with Same Width as Header & Centered Vertically */}
       <div className="relative z-10 mx-auto flex h-full max-w-[1280px] items-center px-6">
         <div className="flex w-[450px] flex-col items-center justify-center text-left 2xl:w-[600px]">
-          <h1 className="text-[30px] font-bold text-white md:text-[40px] 2xl:text-[50px]">
+          <h1 className="text-center text-[30px] font-bold text-white md:text-[40px] 2xl:text-[50px]">
             <span className="font-bold">Electronic Shelf Label</span>
           </h1>
           <p className="text-[20px] text-white text-opacity-70 sm:mt-4 md:text-[28px] 2xl:text-[35px]">
@@ -20,21 +20,11 @@ const HeroSection = () => {
           </p>
 
           {/* Button */}
-          <button
-            className="relative mt-[30px] w-[218px] rounded-full bg-white px-8 py-3 font-bold text-black transition-transform duration-300 hover:scale-105 sm:mt-[40px]"
-            style={{
-              background: "#F5F5F7",
-              border: "3px solid transparent",
-              backgroundImage:
-                "linear-gradient(white, white), linear-gradient(90deg, #42dcff, #ff5c97)",
-              backgroundOrigin: "border-box",
-              backgroundClip: "padding-box, border-box",
-              WebkitBackgroundClip: "padding-box, border-box",
-              boxShadow:
-                "0 0 15px rgba(66, 220, 255, 0.5), 0 0 15px rgba(255, 92, 151, 0.5)",
-            }}
-          >
-            Get a Demo
+
+          <button className="animated-gradient-bg-div gradient-hover-effect mt-[30px] h-[50px] w-[216px] rounded-full p-[2px] sm:mt-[40px] sm:h-[50px] md:p-[3px] lg:h-[55px]">
+            <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-lg font-bold text-black lg:text-lg">
+              Get Demo
+            </div>
           </button>
         </div>
       </div>
