@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,11 +27,14 @@ const HeroSection = () => {
               Start Free Trial
             </div>
           </button>
-          <button className="animated-gradient-bg-div gradient-hover-effect h-[50px] w-[246px] rounded-full p-[2px] sm:h-[55px] md:p-[3px] lg:h-[66px]">
+          <Link
+            to={"/contact"}
+            className="animated-gradient-bg-div gradient-hover-effect h-[50px] w-[246px] rounded-full p-[2px] sm:h-[55px] md:p-[3px] lg:h-[66px]"
+          >
             <div className="flex h-full w-full items-center justify-center rounded-full bg-black text-[20px] font-[500] lg:text-[25px]">
               Get Demo
             </div>
-          </button>
+          </Link>
         </div>
       </div>
       {/* bottom  */}

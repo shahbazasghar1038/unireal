@@ -17,7 +17,7 @@ const HowGeminiWorks = () => {
                 className="aspect-square size-[70px] w-full max-w-[70px] shrink-0 2xl:size-[83px] 2xl:max-w-[83px]"
                 alt=""
               />
-              <h3 className="mt-6 flex-grow text-[25px] font-[400] md:mt-[35px] 2xl:text-[30px]">
+              <h3 className="mt-6 text-[25px] font-[400] md:mt-[35px] 2xl:text-[30px]">
                 Get Your Unique 6-Digit Code
               </h3>
               <p className="mt-[60px] text-[22px] font-[300] text-[#A4A4A4] md:mt-[120px] xl:mt-[139px] 2xl:text-[26px]">
@@ -34,7 +34,7 @@ const HowGeminiWorks = () => {
                 className="aspect-square size-[70px] w-full max-w-[70px] shrink-0 2xl:size-[83px] 2xl:max-w-[83px]"
                 alt=""
               />
-              <h3 className="mt-6 flex-grow text-[25px] font-[400] md:mt-[35px] 2xl:text-[30px]">
+              <h3 className="mt-6 text-[25px] font-[400] md:mt-[35px] 2xl:text-[30px]">
                 Upload Content{" "}
               </h3>
               <p className="mt-[60px] text-[22px] font-[300] text-[#A4A4A4] md:mt-[120px] xl:mt-[139px] 2xl:text-[26px]">
@@ -51,7 +51,7 @@ const HowGeminiWorks = () => {
                 className="aspect-square size-[70px] w-full max-w-[70px] shrink-0 2xl:size-[83px] 2xl:max-w-[83px]"
                 alt=""
               />
-              <h3 className="mt-6 flex-grow text-[25px] font-[400] md:mt-[35px] 2xl:text-[30px]">
+              <h3 className="mt-6 text-[25px] font-[400] md:mt-[35px] 2xl:text-[30px]">
                 Create Campaigns & Publish{" "}
               </h3>
               <p className="mt-[60px] text-[22px] font-[300] text-[#A4A4A4] md:mt-[120px] xl:mt-[139px] 2xl:text-[26px]">

@@ -23,10 +23,10 @@ const KeyFeatures = () => {
             />
           </div>
           <div className="flex w-full items-center justify-center">
-            <div className="bg-div-custom-gradient p-1 lg:ml-14">
+            <div className="rounded-[10px] bg-div-custom-gradient p-1 lg:ml-14">
               <img
                 src="/right-imgg.svg"
-                className="w-full max-w-[270px] sm:max-w-[365px] 2xl:max-w-[465px]"
+                className="w-full max-w-[270px] rounded-[10px] sm:max-w-[365px] 2xl:max-w-[465px]"
                 alt=""
               />
             </div>
