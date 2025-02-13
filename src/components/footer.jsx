@@ -152,7 +152,7 @@ const Footer = () => {
                         Company
                       </Link>
                       <Link
-                        to="/services"
+                        to="/esl"
                         className="font-[300] leading-[1] transition-all hover:opacity-50"
                       >
                         Services
