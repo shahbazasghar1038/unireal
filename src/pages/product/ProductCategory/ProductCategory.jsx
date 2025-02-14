@@ -247,7 +247,7 @@ const ProductCategory = () => {
   return (
     <>
       <div className="h-[90px] w-full bg-white"></div>
-      <div className="mx-auto max-w-7xl bg-white p-6">
+      <div className="mx-auto w-full max-w-[1240px] bg-white p-6 2xl:max-w-[1480px]">
         {/* Breadcrumb */}
         <div className="flex items-center space-x-2">
           <span
@@ -351,10 +351,10 @@ const ProductCategory = () => {
         <div className="relative mt-6 flex items-center justify-center">
           {/* Left Scroll Button */}
           <button
-            className="absolute left-0 flex size-[30px] shrink-0 items-center justify-center rounded-full bg-[#6C7275] shadow sm:relative"
+            className="absolute left-0 flex size-[30px] shrink-0 items-center justify-center rounded-full border border-[#E4E4E4] bg-[#FFFFFF] shadow-lg hover:opacity-80 sm:relative"
             onClick={scrollLeft}
           >
-            <ChevronLeft color="white" size={20} />
+            <ChevronLeft color="black" size={20} />
           </button>
 
           <div
@@ -379,10 +379,10 @@ const ProductCategory = () => {
 
           {/* Right Scroll Button */}
           <button
-            className="absolute right-0 flex size-[30px] shrink-0 items-center justify-center rounded-full bg-[#6C7275] shadow sm:relative"
+            className="absolute right-0 flex size-[30px] shrink-0 items-center justify-center rounded-full border border-[#E4E4E4] bg-[#FFFFFF] shadow-lg hover:opacity-80 sm:relative"
             onClick={scrollRight}
           >
-            <ChevronRight color="white" size={20} />
+            <ChevronRight color="black" size={20} />
           </button>
         </div>
         {/* Products Grid */}
@@ -424,7 +424,7 @@ const ProductCategory = () => {
                       className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
                     />
                   </div>
-                  <p className="mt-4 w-full text-left font-medium text-gray-800">
+                  <p className="mt-[17.3px] w-full text-left font-medium text-[#141718]">
                     {product.name}
                   </p>
                 </motion.div>

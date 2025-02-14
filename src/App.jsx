@@ -82,7 +82,7 @@ const App = () => {
           <Route
             path="/product/:id"
             element={
-              <div className="w-full bg-white pt-[80px] !text-black">
+              <div className="w-full bg-white pt-[90px] !text-black">
                 <ProductDetail />
               </div>
             }

@@ -99,7 +99,7 @@ const Product = () => {
   return (
     <>
       <div className="h-[90px] w-full bg-white"></div>
-      <div className="mx-auto max-w-[1240px] bg-white p-6 2xl:max-w-[1480px]">
+      <div className="mx-auto w-full max-w-[1240px] bg-white p-6 2xl:max-w-[1480px]">
         {/* Breadcrumb */}
         <div className="flex items-center space-x-2">
           <span
@@ -221,7 +221,7 @@ const Product = () => {
                   className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
-              <p className="mt-4 w-full text-left font-medium text-gray-800">
+              <p className="mt-[17.3px] w-full text-left font-medium text-[#141718]">
                 {product.name}
               </p>
             </Link>

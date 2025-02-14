@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // Import product images
-import product1 from "../../../assets/product1.png";
 import { motion } from "framer-motion";
+import product1 from "../../../assets/product1.png";
 //outdoor signage
 import mwe601 from "../../../assets/digitalSignage/mwe601.jpg";
 import mwe603 from "../../../assets/digitalSignage/mwe603.jpg";
@@ -566,172 +566,88 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="mx-auto max-w-[1400px] bg-white p-6">
-      {/* Breadcrumb */}
-      <div className="mb-5 flex flex-wrap items-center gap-2">
-        <span
-          className="cursor-pointer whitespace-nowrap text-xs text-gray-500 sm:text-sm md:text-base"
-          onClick={() => navigate("/")}
-        >
-          Home
-        </span>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
-        >
-          <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
-        </svg>
-
-        <span
-          className="cursor-pointer whitespace-nowrap text-xs text-gray-500 sm:text-sm md:text-base"
-          onClick={() => navigate("/products")}
-        >
-          Products
-        </span>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
-        >
-          <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
-        </svg>
-
-        <Link
-          to="/categories"
-          state={{ selectedProduct: category }}
-          className="cursor-pointer whitespace-nowrap text-xs text-gray-500 sm:text-sm md:text-base"
-        >
-          {category}
-        </Link>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
-        >
-          <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
-        </svg>
-
-        <span className="whitespace-nowrap text-xs font-semibold text-black sm:text-sm md:text-base">
-          {product.name}
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-[0.5fr_2fr_1fr]">
-        {/* mobile  */}
-        {/* Left Side: Larger Thumbnails */}
-        <div className="hidden max-h-[750px] flex-row items-center space-x-2 md:flex-col md:space-x-0 md:space-y-6 lg:flex">
-          {/* Previous Image Button */}
-          <button
-            onClick={handlePrevious}
-            className="flex items-center justify-center rounded-full p-2 hover:bg-gray-300"
+    <>
+      <div className="mx-auto w-full max-w-[1240px] bg-white p-6 2xl:max-w-[1480px]">
+        {/* Breadcrumb */}
+        <div className="mb-5 flex flex-wrap items-center gap-2">
+          <span
+            className="cursor-pointer whitespace-nowrap text-xs text-gray-500 sm:text-sm md:text-base"
+            onClick={() => navigate("/")}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
-            >
-              <path d="M18 15l-6-6-6 6"></path>
-            </svg>
-          </button>
-
-          {/* Thumbnails for image navigation */}
-          {[
-            products[(activeIndex - 1 + products.length) % products.length], // Previous
-            products[activeIndex], // Current
-            products[(activeIndex + 1) % products.length], // Next
-          ].map((imgProduct, index) => (
-            <motion.img
-              key={imgProduct.id}
-              src={imgProduct.image}
-              initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
-              animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
-              transition={{
-                duration: 0.1,
-                ease: "linear",
-                // delay: index * 0.1, // Stagger animation
-              }}
-              alt={`Thumbnail ${index}`}
-              className={`h-40 w-32 cursor-pointer rounded-md border object-cover transition ${
-                index === 1 ? "border-gray-600 scale-105" : "border-gray-300"
-              }`}
-              onClick={() =>
-                setActiveIndex(
-                  products.findIndex((p) => p.id === imgProduct.id)
-                )
-              }
-            />
-          ))}
-
-          {/* Next Image Button */}
-          <button
-            onClick={handleNext}
-            className="flex items-center justify-center rounded-full p-2 hover:bg-gray-300"
+            Home
+          </span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
+            <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+          </svg>
+
+          <span
+            className="cursor-pointer whitespace-nowrap text-xs text-gray-500 sm:text-sm md:text-base"
+            onClick={() => navigate("/products")}
+          >
+            Products
+          </span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
+          >
+            <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+          </svg>
+
+          <Link
+            to="/categories"
+            state={{ selectedProduct: category }}
+            className="cursor-pointer whitespace-nowrap text-xs text-gray-500 sm:text-sm md:text-base"
+          >
+            {category}
+          </Link>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
+          >
+            <path d="M9 6L15 12L9 18" stroke="#A4A4A4" />
+          </svg>
+
+          <span className="whitespace-nowrap text-xs font-semibold text-black sm:text-sm md:text-base">
+            {product.name}
+          </span>
         </div>
 
-        {/* Main Image (Larger) */}
-        <div className="flex max-h-[500px] w-full flex-1 items-center justify-center rounded-lg bg-gray-100 p-4 shadow-lg md:max-h-[750px] md:p-10">
-          <motion.img
-            src={products[activeIndex].image} // Corrected to use selected product image
-            alt={products[activeIndex].name}
-            initial={{ x: -200, y: 0, opacity: 0, scale: 0.4 }} // Start from the center
-            animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} // Move to actual position
-            transition={{
-              duration: 0.2,
-              ease: "linear",
-              // delay: index * 0.1, // Stagger animation
-            }}
-            className="h-[350px] max-h-[510px] w-full object-contain sm:h-auto"
-          />
-        </div>
-        {/* laptop  */}
-        <div className="relative flex max-w-full items-center justify-center lg:hidden">
-          {/* Previous Image Button */}
-          <button
-            onClick={handlePrevious}
-            className="absolute left-[-15px] z-10 flex items-center justify-center rounded-full bg-white p-2 shadow hover:bg-gray-300"
-            style={{ top: "50%", transform: "translateY(-50%)" }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
+        <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-[0.5fr_2fr_1fr]">
+          {/* mobile  */}
+          {/* Left Side: Larger Thumbnails */}
+          <div className="hidden max-h-[750px] flex-row items-center space-x-2 md:flex-col md:space-x-0 md:space-y-6 lg:flex">
+            {/* Previous Image Button */}
+            <button
+              onClick={handlePrevious}
+              className="flex items-center justify-center rounded-full p-2 hover:bg-gray-300"
             >
-              <path d="M15 18l-6-6 6-6"></path>
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+              >
+                <path d="M18 15l-6-6-6 6"></path>
+              </svg>
+            </button>
 
-          <div className="flex w-full justify-center gap-4">
+            {/* Thumbnails for image navigation */}
             {[
               products[(activeIndex - 1 + products.length) % products.length], // Previous
               products[activeIndex], // Current
@@ -748,7 +664,7 @@ const ProductDetail = () => {
                   // delay: index * 0.1, // Stagger animation
                 }}
                 alt={`Thumbnail ${index}`}
-                className={`h-[130px] md:h-[170px] sm:max-h-none max-w-[150px] w-24 lg:h-40 md:w-32 cursor-pointer rounded-md border p-3 object-cover transition ${
+                className={`h-40 w-32 cursor-pointer rounded-md border object-cover transition ${
                   index === 1 ? "border-gray-600 scale-105" : "border-gray-300"
                 }`}
                 onClick={() =>
@@ -758,73 +674,161 @@ const ProductDetail = () => {
                 }
               />
             ))}
-          </div>
 
-          {/* Next Image Button */}
-          <button
-            onClick={handleNext}
-            className="absolute right-[-15px] z-10 flex items-center justify-center rounded-full bg-white p-2 shadow hover:bg-gray-300"
-            style={{ top: "50%", transform: "translateY(-50%)" }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
+            {/* Next Image Button */}
+            <button
+              onClick={handleNext}
+              className="flex items-center justify-center rounded-full p-2 hover:bg-gray-300"
             >
-              <path d="M9 18l6-6-6-6"></path>
-            </svg>
-          </button>
-        </div>
-        {/* Right Side: Product Information (Smaller) */}
-        <div className="flex w-full flex-col space-y-6 md:w-[500px]">
-          <h1 className="text-3xl font-bold">{products[activeIndex].name}</h1>
-
-          {/* Available Sizes */}
-          <div>
-            <h3 className="text-lg font-semibold">Available Sizes</h3>
-            <div className="mt-3 flex flex-wrap gap-1">
-              {[32, 43, 49, 55, 65, 75, 86].map((size) => (
-                <span
-                  key={size}
-                  className="border-gray text-md mx-1 cursor-pointer rounded-md border px-4 py-1 font-medium"
-                >
-                  {size}
-                </span>
-              ))}
-            </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </button>
           </div>
 
-          {/* Specifications */}
-          <h3 className="mb-2 font-semibold">Specifications:</h3>
-          <div className="md: rounded-lg bg-gray-100 px-4 py-4 shadow-md sm:px-6 md:min-h-[440px] md:px-5">
-            <div className="text-md flex justify-between pb-2">
-              <span className="font-medium">Screen</span>
+          {/* Main Image (Larger) */}
+          <div className="flex max-h-[500px] w-full flex-1 items-center justify-center rounded-lg bg-gray-100 p-4 shadow-lg md:max-h-[750px] md:p-10">
+            <motion.img
+              src={products[activeIndex].image} // Corrected to use selected product image
+              alt={products[activeIndex].name}
+              initial={{ x: -200, y: 0, opacity: 0, scale: 0.4 }} // Start from the center
+              animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} // Move to actual position
+              transition={{
+                duration: 0.2,
+                ease: "linear",
+                // delay: index * 0.1, // Stagger animation
+              }}
+              className="h-[350px] max-h-[510px] w-full object-contain sm:h-auto"
+            />
+          </div>
+          {/* laptop  */}
+          <div className="relative flex max-w-full items-center justify-center lg:hidden">
+            {/* Previous Image Button */}
+            <button
+              onClick={handlePrevious}
+              className="absolute left-[-15px] z-10 flex items-center justify-center rounded-full bg-white p-2 shadow hover:bg-gray-300"
+              style={{ top: "50%", transform: "translateY(-50%)" }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+              >
+                <path d="M15 18l-6-6 6-6"></path>
+              </svg>
+            </button>
+
+            <div className="flex w-full justify-center gap-4">
+              {[
+                products[(activeIndex - 1 + products.length) % products.length], // Previous
+                products[activeIndex], // Current
+                products[(activeIndex + 1) % products.length], // Next
+              ].map((imgProduct, index) => (
+                <motion.img
+                  key={imgProduct.id}
+                  src={imgProduct.image}
+                  initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
+                  animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
+                  transition={{
+                    duration: 0.1,
+                    ease: "linear",
+                    // delay: index * 0.1, // Stagger animation
+                  }}
+                  alt={`Thumbnail ${index}`}
+                  className={`h-[130px] md:h-[170px] sm:max-h-none max-w-[150px] w-24 lg:h-40 md:w-32 cursor-pointer rounded-md border p-3 object-cover transition ${
+                    index === 1
+                      ? "border-gray-600 scale-105"
+                      : "border-gray-300"
+                  }`}
+                  onClick={() =>
+                    setActiveIndex(
+                      products.findIndex((p) => p.id === imgProduct.id)
+                    )
+                  }
+                />
+              ))}
             </div>
 
-            {products[activeIndex].specifications
-              ?.slice(0, undefined)
-              .map((spec) => (
-                <div
-                  key={spec.id}
-                  className="text-md my-1.5 flex justify-between sm:my-3"
-                >
-                  <span className="w-[40%] text-sm font-medium sm:w-1/2 sm:text-base">
-                    {spec.label}
+            {/* Next Image Button */}
+            <button
+              onClick={handleNext}
+              className="absolute right-[-15px] z-10 flex items-center justify-center rounded-full bg-white p-2 shadow hover:bg-gray-300"
+              style={{ top: "50%", transform: "translateY(-50%)" }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-5 w-5"
+              >
+                <path d="M9 18l6-6-6-6"></path>
+              </svg>
+            </button>
+          </div>
+          {/* Right Side: Product Information (Smaller) */}
+          <div className="flex w-full flex-col space-y-6 md:w-[500px]">
+            <h1 className="text-3xl font-bold">{products[activeIndex].name}</h1>
+
+            {/* Available Sizes */}
+            <div>
+              <h3 className="text-lg font-semibold">Available Sizes</h3>
+              <div className="mt-3 flex flex-wrap gap-1">
+                {[32, 43, 49, 55, 65, 75, 86].map((size) => (
+                  <span
+                    key={size}
+                    className="border-gray text-md mx-1 cursor-pointer rounded-md border px-4 py-1 font-medium"
+                  >
+                    {size}
                   </span>
-                  <span className="w-[60%] text-left text-sm text-gray-600 sm:w-1/2 sm:text-base">
-                    {spec.value}
-                  </span>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Specifications */}
+            <h3 className="mb-2 font-semibold">Specifications:</h3>
+            <div className="md: rounded-lg bg-gray-100 px-4 py-4 shadow-md sm:px-6 md:min-h-[440px] md:px-5">
+              <div className="text-md flex justify-between pb-2">
+                <span className="font-bold">Screen</span>
+              </div>
+
+              {products[activeIndex].specifications
+                ?.slice(0, undefined)
+                .map((spec) => (
+                  <div
+                    key={spec.id}
+                    className="text-md my-1.5 flex justify-between sm:my-3"
+                  >
+                    <span className="w-[40%] text-sm font-medium sm:w-1/2 sm:text-base">
+                      {spec.label}
+                    </span>
+                    <span className="w-[60%] text-left text-sm text-gray-600 sm:w-1/2 sm:text-base">
+                      {spec.value}
+                    </span>
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
