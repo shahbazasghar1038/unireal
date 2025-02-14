@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // Import product images
 import product1 from "../../../assets/product1.png";
-
+import { motion } from "framer-motion";
 //outdoor signage
 import mwe601 from "../../../assets/digitalSignage/mwe601.jpg";
 import mwe603 from "../../../assets/digitalSignage/mwe603.jpg";
@@ -624,8 +624,9 @@ const ProductDetail = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-[0.5fr_2fr_1fr]">
+        {/* mobile  */}
         {/* Left Side: Larger Thumbnails */}
-        <div className="hidden max-h-[750px] flex-row items-center space-x-2 overflow-x-auto md:flex-col md:space-x-0 md:space-y-6 md:overflow-y-auto lg:flex">
+        <div className="hidden max-h-[750px] flex-row items-center space-x-2 md:flex-col md:space-x-0 md:space-y-6 lg:flex">
           {/* Previous Image Button */}
           <button
             onClick={handlePrevious}
@@ -651,9 +652,16 @@ const ProductDetail = () => {
             products[activeIndex], // Current
             products[(activeIndex + 1) % products.length], // Next
           ].map((imgProduct, index) => (
-            <img
+            <motion.img
               key={imgProduct.id}
               src={imgProduct.image}
+              initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
+              animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
+              transition={{
+                duration: 0.1,
+                ease: "linear",
+                // delay: index * 0.1, // Stagger animation
+              }}
               alt={`Thumbnail ${index}`}
               className={`h-40 w-32 cursor-pointer rounded-md border object-cover transition ${
                 index === 1 ? "border-gray-600 scale-105" : "border-gray-300"
@@ -688,12 +696,20 @@ const ProductDetail = () => {
 
         {/* Main Image (Larger) */}
         <div className="flex max-h-[500px] w-full flex-1 items-center justify-center rounded-lg bg-gray-100 p-4 shadow-lg md:max-h-[750px] md:p-10">
-          <img
+          <motion.img
             src={products[activeIndex].image} // Corrected to use selected product image
             alt={products[activeIndex].name}
+            initial={{ x: -200, y: 0, opacity: 0, scale: 0.4 }} // Start from the center
+            animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} // Move to actual position
+            transition={{
+              duration: 0.2,
+              ease: "linear",
+              // delay: index * 0.1, // Stagger animation
+            }}
             className="h-[350px] max-h-[510px] w-full object-contain sm:h-auto"
           />
         </div>
+        {/* laptop  */}
         <div className="relative flex max-w-full items-center justify-center lg:hidden">
           {/* Previous Image Button */}
           <button
@@ -721,9 +737,16 @@ const ProductDetail = () => {
               products[activeIndex], // Current
               products[(activeIndex + 1) % products.length], // Next
             ].map((imgProduct, index) => (
-              <img
+              <motion.img
                 key={imgProduct.id}
                 src={imgProduct.image}
+                initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
+                animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
+                transition={{
+                  duration: 0.1,
+                  ease: "linear",
+                  // delay: index * 0.1, // Stagger animation
+                }}
                 alt={`Thumbnail ${index}`}
                 className={`h-[130px] md:h-[170px] sm:max-h-none max-w-[150px] w-24 lg:h-40 md:w-32 cursor-pointer rounded-md border p-3 object-cover transition ${
                   index === 1 ? "border-gray-600 scale-105" : "border-gray-300"

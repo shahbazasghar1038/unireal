@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import product1 from "../../../assets/product1.png";
 import Newsletter from "../../../components/Newsletter/Newsletter";
 
@@ -185,6 +185,7 @@ const ProductCategory = () => {
 
   // Get the product name from the previous page
   const { selectedProduct } = location.state || {};
+  const [clickedId, setClickedId] = useState(null);
 
   const [gridView, setGridView] = useState(true);
   const [twoImageView, setTwoImageView] = useState(false);
@@ -227,6 +228,20 @@ const ProductCategory = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
+  };
+
+  const handleClick = (product) => {
+    setClickedId(product.id);
+
+    // Delay navigation until animation completes
+    setTimeout(() => {
+      navigate(`/product/${product.id}`, {
+        state: {
+          currentProductId: product.id,
+          category: product.category,
+        },
+      });
+    }, 200); // Adjust timing to match animation duration
   };
 
   return (
@@ -381,28 +396,40 @@ const ProductCategory = () => {
           }`}
         >
           {sortedProducts.length > 0 ? (
-            sortedProducts.map((product) => (
-              <Link
-                key={product.id}
-                to={`/product/${product.id}`}
-                state={{
-                  currentProductId: product.id,
-                  category: product.category,
-                }}
-                className="flex flex-col items-center"
-              >
-                <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
-                  />
-                </div>
-                <p className="mt-4 w-full text-left font-medium text-gray-800">
-                  {product.name}
-                </p>
-              </Link>
-            ))
+            sortedProducts.map((product, index) => {
+              const isClicked = clickedId === product.id;
+              const isAdjacent =
+                clickedId &&
+                (index ===
+                  sortedProducts.findIndex((p) => p.id === clickedId) - 1 ||
+                  index ===
+                    sortedProducts.findIndex((p) => p.id === clickedId) + 1);
+
+              return (
+                <motion.div
+                  key={product.id}
+                  onClick={() => handleClick(product)}
+                  className="cursor-pointer"
+                  initial={{ scale: 1, x: 0 }}
+                  animate={{
+                    scale: isClicked ? 1 : isAdjacent ? 1 : 1,
+                    x: isAdjacent ? (product.id < clickedId ? 300 : -300) : 0,
+                  }}
+                  transition={{ duration: 0.3, ease: "linear" }}
+                >
+                  <div className="flex w-full flex-col items-center overflow-hidden rounded-lg bg-gray-100 p-4 transition-all hover:shadow-lg">
+                    <img
+                      src={product.image}
+                      alt={product.name || "Product Image"}
+                      className="h-[311px] w-full transform object-contain transition-transform duration-300 ease-in-out hover:scale-110"
+                    />
+                  </div>
+                  <p className="mt-4 w-full text-left font-medium text-gray-800">
+                    {product.name}
+                  </p>
+                </motion.div>
+              );
+            })
           ) : (
             <p className="mt-6 text-center text-gray-600">No products found.</p>
           )}
