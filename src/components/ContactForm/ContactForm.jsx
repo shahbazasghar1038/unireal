@@ -107,7 +107,7 @@ const ContactForm = () => {
             <div className="relative mt-[50px] pl-[25px] text-white text-opacity-80 md:pl-[40px] lg:mt-[67px]">
               <div className="absolute left-0 top-0 h-full w-[6px] bg-contact-gradient" />
               <div className="space-y-3 text-[18px] font-[400] lg:text-[20px]">
-                <p>110 Easter Queenslie Road, Glasgow, Scotland</p>
+                <p>48 St. Vincent Street, Glasgow, G2 5HS, United Kingdom</p>
                 <p>G33 4UL, GB</p>
                 <p>+44 141 781 6600</p>
                 <p>hello@unireal.io</p>
