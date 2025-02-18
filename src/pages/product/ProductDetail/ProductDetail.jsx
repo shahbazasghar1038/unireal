@@ -656,13 +656,13 @@ const ProductDetail = () => {
               <motion.img
                 key={imgProduct.id}
                 src={imgProduct.image}
-                initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
-                animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
-                transition={{
-                  duration: 0.1,
-                  ease: "linear",
-                  // delay: index * 0.1, // Stagger animation
-                }}
+                // initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
+                // animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
+                // transition={{
+                //   duration: 0.1,
+                //   ease: "linear",
+                //   // delay: index * 0.1, // Stagger animation
+                // }}
                 alt={`Thumbnail ${index}`}
                 className={`h-40 w-32 cursor-pointer rounded-md border object-cover transition ${
                   index === 1 ? "border-gray-600 scale-105" : "border-gray-300"
@@ -700,13 +700,13 @@ const ProductDetail = () => {
             <motion.img
               src={products[activeIndex].image} // Corrected to use selected product image
               alt={products[activeIndex].name}
-              initial={{ x: -200, y: 0, opacity: 0, scale: 0.4 }} // Start from the center
-              animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} // Move to actual position
-              transition={{
-                duration: 0.2,
-                ease: "linear",
-                // delay: index * 0.1, // Stagger animation
-              }}
+              // initial={{ x: -200, y: 0, opacity: 0, scale: 0.4 }} // Start from the center
+              // animate={{ x: 0, y: 0, opacity: 1, scale: 1 }} // Move to actual position
+              // transition={{
+              //   duration: 0.2,
+              //   ease: "linear",
+              //   // delay: index * 0.1, // Stagger animation
+              // }}
               className="h-[350px] max-h-[510px] w-full object-contain sm:h-auto"
             />
           </div>
@@ -741,13 +741,13 @@ const ProductDetail = () => {
                 <motion.img
                   key={imgProduct.id}
                   src={imgProduct.image}
-                  initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
-                  animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
-                  transition={{
-                    duration: 0.1,
-                    ease: "linear",
-                    // delay: index * 0.1, // Stagger animation
-                  }}
+                  // initial={{ x: 200, y: 0, opacity: 0 }} // Start from the center
+                  // animate={{ x: 0, y: 0, opacity: 1 }} // Move to actual position
+                  // transition={{
+                  //   duration: 0.1,
+                  //   ease: "linear",
+                  //   // delay: index * 0.1, // Stagger animation
+                  // }}
                   alt={`Thumbnail ${index}`}
                   className={`h-[130px] md:h-[170px] sm:max-h-none max-w-[150px] w-24 lg:h-40 md:w-32 cursor-pointer rounded-md border p-3 object-cover transition ${
                     index === 1

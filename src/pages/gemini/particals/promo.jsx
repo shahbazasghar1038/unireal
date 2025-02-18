@@ -27,15 +27,15 @@ const Promo = () => {
         alt=""
       />
       <div className="flex w-full max-w-[1240px] flex-col items-center justify-center px-5 pb-[100px] pt-[80px] md:pb-[130px] md:pt-[100px] lg:pb-[156px] 2xl:max-w-[1485px] 2xl:pt-[119px]">
-        {/* top  */}
+        {/* top */}
         <div className="flex w-full max-w-[1300px] flex-col items-center justify-center pb-[60px] md:pb-[90px]">
           <h1 className="w-fit bg-heading-gradient bg-clip-text text-center text-[40px] font-[700] text-transparent md:text-[60px] 2xl:text-[80px]">
-            Promo
+            Gamification
           </h1>
           <p className="mt-[25px] text-center text-[20px] font-[400] leading-[34px] text-white md:mt-[35px] md:text-[26px] 2xl:mt-[50px] 2xl:text-[31px] 2xl:leading-[40px]">
             Gemini’s{" "}
             <span className="text-center font-[700] text-[#FF00FF]">
-              Promo Feature
+              Gamification Feature
             </span>{" "}
             is designed to take customer engagement to the next level.{" "}
           </p>
@@ -55,7 +55,7 @@ const Promo = () => {
             </div>
           </div>
         </div>
-        {/* why it matters  */}
+        {/* why it matters */}
         <div className="flex w-full flex-col items-center justify-center gap-[60px] 2xl:gap-[80px]">
           <h3 className="text-center text-[35px] font-[700] text-white md:text-[40px]">
             Why It Matters{" "}

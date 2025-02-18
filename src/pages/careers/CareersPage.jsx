@@ -38,7 +38,7 @@ const CareersPage = () => {
         <h2 className="text-[30px] font-bold lg:text-[50px]">
           Why Work at Unireal?
         </h2>
-        <p className="mx-auto w-full text-center text-[18px] font-[400] text-gray-200 lg:text-justify lg:text-[24px] 2xl:text-center 2xl:text-[26px]">
+        <p className="mx-auto w-full text-center text-[17px] font-[400] text-gray-200 sm:text-[18px] lg:text-justify lg:text-[24px] 2xl:text-center 2xl:text-[26px]">
           At Unireal, we are redefining the future of retail with cutting-edge
           digital signage and Electronic Shelf Label (ESL) solutions powered by
           AI and IoT. Joining our team means being part of an innovative,

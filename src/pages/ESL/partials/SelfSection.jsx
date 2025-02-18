@@ -43,7 +43,7 @@ const SelfSection = () => {
           playsInline
           controls={false}
           onCanPlay={handleCanPlay}
-          className="h-full w-full object-cover"
+          className="h-[270px] w-full object-cover sm:h-full"
         >
           <source src="/shelf.mp4" type="video/mp4" />
           Your browser does not support the video tag.

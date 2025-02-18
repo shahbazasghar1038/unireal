@@ -231,7 +231,7 @@ const ProductCategory = () => {
   };
 
   const handleClick = (product) => {
-    setClickedId(product.id);
+    // setClickedId(product.id);
 
     // Delay navigation until animation completes
     setTimeout(() => {

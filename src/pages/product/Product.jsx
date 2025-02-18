@@ -120,7 +120,7 @@ const Product = () => {
         </div>
 
         {/* Header Section */}
-        <div className="mb-6 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
+        <div className="mb-6 hidden flex-col space-y-4 md:flex md:flex-row md:items-center md:justify-between md:space-y-0">
           <h1 className="text-2xl font-bold text-black"></h1>
 
           {/* Sorting & View Toggle */}

@@ -26,8 +26,8 @@ const ScrollingText = () => {
       },
       {
         width: "5%",
-        top: "20px",
-        x: isMobile ? "18vw" : "7.9vw",
+        top: isMobile ? "20px" : "16px",
+        x: isMobile ? "15.4vw" : "7.85vw",
         scrollTrigger: {
           trigger: document?.documentElement,
           start: "top top",
@@ -41,7 +41,7 @@ const ScrollingText = () => {
   return (
     <div
       ref={imgRef}
-      className={`fixed top-[280px] z-[9999] w-full min-w-[80px] max-w-[99vw] ${
+      className={`fixed top-[280px] z-[9999] w-full min-w-[70px] sm:min-w-[80px] max-w-[99vw] ${
         isMobile ? "sm:hidden" : "hidden sm:flex"
       }`}
     >
