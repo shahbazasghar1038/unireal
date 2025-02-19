@@ -227,7 +227,7 @@ const Product = () => {
             </Link>
           ))}
         </div>
-        <div className="flex w-full items-center justify-center pb-[20px] pt-[70px] 2xl:pb-[30px]">
+        {/* <div className="flex w-full items-center justify-center pb-[20px] pt-[70px] 2xl:pb-[30px]">
           <div className="flex size-[47px] animate-bounce cursor-pointer items-center justify-center rounded-full bg-[#000000]/20">
             <img
               src="/arrow-down-product.svg"
@@ -235,7 +235,7 @@ const Product = () => {
               alt=""
             />
           </div>
-        </div>
+        </div> */}
       </div>
       <Email />
     </>

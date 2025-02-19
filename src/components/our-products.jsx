@@ -33,7 +33,7 @@ const OurProducts = () => {
               autoScroll: {
                 pauseOnHover: true,
                 pauseOnFocus: true,
-                speed: 1.4,
+                speed: 1,
                 // speed: adjustedSpeed,
               },
             }}

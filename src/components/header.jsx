@@ -116,7 +116,7 @@ const Header = () => {
         <div className="flex h-[70px] w-full items-center justify-between px-[5.3%]">
           <Link
             to="/"
-            className="relative translate-y-[1.5px] sm:translate-y-[2px]"
+            className="gradient-hover-effect2 relative translate-y-[1.5px] before:right-[-75px] sm:translate-y-[2px] 2xl:before:right-[-100px]"
           >
             <img
               src="/logo.png"

@@ -108,7 +108,6 @@ const ContactForm = () => {
               <div className="absolute left-0 top-0 h-full w-[6px] bg-contact-gradient" />
               <div className="space-y-3 text-[18px] font-[400] lg:text-[20px]">
                 <p>48 St. Vincent Street, Glasgow, G2 5HS, United Kingdom</p>
-                <p>G33 4UL, GB</p>
                 <p>+44 141 781 6600</p>
                 <p>hello@unireal.io</p>
               </div>
@@ -118,7 +117,7 @@ const ContactForm = () => {
           {/* Right Side: Contact Form (Wider) */}
           <div className="w-full rounded-lg bg-[#1a1a1a] px-5 py-8 shadow-lg md:py-[53px] lg:px-[43px]">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-[30px]">
-              <div className="grid w-full gap-4 lg:grid-cols-2">
+              <div className="grid w-full gap-[30px] sm:gap-4 lg:grid-cols-2">
                 <div className="relative grid grid-cols-1 gap-4 md:grid-cols-1">
                   <Controller
                     name="firstName"
