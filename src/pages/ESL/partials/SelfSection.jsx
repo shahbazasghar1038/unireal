@@ -15,7 +15,7 @@ const SelfSection = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-md mx-auto mt-4 max-w-[1000px] text-center text-[20px] text-white text-opacity-80 md:text-[24px] 2xl:max-w-[1100px] 2xl:text-[26px]">
+        <p className="mobile-company-text-justify text-md mx-auto mt-4 max-w-[1000px] text-center text-[20px] text-white text-opacity-80 md:text-[24px] 2xl:max-w-[1100px] 2xl:text-[26px]">
           Electronic shelf label (ESL) is revolutionizing the way retail stores
           manage pricing and product information. Our digital price tags are
           designed to improve efficiency, accuracy, and customer satisfaction in

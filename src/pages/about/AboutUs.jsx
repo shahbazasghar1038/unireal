@@ -11,7 +11,7 @@ const AboutUs = () => {
           <h2 className="w-fit bg-company-gradient-text bg-clip-text text-[40px] font-[500] text-transparent lg:text-[55px]">
             Who We Are
           </h2>
-          <p className="text-center text-[17px] text-[#D8D8D8] sm:text-[19px] lg:text-[24px] lg:leading-[36px] 2xl:text-[30px] 2xl:leading-[38px]">
+          <p className="mobile-company-text-justify text-center text-[17px] text-[#D8D8D8] sm:text-[19px] lg:text-[24px] lg:leading-[36px] 2xl:text-[30px] 2xl:leading-[38px]">
             At Unireal, we are at the forefront of the digital revolution,
             transforming the way businesses interact with their customers and
             manage their operations. As a cutting-edge digital technology firm,
