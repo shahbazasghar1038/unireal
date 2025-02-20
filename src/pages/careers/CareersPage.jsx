@@ -78,7 +78,7 @@ const CareersPage = () => {
                   Remote
                 </p>
               </div>
-              <button className="animated-gradient-bg-div gradient-hover-effect z-[100] h-[50px] w-[181px] rounded-full p-[2px] sm:h-[55px] md:p-[3px] lg:h-[48px]">
+              <button className="animated-gradient-bg-div gradient-hover-effect3 z-[100] h-[50px] w-[181px] rounded-full p-[2px] sm:h-[55px] md:p-[3px] lg:h-[48px]">
                 <div className="flex h-full w-full items-center justify-center rounded-full bg-[#1D1D1F] text-[20px] font-[500] lg:text-[18px]">
                   Apply
                 </div>

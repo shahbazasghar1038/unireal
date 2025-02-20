@@ -453,3 +453,41 @@ select option:hover {
 select:focus option:checked {
   background-color: #1d1d1f !important;
 }
+
+.gradient-hover-effect3 {
+  position: relative;
+  background: linear-gradient(
+    269.08deg,
+    #fe9748 2.58%,
+    #fe489e 21.41%,
+    #a952fe 67.8%,
+    #4ecbff 99.21%
+  );
+  /* padding: 20px; */
+  transition: all 0.3s ease-in-out;
+}
+
+.gradient-hover-effect3::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  background: linear-gradient(
+    269.08deg,
+    #fe9748 2.58%,
+    #fe489e 21.41%,
+    #a952fe 67.8%,
+    #4ecbff 99.21%
+  );
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.gradient-hover-effect3:hover::before {
+  opacity: 0.4;
+}

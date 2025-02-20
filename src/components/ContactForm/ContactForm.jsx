@@ -340,7 +340,7 @@ const ContactForm = () => {
                 <div className="pt-[50px] 2xl:!pt-[70px]">
                   <button
                     disabled={loading}
-                    className="animated-gradient-bg-div gradient-hover-effect z-[10] h-[45px] w-[246px] rounded-full p-[2px] sm:h-[50px] md:p-[3px] lg:h-[54px]"
+                    className="animated-gradient-bg-div gradient-hover-effect3 z-[10] h-[45px] w-[246px] rounded-full p-[2px] sm:h-[50px] md:p-[3px] lg:h-[54px]"
                   >
                     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#1D1D1F] text-[18px] font-[500] lg:text-[20px]">
                       {loading ? "Submitting..." : "Submit"}
