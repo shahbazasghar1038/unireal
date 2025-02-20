@@ -491,3 +491,10 @@ select:focus option:checked {
 .gradient-hover-effect3:hover::before {
   opacity: 0.4;
 }
+@media (max-width: 640px) {
+  .mobile-company-text-justify {
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+  }
+}

@@ -32,14 +32,14 @@ const Promo = () => {
           <h1 className="w-fit bg-heading-gradient bg-clip-text text-center text-[40px] font-[700] text-transparent md:text-[60px] 2xl:text-[80px]">
             Gamification
           </h1>
-          <p className="mt-[25px] text-center text-[18px] font-[400] text-white sm:text-[20px] sm:leading-[34px] md:mt-[35px] md:text-[26px] 2xl:mt-[50px] 2xl:text-[31px] 2xl:leading-[40px]">
+          <p className="mobile-company-text-justify mt-[25px] text-center text-[18px] font-[400] text-white sm:text-[20px] sm:leading-[34px] md:mt-[35px] md:text-[26px] 2xl:mt-[50px] 2xl:text-[31px] 2xl:leading-[40px]">
             Gemini’s{" "}
             <span className="text-center font-[700] text-[#FF00FF]">
               Gamification Feature
             </span>{" "}
             is designed to take customer engagement to the next level.{" "}
           </p>
-          <p className="mt-[30px] text-center text-[18px] font-[400] text-white sm:text-[20px] sm:leading-[34px] md:mt-[50px] md:text-[26px] 2xl:mt-[72px] 2xl:text-[31px] 2xl:leading-[40px]">
+          <p className="mobile-company-text-justify mt-[30px] text-center text-[18px] font-[400] text-white sm:text-[20px] sm:leading-[34px] md:mt-[50px] md:text-[26px] 2xl:mt-[72px] 2xl:text-[31px] 2xl:leading-[40px]">
             With the{" "}
             <span className="font-[700] text-[#FF00FF]">Spin the Wheel</span>{" "}
             game, businesses can create fun, interactive experiences that not
